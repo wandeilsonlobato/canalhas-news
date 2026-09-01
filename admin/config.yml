@@ -2,7 +2,7 @@ backend:
   name: github
   repo: wandeilsonlobato/canalhas-news
   branch: main
-  base_url: https://COLOQUE-AQUI-A-URL-DO-SEU-WORKER.workers.dev
+  base_url: https://canalhas-cms-auth.wandeilsonnunes190.workers.dev
   auth_endpoint: auth
 
 # Fluxo editorial: cada matéria nova vira uma branch + PR própria, passando
