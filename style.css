@@ -568,7 +568,12 @@ h2.section-title::before {
     z-index: 1;
 }
 
-.news-card .card-link {
+/* Link "esticado": a âncora fica no fluxo normal (pro título medir
+   sua própria altura corretamente), e um ::after cobre o .news-card
+   inteiro (ancestral posicionado mais próximo) pra manter a área
+   inteira clicável. */
+.news-card .card-link::after {
+    content: '';
     position: absolute;
     inset: 0;
     z-index: 3;
@@ -590,9 +595,12 @@ h2.section-title::before {
 
 .news-card .news-content {
     position: absolute;
-    left: 0; right: 0; bottom: 0;
+    inset: 0;
     z-index: 2;
     padding: 1.1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 }
 
 .news-card .news-title {
@@ -627,7 +635,7 @@ h2.section-title::before {
 }
 
 @media (min-width: 900px) {
-    .news-grid.magazine { grid-template-columns: 1.7fr 1fr; align-items: stretch; }
+    .news-grid.magazine { grid-template-columns: 1.7fr 1fr; align-items: start; }
 }
 
 .news-card.feature { aspect-ratio: auto; min-height: 440px; }
