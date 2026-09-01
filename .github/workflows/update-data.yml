@@ -1,0 +1,37 @@
+name: Atualizar Agenda da Matilha
+
+on:
+  schedule:
+    - cron: '0 */6 * * *' # Roda a cada 6 horas
+  workflow_dispatch: # Permite rodar manualmente clicando num botão
+
+jobs:
+  update-matches:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # Permissão para salvar o arquivo no repositório
+
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v4
+
+      - name: Instalar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Rodar Script de Atualização (Agenda e Resultados)
+        env:
+          PANDASCORE_KEY: ${{ secrets.PANDASCORE_KEY }}
+        run: node fetch-data.js
+
+      - name: Buscar Notícias Externas
+        run: node fetch-news.js
+
+      - name: Salvar alterações (Commit & Push)
+        run: |
+          git config --global user.name 'Bot da Matilha'
+          git config --global user.email 'bot@canalhasnews.com.br'
+          git add data/matches.json data/results.json data/news_external.json
+          git diff --cached --quiet || git commit -m "Atualizando agenda, resultados e notícias externas [skip ci]"
+          git push

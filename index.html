@@ -3,9 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Canalhas News | Red Canids News</title>
+    <title>Canalhas News | Notícias da RED Canids Kalunga</title>
     <link rel="shortcut icon" href="img/redcanalhas-logo.png" type="image/png">
     <link rel="icon" href="img/redcanalhas-logo.png" type="image/png">
+
+    <meta name="description" content="Portal de notícias não-oficial da RED Canids Kalunga: cobertura de League of Legends, CS2 e Valorant, calendário de jogos, elenco completo e bastidores da Matilha.">
+    <meta name="author" content="Canalhas News">
+    <link rel="canonical" href="https://canalhasnews.com.br/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://canalhasnews.com.br/">
+    <meta property="og:title" content="Canalhas News | Notícias da RED Canids Kalunga">
+    <meta property="og:description" content="Cobertura completa da RED Canids Kalunga: notícias, calendário de jogos, elenco e bastidores da Matilha.">
+    <meta property="og:image" content="https://canalhasnews.com.br/img/redcanalhas-logo.png">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Canalhas News | Notícias da RED Canids Kalunga">
+    <meta property="twitter:description" content="Cobertura completa da RED Canids Kalunga: notícias, calendário de jogos, elenco e bastidores da Matilha.">
+    <meta property="twitter:image" content="https://canalhasnews.com.br/img/redcanalhas-logo.png">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
@@ -29,7 +45,7 @@
                     <li><a href="creators.html">Creators</a></li>
                     <li><a href="sobre.html">Sobre</a></li>
                     <li><a href="contato.html">Contato</a></li>
-                    <li><a href="#schedule">Calendário</a></li>
+                    <li><a href="index.html#schedule">Calendário</a></li>
                     <li><a href="campeonatos.html">Campeonatos</a></li>
                 </ul>
             </nav>
@@ -47,28 +63,38 @@
 
     <div class="page-wrapper">
         <main class="main-content">
+            <section class="hero reveal">
+                <span class="hero-tag">Ao vivo na temporada 2026</span>
+                <h1 class="hero-title">A voz da matilha em League of Legends, CS2 e Valorant</h1>
+                <p class="hero-subtitle">Cobertura completa da RED Canids Kalunga: resultados, bastidores, elenco e o calendário atualizado de cada partida da Matilha.</p>
+                <div class="hero-actions">
+                    <a href="#schedule" class="hero-btn primary">Ver próximos jogos</a>
+                    <a href="noticias.html" class="hero-btn secondary">Últimas notícias</a>
+                </div>
+            </section>
+
             <!-- Seção de Calendário -->
             <section id="schedule">
-                <h2 class="section-title">Próximos Jogos</h2>
-                <div class="schedule-tabs">
+                <h2 class="section-title reveal">Próximos Jogos</h2>
+                <div class="schedule-tabs reveal">
                     <button class="active" data-filter="all">Todos</button>
                     <button data-filter="lol">LoL</button>
                     <button data-filter="cs2">CS2</button>
                     <button data-filter="valorant">Valorant</button>
                 </div>
                 <div class="schedule-list">
-                    <!-- O conteúdo será carregado via JavaScript -->
-                    <div id="loading-schedule" style="text-align: center; padding: 2rem; color: var(--text-gray);">
-                        Buscando partidas...
+                    <div id="loading-schedule">
+                        <div class="skeleton-item"></div>
+                        <div class="skeleton-item"></div>
                     </div>
                 </div>
             </section>
 
             <!-- Seção de Notícias -->
             <section id="news">
-                <h2 class="section-title">Destaques da Matilha</h2>
+                <h2 class="section-title reveal">Destaques da Matilha</h2>
                 <div class="news-grid">
-                    <article class="news-card">
+                    <article class="news-card reveal">
                         <div class="image-wrapper">
                             <span class="news-tag">League of Legends</span>
                             <div class="news-image" style="background-image: url('img/img-noticias/capa-cblols1.jpg');"></div>
@@ -80,7 +106,7 @@
                         </div>
                     </article>
 
-                    <article class="news-card">
+                    <article class="news-card reveal">
                         <div class="image-wrapper">
                             <span class="news-tag">League of Legends</span>
                             <div class="news-image" style="background-image: url('img/img-noticias/capa-playoffs4.jpg');"></div>
@@ -105,17 +131,25 @@
                     <svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
                     <span>Início</span>
                 </a>
-                <a href="#news" class="nav-item" title="Notícias">
+                <a href="noticias.html" class="nav-item" title="Notícias">
                     <svg viewBox="0 0 24 24"><path d="M20 3H4c-1.1 0-2 .9-2 2v11c0 1.1.9 2 2 2h3l-1 1v2h12v-2l-1-1h3c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 13H4V5h16v11zM6 8h12v2H6zm0 4h12v2H6z"/></svg>
                     <span>Notícias</span>
                 </a>
-                <a href="#schedule" class="nav-item" title="Agenda">
+                <a href="index.html#schedule" class="nav-item" title="Agenda">
                     <svg viewBox="0 0 24 24"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/></svg>
                     <span>Agenda</span>
                 </a>
                 <a href="times.html" class="nav-item" title="Times">
                     <svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
                     <span>Times</span>
+                </a>
+                <a href="creators.html" class="nav-item" title="Creators">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                    <span>Creators</span>
+                </a>
+                <a href="campeonatos.html" class="nav-item" title="Campeonatos">
+                    <svg viewBox="0 0 24 24"><path d="M20.2 2H3.8C2.8 2 2 2.8 2 3.8V6c0 3.1 2.3 5.7 5.3 6 1.3 2.3 3.6 3.9 6.2 4v2H9v2h6v-2h-4.5c2.6-.1 4.9-1.7 6.2-4 3-.3 5.3-2.9 5.3-6V3.8c0-1-.8-1.8-1.8-1.8zM4 6V4h3v3.6C5.1 7.2 4 6.2 4 6zm13 1.6V4h3v2c0 1.8-1.1 3.2-3 3.6z"/></svg>
+                    <span>Camp.</span>
                 </a>
             </nav>
         </aside>
@@ -136,11 +170,14 @@
                     <a href="https://x.com/REDcanalhas_" target="_blank" aria-label="X (Twitter)">
                         <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
                     </a>
+                    <a href="https://www.instagram.com/redcanalhas_/" target="_blank" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                    </a>
                 </div>
             </div>
             <div class="footer-section newsletter">
                 <h4>Fique por dentro</h4>
-                <form>
+                <form class="newsletter-form">
                     <input type="email" placeholder="Seu melhor e-mail" required>
                     <button type="submit">Inscrever</button>
                 </form>
@@ -151,173 +188,11 @@
         </div>
     </footer>
 
-    <script src="js/main.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const tabs = document.querySelectorAll('.schedule-tabs button');
-            const scheduleList = document.querySelector('.schedule-list');
-            const loadingMsg = document.getElementById('loading-schedule');
+    <button class="back-to-top" aria-label="Voltar ao topo">
+        <svg viewBox="0 0 24 24"><path d="M12 4l-8 8h5v8h6v-8h5z"/></svg>
+    </button>
 
-
-            // --- CONFIGURAÇÃO AUTOMÁTICA DE LOGOS (GITHUB) ---
-            // Cole aqui o link da pasta do GitHub que você achou, mas modificado para o jsDelivr.
-            // Padrão: https://cdn.jsdelivr.net/gh/USUARIO/REPOSITORIO@main/PASTA/
-            // Exemplo abaixo usa um repositório público de logos de LoL:
-            const GITHUB_LOGOS_URL = 'https://cdn.jsdelivr.net/gh/flori-sch/League-of-Legends-Team-Logos@main/CBLOL/';
-
-            const localTeamLogos = {
-                'LOUD': 'img/loud-logo.png',
-                'paiN Gaming': 'img/pain-logo.png',
-                'Vivo Keyd Stars': 'img/keyd-stars-logo.png',
-                'Leviatan': 'img/leviatan-logo.png',
-                'FURIA': 'img/furia-esports-logo.png',
-                'Fluxo': 'img/fluxo-logo.png',
-                'LOS': 'img/los-logo.png',
-                'Los Grandes': 'img/los-logo.png'
-            };
-
-            function getAutoLogo(teamName) {
-                if (localTeamLogos[teamName]) return localTeamLogos[teamName];
-                // Remove espaços extras e garante que o nome esteja correto para a URL
-                // Ex: "paiN Gaming" vira "paiN%20Gaming.png" na URL
-                return `${GITHUB_LOGOS_URL}${encodeURIComponent(teamName)}.png`;
-            }
-
-            // AGENDA MANUAL (Prioridade Alta)
-            // Adicione jogos aqui para garantir que apareçam, independente da API.
-            // Formato da data: AAAA-MM-DDTHH:MM:00 (Ex: 2026-02-01T13:00:00)
-            const LOCAL_SCHEDULE = [
-                {
-                    game: 'lol', // Categoria do jogo
-                    league: 'Copa CBLOL 2026 - MD3', // Nome do campeonato/fase
-                    date: '2026-04-04T13:00:00', // Data e hora do jogo
-                    opponent: 'Fluxo' // Oponente
-                }
-            ];
-
-            // Função para buscar partidas
-            async function fetchMatches() {
-                try {
-                    // Adiciona timeout de 5 segundos para não travar em conexões lentas
-                    const controller = new AbortController();
-                    const timeoutId = setTimeout(() => controller.abort(), 5000);
-
-                    // 1. Tenta buscar o arquivo gerado automaticamente pelo GitHub Actions
-                    const response = await fetch('data/matches.json', { signal: controller.signal });
-                    clearTimeout(timeoutId);
-
-                    if (!response.ok) throw new Error('Arquivo automático não encontrado ou erro de rede');
-                    const autoMatches = await response.json();
-                    renderMatches(autoMatches);
-                } catch (error) {
-                    // 2. Fallback: Se não tiver automação, usa a agenda manual
-                    console.warn("Usando agenda manual (Fallback). Motivo:", error.message);
-                    renderMatches(LOCAL_SCHEDULE);
-                }
-            }
-
-            function formatGameName(slug) {
-                if (slug === 'league-of-legends') return 'lol';
-                if (slug === 'cs-go') return 'cs2'; // PandaScore usa cs-go para CS2 muitas vezes
-                if (slug === 'valorant') return 'valorant';
-                return 'outros';
-            }
-
-            function formatDate(dateString) {
-                const date = new Date(dateString);
-                if (isNaN(date.getTime())) return 'Data a confirmar';
-                const day = String(date.getDate()).padStart(2, '0');
-                const month = String(date.getMonth() + 1).padStart(2, '0');
-                const hours = String(date.getHours()).padStart(2, '0');
-                const minutes = String(date.getMinutes()).padStart(2, '0');
-                return `${day}/${month} - ${hours}:${minutes}`;
-            }
-
-            function renderMatches(matches) {
-                loadingMsg.style.display = 'none';
-                
-                // Limpa itens anteriores (exceto o loadingMsg que já foi ocultado)
-                const existingItems = scheduleList.querySelectorAll('.schedule-item');
-                existingItems.forEach(el => el.remove());
-
-                if (!matches || matches.length === 0) {
-                    scheduleList.insertAdjacentHTML('beforeend', '<p style="text-align:center; color:var(--text-gray);">Nenhum jogo agendado nos próximos dias.</p>');
-                    return;
-                }
-
-                const fragment = document.createDocumentFragment();
-
-                matches.forEach(match => {
-                    // Normalização dos dados
-                    const gameCategory = match.game || 'outros';
-                    const leagueName = match.league || 'Campeonato';
-                    const matchDate = formatDate(match.date);
-                    const opponentName = match.opponent || 'A Definir';
-                    
-                    // Prioriza a logo do JSON, se não tiver, usa a automática
-                    // Se for "A Definir", não exibe logo
-                    const opponentLogo = (opponentName === 'A Definir') ? null : (match.logo || getAutoLogo(opponentName));
-                    const redLogo = 'img/redcanalhas-logo.png';
-                    
-                    const opponentImgHtml = opponentLogo 
-                        ? `<img src="${opponentLogo}" alt="${opponentName}" loading="lazy" onerror="this.onerror=null;this.src='img/redcanalhas-logo.png'">`
-                        : '';
-
-                    const div = document.createElement('div');
-                    div.className = 'schedule-item';
-                    div.setAttribute('data-category', gameCategory);
-
-                    // Verifica filtro atual para já nascer visível ou oculto (otimização visual)
-                    const activeTab = document.querySelector('.schedule-tabs button.active');
-                    const currentFilter = activeTab ? activeTab.getAttribute('data-filter') : 'all';
-                    if (currentFilter !== 'all' && currentFilter !== gameCategory) {
-                        div.style.display = 'none';
-                    }
-
-                    div.innerHTML = `
-                            <div class="team">
-                                <img src="${redLogo}" alt="RED Canids" loading="lazy" onerror="this.src='img/redcanalhas-logo.png'">
-                                <span>RED</span>
-                            </div>
-                            <div class="match-info">
-                                <div>${matchDate}</div>
-                                <strong>VS</strong>
-                                <div style="font-size: 0.8rem; opacity: 0.8;">${leagueName}</div>
-                            </div>
-                            <div class="team">
-                                <span>${opponentName}</span>
-                                ${opponentImgHtml}
-                            </div>
-                    `;
-                    fragment.appendChild(div);
-                });
-                
-                scheduleList.appendChild(fragment);
-            }
-
-            // Iniciar busca
-            fetchMatches();
-
-            // Lógica das Abas de Filtro
-            tabs.forEach(tab => {
-                tab.addEventListener('click', () => {
-                    tabs.forEach(t => t.classList.remove('active'));
-                    tab.classList.add('active');
-
-                    const filter = tab.getAttribute('data-filter');
-                    const items = document.querySelectorAll('.schedule-item');
-
-                    items.forEach(item => {
-                        const category = item.getAttribute('data-category');
-                        if (filter === 'all' || filter === category) {
-                            item.style.display = 'flex';
-                        } else {
-                            item.style.display = 'none';
-                        }
-                    });
-                });
-            });
-        });
-    </script>
+    <script src="js/main.js" defer></script>
+    <script src="js/schedule.js" defer></script>
 </body>
 </html>

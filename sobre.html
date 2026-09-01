@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,363 +9,20 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --red-primary: #E30613;
-            --red-dark: #8a0000;
-            --black-bg: #0f0f0f;
-            --card-bg: #181818;
-            --text-light: #ffffff;
-            --text-gray: #b0b0b0;
-        }
+    <meta name="description" content="Conheça o Canalhas News, portal de fas dedicado a cobrir cada passo da RED Canids Kalunga em League of Legends, CS2 e Valorant.">
+    <link rel="canonical" href="https://canalhasnews.com.br/sobre.html">
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Roboto', sans-serif;
-        }
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://canalhasnews.com.br/sobre.html">
+    <meta property="og:title" content="Sobre Nós | Canalhas News">
+    <meta property="og:description" content="A história por trás do maior portal de fãs da RED Canids Kalunga.">
+    <meta property="og:image" content="https://canalhasnews.com.br/img/redcanalhas-logo.png">
 
-        body {
-            background-color: var(--black-bg);
-            color: var(--text-light);
-        }
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Sobre Nós | Canalhas News">
+    <meta property="twitter:image" content="https://canalhasnews.com.br/img/redcanalhas-logo.png">
 
-        /* Header */
-        header {
-            background-color: rgba(15, 15, 15, 0.95);
-            backdrop-filter: blur(10px);
-            padding: 1rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: relative;
-            z-index: 9999;
-            border-bottom: 1px solid #333;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            text-decoration: none;
-            color: var(--text-light);
-        }
-
-        .logo img {
-            height: 70px;
-            width: auto;
-            filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.3));
-        }
-
-        .logo-text {
-            font-family: 'Oswald', sans-serif;
-            font-size: 2.5rem;
-            font-weight: normal;
-            text-transform: uppercase;
-            letter-spacing: -0.5px;
-            line-height: 1;
-        }
-
-        .logo-text span {
-            font-family: 'Oswald', sans-serif;
-            color: var(--red-primary);
-            font-size: 1.1em;
-            font-weight: normal;
-        }
-
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 20px;
-        }
-
-        nav a {
-            color: var(--text-light);
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            transition: color 0.3s ease;
-        }
-
-        nav a:hover {
-            color: var(--red-primary);
-        }
-
-        /* Mobile Menu Styles */
-        .mobile-menu-btn {
-            display: none;
-            background: none;
-            border: none;
-            cursor: pointer;
-            flex-direction: column;
-            gap: 5px;
-        }
-
-        .mobile-menu-btn span {
-            width: 25px;
-            height: 3px;
-            background-color: var(--text-light);
-            transition: 0.3s;
-        }
-
-        /* Page Layout */
-        .page-wrapper {
-            padding: 2rem;
-            display: grid;
-            grid-template-columns: 80px 1fr;
-            gap: 2rem;
-        }
-
-        .main-content {
-            max-width: 900px;
-            justify-self: center;
-            width: 100%;
-        }
-
-        /* Section Titles */
-        h2.section-title {
-            position: relative;
-            margin-bottom: 2rem;
-            font-size: 2.5rem;
-            font-weight: 900;
-            text-transform: uppercase;
-            text-align: center;
-            color: var(--red-primary);
-        }
-
-        /* About Content */
-        .about-content {
-            background-color: var(--card-bg);
-            padding: 2rem;
-            border-radius: 8px;
-            border-top: 4px solid var(--red-primary);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        }
-
-        .about-content p {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            color: var(--text-gray);
-            margin-bottom: 1.5rem;
-        }
-
-        .about-content p strong {
-            color: var(--text-light);
-            font-weight: 700;
-        }
-
-        /* Sidebar */
-        .sidebar {
-            order: -1;
-        }
-
-        .sidebar-nav {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 2rem;
-            position: sticky;
-            top: 100px;
-        }
-
-        .nav-item {
-            color: var(--text-gray);
-            transition: color 0.3s ease;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-decoration: none;
-            font-size: 0.7rem;
-            font-weight: 600;
-            gap: 5px;
-            text-align: center;
-        }
-
-        .nav-item:hover {
-            color: var(--red-primary);
-        }
-
-        .nav-item svg {
-            width: 24px;
-            height: 24px;
-            fill: currentColor;
-        }
-
-        /* Footer */
-        footer {
-            background-color: #000;
-            padding: 3rem 2rem 1rem;
-            margin-top: 4rem;
-            color: var(--text-gray);
-            border-top: 3px solid var(--red-primary);
-        }
-
-        .footer-container {
-            max-width: 1200px;
-            margin: 0 auto 2rem auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-        }
-
-        .footer-section h4 {
-            font-size: 1.1rem;
-            color: var(--text-light);
-            margin-bottom: 1rem;
-            text-transform: uppercase;
-        }
-
-        .footer-section.about .logo {
-            margin-bottom: 1rem;
-        }
-
-        .footer-section.about p {
-            font-size: 0.9rem;
-            line-height: 1.6;
-        }
-
-        .social-links {
-            display: flex;
-            flex-direction: row;
-            gap: 15px;
-        }
-
-        .social-links a {
-            color: var(--text-gray);
-            text-decoration: none;
-            transition: color 0.3s ease, transform 0.3s ease;
-        }
-
-        .social-links a:hover {
-            color: var(--red-primary);
-            transform: translateY(-3px);
-        }
-
-        .social-links svg {
-            width: 24px;
-            height: 24px;
-            fill: currentColor;
-        }
-
-        .newsletter form {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .newsletter input {
-            background-color: var(--card-bg);
-            border: 1px solid #333;
-            padding: 12px;
-            border-radius: 4px;
-            color: var(--text-light);
-            font-family: 'Roboto', sans-serif;
-            margin-bottom: 10px;
-        }
-
-        .newsletter button {
-            background-color: var(--red-primary);
-            color: white;
-            border: none;
-            padding: 12px;
-            border-radius: 4px;
-            cursor: pointer;
-            font-weight: 700;
-            text-transform: uppercase;
-            transition: background-color 0.3s ease, transform 0.3s ease;
-        }
-
-        .newsletter button:hover {
-            background-color: var(--red-dark);
-            transform: translateY(-2px);
-        }
-
-        .footer-bottom {
-            text-align: center;
-            padding-top: 1.5rem;
-            border-top: 1px solid #333;
-            font-size: 0.8rem;
-        }
-
-        @media (max-width: 768px) {
-            .mobile-menu-btn {
-                display: flex;
-                margin-left: auto;
-            }
-
-            .logo {
-                position: static;
-                transform: none;
-                width: auto;
-                justify-content: flex-start;
-            }
-
-            .logo-text {
-                font-size: 1.5rem;
-            }
-
-            .logo img {
-                height: 50px;
-            }
-
-            nav {
-                display: none;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                width: 100%;
-                background-color: rgba(15, 15, 15, 0.98);
-                padding: 1rem 0;
-                border-bottom: 1px solid #333;
-                flex-direction: column;
-                align-items: center;
-                z-index: 10000;
-            }
-
-            nav.active {
-                display: flex;
-            }
-
-            nav ul {
-                flex-direction: column;
-                gap: 1.5rem;
-                width: 100%;
-                text-align: center;
-            }
-
-            .page-wrapper {
-                grid-template-columns: 1fr;
-                padding: 1rem;
-            }
-
-            .sidebar {
-                display: none;
-            }
-
-            .section-title {
-                font-size: 2rem;
-            }
-
-            .about-content {
-                padding: 1.5rem;
-                box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-            }
-        }
-
-        /* Light Mode */
-        body.light-mode { --black-bg: #f4f4f9; --card-bg: #ffffff; --text-light: #1a1a1a; --text-gray: #4a4a4a; --red-primary: #cc0000; }
-        body.light-mode header, body.light-mode nav { background-color: rgba(255, 255, 255, 0.98); border-bottom: 1px solid #e0e0e0; }
-        body.light-mode .mobile-menu-btn span { background-color: #1a1a1a; }
-        body.light-mode .news-card, body.light-mode .full-article, body.light-mode .about-content, body.light-mode .contact-form, body.light-mode .modal-content, body.light-mode .accordion-header, body.light-mode .champ-card, body.light-mode .player-card, body.light-mode .schedule-item, body.light-mode .schedule-tabs button, body.light-mode .roster-tabs button, body.light-mode .filter-tabs button, body.light-mode .newsletter input { box-shadow: 0 2px 8px rgba(0,0,0,0.05); border: 1px solid #e0e0e0; }
-        body.light-mode .schedule-tabs button:hover, body.light-mode .roster-tabs button:hover, body.light-mode .filter-tabs button:hover { background-color: #e0e0e0; }
-        body.light-mode .footer-bottom { border-top: 1px solid #e0e0e0; }
-        
-        /* Theme Toggle */
-        .header-controls { display: flex; align-items: center; gap: 15px; }
-        .theme-toggle { background: none; border: none; cursor: pointer; color: var(--text-light); padding: 5px; display: flex; align-items: center; justify-content: center; transition: color 0.3s; }
-        .theme-toggle:hover { color: var(--red-primary); }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -404,8 +61,8 @@
     <div class="page-wrapper">
         <main class="main-content">
             <section id="about-us">
-                <h2 class="section-title">A HISTÓRIA DO CANALHAS NEWS</h2>
-                <div class="about-content">
+                <h2 class="section-title reveal">A HISTÓRIA DO CANALHAS NEWS</h2>
+                <div class="about-content reveal">
                     <p>
                         <strong>Canalhas News</strong> nasceu da paixão de um grupo de torcedores fanáticos pela <strong>RED Canids Kalunga</strong>. Sentíamos falta de um espaço que fosse 100% dedicado a cobrir cada passo da matilha, desde as vitórias mais emocionantes até as análises mais profundas sobre as escalações e estratégias.
                     </p>
@@ -425,7 +82,7 @@
                     <svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
                     <span>Início</span>
                 </a>
-                <a href="index.html#news" class="nav-item" title="Notícias">
+                <a href="noticias.html" class="nav-item" title="Notícias">
                     <svg viewBox="0 0 24 24"><path d="M20 3H4c-1.1 0-2 .9-2 2v11c0 1.1.9 2 2 2h3l-1 1v2h12v-2l-1-1h3c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 13H4V5h16v11zM6 8h12v2H6zm0 4h12v2H6z"/></svg>
                     <span>Notícias</span>
                 </a>
@@ -473,7 +130,7 @@
             </div>
             <div class="footer-section newsletter">
                 <h4>Fique por dentro</h4>
-                <form>
+                <form class="newsletter-form">
                     <input type="email" placeholder="Seu melhor e-mail" required>
                     <button type="submit">Inscrever</button>
                 </form>
@@ -484,43 +141,10 @@
         </div>
     </footer>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const mobileBtn = document.querySelector('.mobile-menu-btn');
-            const nav = document.querySelector('nav');
+    <button class="back-to-top" aria-label="Voltar ao topo">
+        <svg viewBox="0 0 24 24"><path d="M12 4l-8 8h5v8h6v-8h5z"/></svg>
+    </button>
 
-            if(mobileBtn) {
-                mobileBtn.addEventListener('click', () => {
-                    nav.classList.toggle('active');
-                });
-                // Fecha o menu ao clicar em links
-                nav.querySelectorAll('a').forEach(link => {
-                    link.addEventListener('click', () => nav.classList.remove('active'));
-                });
-            }
-
-            // Theme Toggle Logic
-            const themeToggle = document.querySelector('.theme-toggle');
-            const body = document.body;
-            const sunIcon = document.querySelector('.sun-icon');
-            const moonIcon = document.querySelector('.moon-icon');
-
-            if (localStorage.getItem('theme') === 'light') {
-                body.classList.add('light-mode');
-                sunIcon.style.display = 'none';
-                moonIcon.style.display = 'block';
-            }
-
-            if(themeToggle) {
-                themeToggle.addEventListener('click', () => {
-                    body.classList.toggle('light-mode');
-                    const isLight = body.classList.contains('light-mode');
-                    localStorage.setItem('theme', isLight ? 'light' : 'dark');
-                    sunIcon.style.display = isLight ? 'none' : 'block';
-                    moonIcon.style.display = isLight ? 'block' : 'none';
-                });
-            }
-        });
-    </script>
+    <script src="js/main.js" defer></script>
 </body>
 </html>

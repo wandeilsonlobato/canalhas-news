@@ -1,0 +1,23 @@
+[
+    {
+        "game": "lol",
+        "league": "CBLOL 2026 - Split 2",
+        "date": "2026-09-10T19:00:00",
+        "opponent": "LOUD",
+        "logo": "img/loud-logo.png"
+    },
+    {
+        "game": "valorant",
+        "league": "VCT Americas",
+        "date": "2026-09-14T16:00:00",
+        "opponent": "Leviatan",
+        "logo": "img/leviatan-logo.png"
+    },
+    {
+        "game": "cs2",
+        "league": "IEM Rio 2026",
+        "date": "2026-09-21T14:00:00",
+        "opponent": "A Definir",
+        "logo": null
+    }
+]
