@@ -78,6 +78,25 @@
                     <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
                     <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
                 </button>
+                <div class="auth-widget">
+                    <button class="auth-login-btn" type="button">
+                        <svg viewBox="0 0 24 24"><path fill="#fff" d="M21.35 11.1h-9.17v2.73h6.51c-.33 1.73-1.33 3.2-2.84 4.18v3.47h4.59c2.69-2.48 4.24-6.13 4.24-10.47 0-.87-.08-1.66-.22-2.4z"/><path fill="#fff" d="M12.18 22c2.7 0 4.97-.89 6.63-2.42l-4.59-3.47c-.9.6-2.05.95-2.04.95-3.34 0-6.17-2.25-7.18-5.28H.32v3.53C1.97 19.42 5.7 22 12.18 22z"/><path fill="#fff" d="M5 11.78a6.9 6.9 0 0 1 0-4.42V3.83H.32a11.03 11.03 0 0 0 0 14.34L5 14.51v-2.73z"/><path fill="#fff" d="M12.18 5.06c1.47 0 2.79.51 3.83 1.5l4.06-4.06C17.96 1.03 15.32 0 12.18 0 5.7 0 1.97 2.58.32 6.5l4.68 3.35c1-3.03 3.84-4.79 7.18-4.79z"/></svg>
+                        <span>Entrar</span>
+                    </button>
+                    <div class="auth-user" hidden>
+                        <button class="auth-user-btn" type="button">
+                            <img class="auth-user-photo" src="" alt="">
+                            <span class="auth-user-name"></span>
+                        </button>
+                        <div class="auth-menu" hidden>
+                            <div class="auth-menu-info">
+                                <strong class="auth-menu-name"></strong>
+                                <span class="auth-menu-email"></span>
+                            </div>
+                            <a href="#" class="auth-menu-item auth-logout-btn">Sair</a>
+                        </div>
+                    </div>
+                </div>
             </header>
             <main class="app-main narrow">
                 <div class="app-layout">
@@ -101,6 +120,22 @@
                     <button class="share-btn">WhatsApp</button>
                 </div>
             </article>
+            <section class="comments-section" data-article-id="noticia-cblol-semana3">
+                <h2 class="section-title">Comentários</h2>
+                <p class="comments-login-prompt">
+                    Entre com sua conta Google para comentar nesta matéria.
+                    <button class="auth-login-btn" type="button">
+                        <svg viewBox="0 0 24 24"><path fill="#fff" d="M21.35 11.1h-9.17v2.73h6.51c-.33 1.73-1.33 3.2-2.84 4.18v3.47h4.59c2.69-2.48 4.24-6.13 4.24-10.47 0-.87-.08-1.66-.22-2.4z"/><path fill="#fff" d="M12.18 22c2.7 0 4.97-.89 6.63-2.42l-4.59-3.47c-.9.6-2.05.95-2.04.95-3.34 0-6.17-2.25-7.18-5.28H.32v3.53C1.97 19.42 5.7 22 12.18 22z"/><path fill="#fff" d="M5 11.78a6.9 6.9 0 0 1 0-4.42V3.83H.32a11.03 11.03 0 0 0 0 14.34L5 14.51v-2.73z"/><path fill="#fff" d="M12.18 5.06c1.47 0 2.79.51 3.83 1.5l4.06-4.06C17.96 1.03 15.32 0 12.18 0 5.7 0 1.97 2.58.32 6.5l4.68 3.35c1-3.03 3.84-4.79 7.18-4.79z"/></svg>
+                        <span>Entrar com Google</span>
+                    </button>
+                </p>
+                <form class="comment-form" hidden>
+                    <textarea placeholder="Deixe seu comentário sobre a matéria..." maxlength="1000" required></textarea>
+                    <button type="submit">Comentar</button>
+                </form>
+                <div class="comments-list"><p class="comments-empty">Carregando comentários...</p></div>
+            </section>
+
         
                 </div>
             </main>
@@ -146,6 +181,7 @@
     </button>
 
     <script src="js/main.js" defer></script>
+    <script src="js/auth.js" type="module"></script>
     
     <!-- JSON-LD -->
     <script type="application/ld+json">

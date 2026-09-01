@@ -1,0 +1,55 @@
+rules_version = '2';
+
+// Regras de segurança do Firestore para o Canalhas News.
+// Cole este conteúdo em: Console do Firebase > Firestore Database > Regras.
+//
+// Este arquivo não é lido automaticamente pelo GitHub Pages (é só um site
+// estático) - ele serve como referência versionada do que está configurado
+// no Console do Firebase.
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    function isOwner(uid) {
+      return isSignedIn() && request.auth.uid == uid;
+    }
+
+    function isAdmin() {
+      return isSignedIn() && request.auth.token.email in [
+        'wandeilsonnunes190@gmail.com'
+      ];
+    }
+
+    // Perfil do usuário (nome, foto, tema, newsletter)
+    match /users/{uid} {
+      allow read: if isSignedIn();
+      allow write: if isOwner(uid);
+
+      // Favoritos do usuário (jogadores, times, notícias)
+      match /favorites/{favoriteId} {
+        allow read, write: if isOwner(uid);
+      }
+    }
+
+    // Comentários nas matérias
+    match /comments/{commentId} {
+      allow read: if true;
+
+      allow create: if isSignedIn()
+        && request.resource.data.uid == request.auth.uid
+        && request.resource.data.articleId is string
+        && request.resource.data.text is string
+        && request.resource.data.text.size() > 0
+        && request.resource.data.text.size() <= 1000;
+
+      allow update: if false;
+
+      allow delete: if isSignedIn()
+        && (resource.data.uid == request.auth.uid || isAdmin());
+    }
+  }
+}

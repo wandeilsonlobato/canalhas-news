@@ -51,7 +51,9 @@
         toggle.addEventListener('click', () => {
             const isLight = !body.classList.contains('light-mode');
             applyTheme(isLight);
-            localStorage.setItem('theme', isLight ? 'light' : 'dark');
+            const theme = isLight ? 'light' : 'dark';
+            localStorage.setItem('theme', theme);
+            window.dispatchEvent(new CustomEvent('canalhas:theme-change', { detail: { theme } }));
         });
     }
 
