@@ -1,1 +1,82 @@
-[]
+[
+  {
+    "game": "lol",
+    "league": "CBLOL - Semana 6",
+    "date": "2026-08-29T16:00:00Z",
+    "opponent": "LOUD",
+    "logo": "http://static.lolesports.com/teams/Logo-LOUD-Esports_Original.png",
+    "result": "D 0-2"
+  },
+  {
+    "game": "lol",
+    "league": "CBLOL - Semana 5",
+    "date": "2026-08-23T16:00:00Z",
+    "opponent": "Fluxo W7M",
+    "logo": "http://static.lolesports.com/teams/1766161431111_LogoColorida.png",
+    "result": "V 2-0"
+  },
+  {
+    "game": "lol",
+    "league": "CBLOL - Semana 4",
+    "date": "2026-08-15T16:00:00Z",
+    "opponent": "FURIA",
+    "logo": "http://static.lolesports.com/teams/FURIA---black.png",
+    "result": "D 1-2"
+  },
+  {
+    "game": "lol",
+    "league": "Circuito Desafiante - Fase de Entrada",
+    "date": "2026-08-11T23:00:00Z",
+    "opponent": "RMD Gaming",
+    "logo": "http://static.lolesports.com/teams/1774199461844_rdm_c.png",
+    "result": "D 0-2"
+  },
+  {
+    "game": "lol",
+    "league": "CBLOL - Semana 3",
+    "date": "2026-08-10T21:00:00Z",
+    "opponent": "LEVIATÁN",
+    "logo": "http://static.lolesports.com/teams/1643795049372_LEV-CLAROWhite.png",
+    "result": "D 0-2"
+  },
+  {
+    "game": "lol",
+    "league": "CBLOL - Semana 3",
+    "date": "2026-08-08T16:00:00Z",
+    "opponent": "paiN Gaming",
+    "logo": "http://static.lolesports.com/teams/1674657011011_pain_logo_white.png",
+    "result": "V 2-0"
+  },
+  {
+    "game": "lol",
+    "league": "Circuito Desafiante - Semana 3",
+    "date": "2026-08-05T23:00:00Z",
+    "opponent": "Vivo Keyd Stars Academy",
+    "logo": "http://static.lolesports.com/teams/1774200249450_vks_c.png",
+    "result": "D 0-1"
+  },
+  {
+    "game": "lol",
+    "league": "Circuito Desafiante - Semana 3",
+    "date": "2026-08-04T21:00:00Z",
+    "opponent": "TEAM SOLID",
+    "logo": "http://static.lolesports.com/teams/1774199850391_solid_w.png",
+    "result": "D 0-1"
+  },
+  {
+    "game": "lol",
+    "league": "Circuito Desafiante - Semana 3",
+    "date": "2026-08-04T00:00:00Z",
+    "opponent": "KaBuM! Eports",
+    "logo": "http://static.lolesports.com/teams/1774199720854_kbm_c_w.png",
+    "result": "D 0-1"
+  },
+  {
+    "game": "lol",
+    "league": "CBLOL - Semana 2",
+    "date": "2026-08-02T19:00:00Z",
+    "opponent": "LOS",
+    "logo": "http://static.lolesports.com/teams/1784013312149_LOS-OLaranja.png",
+    "result": "D 0-2"
+  }
+]

@@ -8,7 +8,10 @@ const path = require('path');
 
 const API_KEY = process.env.LOLESPORTS_KEY;
 const BASE_URL = 'https://esports-api.lolesports.com/persisted/gw';
-const TEAM_MATCH = /red\s*canids/i; // casa "RED Canids" e "RED Canids Kalunga"
+// A API da Riot já usou "RED Canids", "RED Canids Kalunga" e agora usa
+// só "RED Kalunga" - casa qualquer uma dessas variações, e também usa o
+// código do time ("RED") como reforço caso o nome mude de novo no futuro.
+const TEAM_MATCH = /red\s*canids|red\s*kalunga/i;
 const REGION_HINT = /brazil|brasil|cblol|desafiante/i;
 
 const MATCHES_FILE = path.join(__dirname, 'data', 'matches.json');
@@ -33,7 +36,10 @@ function readJsonSafe(file) {
 }
 
 function teamInMatch(match) {
-    return (match.teams || []).find((t) => TEAM_MATCH.test(t.name || '') || TEAM_MATCH.test(t.code || ''));
+    return (match.teams || []).find((t) => {
+        const code = (t.code || '').toUpperCase();
+        return TEAM_MATCH.test(t.name || '') || code === 'RED';
+    });
 }
 
 function opponentOf(match, redTeam) {

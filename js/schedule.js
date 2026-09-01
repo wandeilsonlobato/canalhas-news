@@ -26,13 +26,13 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // AGENDA MANUAL (Fallback de última instância, caso data/matches.json falhe)
-    // Atualize a data conforme os confrontos dos playoffs do Split 2 forem definidos.
+    // Atualize conforme os confrontos dos playoffs do Split 2 forem avançando.
     const LOCAL_SCHEDULE = [
         {
             game: 'lol',
-            league: 'CBLOL 2026 - Split 2 (Playoffs)',
-            date: '2026-09-05T19:00:00',
-            opponent: 'A Definir'
+            league: 'CBLOL - Eliminatórias',
+            date: '2026-09-06T16:00:00Z',
+            opponent: 'FURIA'
         }
     ];
 
