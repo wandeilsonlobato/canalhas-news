@@ -1,0 +1,40 @@
+backend:
+  name: github
+  repo: wandeilsonlobato/canalhas-news
+  branch: main
+  base_url: https://COLOQUE-AQUI-A-URL-DO-SEU-WORKER.workers.dev
+  auth_endpoint: auth
+
+# Fluxo editorial: cada matéria nova vira uma branch + PR própria, passando
+# por "Rascunho" -> "Em revisão" -> "Pronta". Só quando alguém aprova em
+# "Pronta" e faz o merge é que a matéria realmente entra no site.
+publish_mode: editorial_workflow
+
+media_folder: "img/img-noticias"
+public_folder: "/img/img-noticias"
+
+collections:
+  - name: "noticias"
+    label: "Notícias"
+    label_singular: "Notícia"
+    folder: "content/noticias"
+    create: true
+    slug: "{{slug}}"
+    identifier_field: title
+    fields:
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Resumo (aparece no card e no Google)", name: "excerpt", widget: "text" }
+      - label: "Categoria"
+        name: "category"
+        widget: "select"
+        options:
+          [
+            "League of Legends",
+            "Brawl Stars",
+            "Academy",
+            "Institucional",
+          ]
+      - { label: "Imagem de capa", name: "coverImage", widget: "image" }
+      - { label: "Data de publicação", name: "date", widget: "datetime" }
+      - { label: "Autor", name: "author", widget: "string", default: "Redação Canalhas" }
+      - { label: "Texto da matéria", name: "body", widget: "markdown" }

@@ -1,0 +1,42 @@
+name: Gerar Páginas das Matérias
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'content/noticias/**'
+  workflow_dispatch:
+
+concurrency:
+  group: generate-articles
+  cancel-in-progress: false
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v7
+
+      - name: Instalar Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: '22'
+
+      - name: Instalar dependências
+        run: npm install
+
+      - name: Gerar páginas a partir das matérias do painel
+        run: node generate-articles.js
+
+      - name: Salvar alterações (Commit & Push)
+        run: |
+          git config --global user.name 'Bot da Matilha'
+          git config --global user.email 'bot@canalhasnews.com.br'
+          git add "noticia-*.html" data/cms_articles.json sitemap.xml
+          git diff --cached --quiet || git commit -m "Gera páginas das novas matérias [skip ci]"
+          git pull --rebase --autostash origin "${GITHUB_REF_NAME}"
+          git push

@@ -160,6 +160,12 @@
                 </article>
             </div>
 
+            <div id="cms-articles-section" hidden>
+                <h2 class="section-title reveal" style="margin-top: 4rem; font-size: 1.8rem;">Matérias da Redação</h2>
+                <p style="color: var(--text-muted); margin-bottom: 2rem;">Publicadas pelo time do Canalhas News:</p>
+                <div class="news-grid" id="cms-articles-grid"></div>
+            </div>
+
             <h2 class="section-title reveal" style="margin-top: 4rem; font-size: 1.8rem;">Giro pela Web</h2>
             <p style="color: var(--text-muted); margin-bottom: 2rem;">As últimas da RED em outros portais:</p>
             <div class="link-card-grid" id="external-news-grid"></div>
@@ -232,6 +238,25 @@
     <script src="js/auth.js" type="module"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
+            fetch('data/cms_articles.json')
+                .then(response => (response.ok ? response.json() : []))
+                .then(data => {
+                    if (!Array.isArray(data) || !data.length) return;
+                    const section = document.getElementById('cms-articles-section');
+                    const grid = document.getElementById('cms-articles-grid');
+                    data.forEach(article => {
+                        const html = `
+                            <article class="news-card compact reveal visible">
+                                <div class="image-wrapper"><div class="news-image" style="background-image: url('${article.coverImage}');"></div></div>
+                                <div class="news-content"><span class="compact-tag">${article.category}</span><h3 class="news-title"><a href="${article.url}" class="card-link">${article.title}</a></h3></div>
+                            </article>
+                        `;
+                        grid.insertAdjacentHTML('beforeend', html);
+                    });
+                    section.hidden = false;
+                })
+                .catch(() => {});
+
             fetch('data/news_external.json')
                 .then(response => response.json())
                 .then(data => {
