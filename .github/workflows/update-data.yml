@@ -5,6 +5,10 @@ on:
     - cron: '0 */6 * * *' # Roda a cada 6 horas
   workflow_dispatch: # Permite rodar manualmente clicando num botão
 
+concurrency:
+  group: update-data
+  cancel-in-progress: false
+
 jobs:
   update-matches:
     runs-on: ubuntu-latest
@@ -34,4 +38,5 @@ jobs:
           git config --global user.email 'bot@canalhasnews.com.br'
           git add data/matches.json data/results.json data/news_external.json
           git diff --cached --quiet || git commit -m "Atualizando agenda, resultados e notícias externas [skip ci]"
+          git pull --rebase --autostash origin "${GITHUB_REF_NAME}"
           git push
