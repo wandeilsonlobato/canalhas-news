@@ -7,11 +7,11 @@ const TEAM_ID = 1266; // ID da RED Canids (Confirme se é este mesmo)
 const OUTPUT_FILE = path.join(__dirname, 'data', 'matches.json');
 const OUTPUT_FILE_RESULTS = path.join(__dirname, 'data', 'results.json');
 
-// Mapeamento de Slugs da PandaScore para nossas categorias
+// Mapeamento de Slugs da PandaScore para nossas categorias.
+// CS2 e Valorant foram descontinuados pela organização em 2026; a PandaScore
+// não cobre Brawl Stars, então a agenda dessa modalidade segue manual por ora.
 const GAME_MAP = {
-    'league-of-legends': 'lol',
-    'cs-go': 'cs2',
-    'valorant': 'valorant'
+    'league-of-legends': 'lol'
 };
 
 async function fetchMatches() {
