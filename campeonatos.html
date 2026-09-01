@@ -109,10 +109,10 @@
                 <div class="champ-card reveal" data-category="lol">
                     <div class="champ-header">
                         <div class="champ-info">
-                            <span class="champ-name">CBLOL 2026 - Split 2</span>
+                            <span class="champ-name" id="lol-champ-name">CBLOL 2026 - Split 2</span>
                             <div class="champ-meta">
                                 <span class="champ-tag">League of Legends</span>
-                                <span>6º lugar na fase regular (2-5) · playoffs em andamento</span>
+                                <span id="lol-champ-meta">6º lugar na fase regular (2-5) · playoffs em andamento</span>
                             </div>
                         </div>
                         <div style="display: flex; align-items: center; gap: 15px;">
@@ -130,7 +130,7 @@
                                         <th>Campanha</th>
                                     </tr>
                                 </thead>
-                                <tbody>
+                                <tbody id="lol-standings-body">
                                     <tr class="highlight-row">
                                         <td class="rank">6º</td>
                                         <td><div class="team-cell"><img src="img/redcanalhas-logo.png" class="team-logo-mini" loading="lazy"> RED Canids</div></td>
@@ -160,10 +160,10 @@
                 <div class="champ-card reveal" data-category="lol">
                     <div class="champ-header">
                         <div class="champ-info">
-                            <span class="champ-name">Circuito Desafiante - Split 2</span>
+                            <span class="champ-name" id="academy-champ-name">Circuito Desafiante - Split 2</span>
                             <div class="champ-meta">
                                 <span class="champ-tag">League of Legends Academy</span>
-                                <span>Estreou com derrota para a Ei Nerd Esports</span>
+                                <span id="academy-champ-meta">Estreou com derrota para a Ei Nerd Esports</span>
                             </div>
                         </div>
                         <div style="display: flex; align-items: center; gap: 15px;">
@@ -176,12 +176,12 @@
                             <table>
                                 <thead>
                                     <tr>
-                                        <th>Rodada</th>
-                                        <th>Adversário</th>
-                                        <th>Resultado</th>
+                                        <th>Posição</th>
+                                        <th>Time</th>
+                                        <th>Campanha</th>
                                     </tr>
                                 </thead>
-                                <tbody>
+                                <tbody id="academy-standings-body">
                                     <tr>
                                         <td class="rank">1ª</td>
                                         <td><div class="team-cell">Ei Nerd Esports</div></td>
@@ -254,6 +254,7 @@
 
     <script src="js/main.js" defer></script>
     <script src="js/auth.js" type="module"></script>
+    <script src="js/standings.js" defer></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const tabs = document.querySelectorAll('.filter-tabs button');

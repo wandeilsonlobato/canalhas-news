@@ -16,6 +16,7 @@ const REGION_HINT = /brazil|brasil|cblol|desafiante/i;
 
 const MATCHES_FILE = path.join(__dirname, 'data', 'matches.json');
 const RESULTS_FILE = path.join(__dirname, 'data', 'results.json');
+const STANDINGS_FILE = path.join(__dirname, 'data', 'standings.json');
 
 async function api(endpoint, params) {
     const url = new URL(`${BASE_URL}/${endpoint}`);
@@ -44,6 +45,70 @@ function teamInMatch(match) {
 
 function opponentOf(match, redTeam) {
     return (match.teams || []).find((t) => t !== redTeam);
+}
+
+// A API da Riot devolve os logos em http:// - o site é servido em https://,
+// então force https aqui pra evitar bloqueio de conteúdo misto no navegador.
+function toHttps(url) {
+    return url ? url.replace(/^http:/, 'https:') : url;
+}
+
+// Busca a classificação (fase de pontos corridos) do torneio atualmente em
+// andamento de uma liga. Retorna null se a liga não tiver uma fase com
+// tabela de classificação no momento (ex: só bracket eliminatório).
+async function fetchStandings(league) {
+    let tournamentsRes;
+    try {
+        tournamentsRes = await api('getTournamentsForLeague', { leagueId: league.id });
+    } catch (err) {
+        console.warn(`Falha ao buscar torneios de ${league.name}:`, err.message);
+        return null;
+    }
+
+    const tournaments = tournamentsRes?.data?.leagues?.[0]?.tournaments || [];
+    if (!tournaments.length) return null;
+
+    const now = new Date();
+    const current = tournaments.find((t) => now >= new Date(t.startDate) && now <= new Date(t.endDate))
+        || tournaments[0];
+
+    let standingsRes;
+    try {
+        standingsRes = await api('getStandings', { tournamentId: current.id });
+    } catch (err) {
+        console.warn(`Falha ao buscar classificação de ${league.name}:`, err.message);
+        return null;
+    }
+
+    const stages = standingsRes?.data?.standings?.[0]?.stages || [];
+    let rankings = [];
+    for (const stage of stages) {
+        for (const section of stage.sections || []) {
+            if (section.rankings && section.rankings.length) {
+                rankings = section.rankings;
+                break;
+            }
+        }
+        if (rankings.length) break;
+    }
+    if (!rankings.length) return null;
+
+    const teams = rankings
+        .map((r) => {
+            const t = r.teams?.[0];
+            if (!t) return null;
+            return {
+                position: r.ordinal,
+                name: t.name,
+                code: t.code,
+                logo: toHttps(t.image) || null,
+                wins: t.record?.wins ?? 0,
+                losses: t.record?.losses ?? 0,
+            };
+        })
+        .filter(Boolean);
+
+    return { league: league.name, tournamentSlug: current.slug, teams };
 }
 
 async function main() {
@@ -97,7 +162,7 @@ async function main() {
                     league: league.name + (event.blockName ? ` - ${event.blockName}` : ''),
                     date: event.startTime,
                     opponent: opponentName,
-                    logo: opponent?.image || null,
+                    logo: toHttps(opponent?.image) || null,
                 };
 
                 if (event.state === 'completed') {
@@ -119,6 +184,12 @@ async function main() {
         upcoming.sort((a, b) => new Date(a.date) - new Date(b.date));
         finished.sort((a, b) => new Date(b.date) - new Date(a.date));
 
+        const standings = [];
+        for (const league of brazilLeagues) {
+            const result = await fetchStandings(league);
+            if (result) standings.push(result);
+        }
+
         const existingMatches = readJsonSafe(MATCHES_FILE).filter((m) => m.game !== 'lol');
         const existingResults = readJsonSafe(RESULTS_FILE).filter((m) => m.game !== 'lol');
 
@@ -127,8 +198,9 @@ async function main() {
 
         fs.writeFileSync(MATCHES_FILE, JSON.stringify([...existingMatches, ...upcoming], null, 2));
         fs.writeFileSync(RESULTS_FILE, JSON.stringify([...existingResults, ...finished.slice(0, 10)], null, 2));
+        fs.writeFileSync(STANDINGS_FILE, JSON.stringify(standings, null, 2));
 
-        console.log(`LoL Esports: ${upcoming.length} partida(s) futura(s), ${finished.length} finalizada(s) encontrada(s) para a RED Canids.`);
+        console.log(`LoL Esports: ${upcoming.length} partida(s) futura(s), ${finished.length} finalizada(s), classificação de ${standings.length} liga(s) encontrada(s) para a RED Canids.`);
     } catch (error) {
         console.error('Falha ao buscar dados do LoL Esports:', error.message);
         // Não quebra o build; mantém os dados que já existiam.

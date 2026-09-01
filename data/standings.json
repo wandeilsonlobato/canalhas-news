@@ -1,0 +1,158 @@
+[
+  {
+    "league": "CBLOL",
+    "tournamentSlug": "cblol_split_3_2026",
+    "teams": [
+      {
+        "position": 1,
+        "name": "LOUD",
+        "code": "LOUD",
+        "logo": "https://static.lolesports.com/teams/Logo-LOUD-Esports_Original.png",
+        "wins": 6,
+        "losses": 1
+      },
+      {
+        "position": 2,
+        "name": "LOS",
+        "code": "LOS",
+        "logo": "https://static.lolesports.com/teams/1784013312149_LOS-OLaranja.png",
+        "wins": 6,
+        "losses": 1
+      },
+      {
+        "position": 3,
+        "name": "Vivo Keyd Stars",
+        "code": "VKS",
+        "logo": "https://static.lolesports.com/teams/1670542079678_vks.png",
+        "wins": 5,
+        "losses": 2
+      },
+      {
+        "position": 4,
+        "name": "FURIA",
+        "code": "FUR",
+        "logo": "https://static.lolesports.com/teams/FURIA---black.png",
+        "wins": 5,
+        "losses": 2
+      },
+      {
+        "position": 5,
+        "name": "RED Kalunga",
+        "code": "RED",
+        "logo": "https://static.lolesports.com/teams/1631820575924_red-2021-worlds.png",
+        "wins": 2,
+        "losses": 5
+      },
+      {
+        "position": 6,
+        "name": "paiN Gaming",
+        "code": "PAIN",
+        "logo": "https://static.lolesports.com/teams/1674657011011_pain_logo_white.png",
+        "wins": 2,
+        "losses": 5
+      },
+      {
+        "position": 7,
+        "name": "Fluxo W7M",
+        "code": "FX",
+        "logo": "https://static.lolesports.com/teams/1766161431111_LogoColorida.png",
+        "wins": 1,
+        "losses": 6
+      },
+      {
+        "position": 8,
+        "name": "LEVIATÁN",
+        "code": "LEV",
+        "logo": "https://static.lolesports.com/teams/1643795049372_LEV-CLAROWhite.png",
+        "wins": 1,
+        "losses": 6
+      }
+    ]
+  },
+  {
+    "league": "Circuito Desafiante",
+    "tournamentSlug": "circuito_desafiante_split_2_2026",
+    "teams": [
+      {
+        "position": 1,
+        "name": "Estral Esports",
+        "code": "EST",
+        "logo": "https://static.lolesports.com/teams/1774200288247_estral_c.png",
+        "wins": 9,
+        "losses": 0
+      },
+      {
+        "position": 2,
+        "name": "INTZ",
+        "code": "INTZ",
+        "logo": "https://static.lolesports.com/teams/1770801521472_LOGOINTZ2026COMESTRELAS.png",
+        "wins": 7,
+        "losses": 2
+      },
+      {
+        "position": 3,
+        "name": "KaBuM! Eports",
+        "code": "KBM",
+        "logo": "https://static.lolesports.com/teams/1774199720854_kbm_c_w.png",
+        "wins": 5,
+        "losses": 4
+      },
+      {
+        "position": 4,
+        "name": "paiN Gaming Academy",
+        "code": "PAIN",
+        "logo": "https://static.lolesports.com/teams/1774199812580_pain_w.png",
+        "wins": 5,
+        "losses": 4
+      },
+      {
+        "position": 5,
+        "name": "Ei Nerd Esports",
+        "code": "NERD",
+        "logo": "https://static.lolesports.com/teams/1774199508230_nerd_w.png",
+        "wins": 4,
+        "losses": 5
+      },
+      {
+        "position": 6,
+        "name": "Vivo Keyd Stars Academy",
+        "code": "VKS",
+        "logo": "https://static.lolesports.com/teams/1774200249450_vks_c.png",
+        "wins": 4,
+        "losses": 5
+      },
+      {
+        "position": 7,
+        "name": "TEAM SOLID",
+        "code": "TSS",
+        "logo": "https://static.lolesports.com/teams/1774199850391_solid_w.png",
+        "wins": 4,
+        "losses": 5
+      },
+      {
+        "position": 8,
+        "name": "7REX Team",
+        "code": "7REX",
+        "logo": "https://static.lolesports.com/teams/1770800891074_logo-7rex-vetor.png",
+        "wins": 4,
+        "losses": 5
+      },
+      {
+        "position": 9,
+        "name": "RMD Gaming",
+        "code": "RMD",
+        "logo": "https://static.lolesports.com/teams/1774199461844_rdm_c.png",
+        "wins": 2,
+        "losses": 7
+      },
+      {
+        "position": 10,
+        "name": "RED Kalunga Academy",
+        "code": "RED",
+        "logo": "https://static.lolesports.com/teams/1642969030123_REDlogo_REDCanids-RGB-linhabranca1.png",
+        "wins": 1,
+        "losses": 8
+      }
+    ]
+  }
+]
