@@ -1,28 +1,36 @@
 (function () {
     'use strict';
 
-    function initMobileMenu() {
-        const btn = document.querySelector('.mobile-menu-btn');
-        const nav = document.querySelector('nav');
-        if (!btn || !nav) return;
+    function initSidebar() {
+        const toggle = document.querySelector('.sidebar-toggle');
+        const sidebar = document.querySelector('.app-sidebar');
+        const scrim = document.querySelector('.sidebar-scrim');
+        if (!toggle || !sidebar) return;
 
-        btn.setAttribute('aria-expanded', 'false');
+        const isMobile = () => window.innerWidth <= 960;
 
-        btn.addEventListener('click', () => {
-            const isOpen = nav.classList.toggle('active');
-            btn.classList.toggle('active', isOpen);
-            btn.setAttribute('aria-expanded', String(isOpen));
-            document.body.classList.toggle('nav-open', isOpen);
+        toggle.addEventListener('click', () => {
+            if (isMobile()) {
+                document.body.classList.toggle('nav-open');
+            } else {
+                document.body.classList.toggle('sidebar-collapsed');
+                localStorage.setItem('sidebarCollapsed', document.body.classList.contains('sidebar-collapsed') ? '1' : '0');
+            }
         });
 
-        nav.querySelectorAll('a').forEach((link) => {
+        if (scrim) {
+            scrim.addEventListener('click', () => document.body.classList.remove('nav-open'));
+        }
+
+        sidebar.querySelectorAll('a').forEach((link) => {
             link.addEventListener('click', () => {
-                nav.classList.remove('active');
-                btn.classList.remove('active');
-                btn.setAttribute('aria-expanded', 'false');
-                document.body.classList.remove('nav-open');
+                if (isMobile()) document.body.classList.remove('nav-open');
             });
         });
+
+        if (!isMobile() && localStorage.getItem('sidebarCollapsed') === '1') {
+            document.body.classList.add('sidebar-collapsed');
+        }
     }
 
     function initThemeToggle() {
@@ -49,13 +57,22 @@
 
     function initActiveNav() {
         const currentPage = location.pathname.split('/').pop() || 'index.html';
+        const currentHash = location.hash;
 
-        document.querySelectorAll('nav a[href], .nav-item[href]').forEach((link) => {
+        document.querySelectorAll('.app-nav-link[href]').forEach((link) => {
             const href = link.getAttribute('href');
             if (!href || href.startsWith('http')) return;
 
-            const linkPage = href.split('#')[0].split('/').pop() || 'index.html';
-            if (linkPage === currentPage) {
+            const [hrefPath, hrefHash] = href.split('#');
+            const linkPage = hrefPath.split('/').pop() || 'index.html';
+            const linkHash = hrefHash ? `#${hrefHash}` : '';
+
+            // Um link com #hash só ativa quando o hash da URL bate exatamente.
+            // Um link sem hash só ativa quando a URL também não tem hash
+            // (evita "Início" e "Agenda" ficarem ativos ao mesmo tempo).
+            const isMatch = linkPage === currentPage && linkHash === currentHash;
+
+            if (isMatch) {
                 link.classList.add('active');
                 link.setAttribute('aria-current', 'page');
             }
@@ -86,28 +103,20 @@
         });
     }
 
-    function initHeaderShrink() {
-        const header = document.querySelector('header');
-        if (!header) return;
-        const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 20);
-        onScroll();
-        window.addEventListener('scroll', onScroll, { passive: true });
-    }
-
-    function initNewsletterForm() {
-        const form = document.querySelector('.newsletter-form');
-        if (!form) return;
-        const button = form.querySelector('button');
-        form.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const original = button.textContent;
-            button.textContent = 'Inscrito!';
-            button.disabled = true;
-            form.reset();
-            setTimeout(() => {
-                button.textContent = original;
-                button.disabled = false;
-            }, 2500);
+    function initNewsletterForms() {
+        document.querySelectorAll('.newsletter-form').forEach((form) => {
+            const button = form.querySelector('button');
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const original = button.textContent;
+                button.textContent = 'Inscrito!';
+                button.disabled = true;
+                form.reset();
+                setTimeout(() => {
+                    button.textContent = original;
+                    button.disabled = false;
+                }, 2500);
+            });
         });
     }
 
@@ -121,12 +130,11 @@
     }
 
     document.addEventListener('DOMContentLoaded', function () {
-        initMobileMenu();
+        initSidebar();
         initThemeToggle();
         initActiveNav();
         initScrollReveal();
-        initHeaderShrink();
-        initNewsletterForm();
+        initNewsletterForms();
         initBackToTop();
     });
 })();
