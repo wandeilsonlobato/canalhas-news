@@ -284,10 +284,57 @@ function updateSitemap(articles) {
     return added;
 }
 
+function readOldManifest() {
+    try {
+        return JSON.parse(fs.readFileSync(MANIFEST_FILE, 'utf8'));
+    } catch {
+        return [];
+    }
+}
+
+function removeSitemapEntries(slugs) {
+    if (!slugs.length) return 0;
+    let xml = fs.readFileSync(SITEMAP_FILE, 'utf8');
+    let removed = 0;
+
+    slugs.forEach((slug) => {
+        const loc = `${SITE_URL}/noticia-${slug}.html`;
+        const escapedLoc = loc.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+        const pattern = new RegExp(`[ \\t]*<url><loc>${escapedLoc}</loc>.*?</url>\\r?\\n?`, 'g');
+        if (pattern.test(xml)) {
+            xml = xml.replace(pattern, '');
+            removed += 1;
+        }
+    });
+
+    if (removed > 0) fs.writeFileSync(SITEMAP_FILE, xml);
+    return removed;
+}
+
+function pruneRemovedArticles(oldManifest, currentSlugs) {
+    const removedSlugs = oldManifest
+        .map((a) => a.slug)
+        .filter((slug) => !currentSlugs.has(slug));
+
+    removedSlugs.forEach((slug) => {
+        const file = path.join(__dirname, `noticia-${slug}.html`);
+        if (fs.existsSync(file)) fs.unlinkSync(file);
+    });
+
+    const sitemapRemoved = removeSitemapEntries(removedSlugs);
+    if (removedSlugs.length) {
+        console.log(`Removidas ${removedSlugs.length} matéria(s) que não existem mais em content/noticias/ (${removedSlugs.join(', ')}). ${sitemapRemoved} URL(s) tirada(s) do sitemap.`);
+    }
+}
+
 function main() {
     const articles = readMarkdownFiles();
+    const oldManifest = readOldManifest();
+
     if (!articles.length) {
-        console.log('Nenhuma matéria em content/noticias/ ainda.');
+        pruneRemovedArticles(oldManifest, new Set());
+        if (fs.existsSync(MANIFEST_FILE)) fs.writeFileSync(MANIFEST_FILE, '[]');
+        console.log('Nenhuma matéria em content/noticias/ no momento.');
         return;
     }
 
@@ -321,6 +368,8 @@ function main() {
     });
 
     manifest.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+    pruneRemovedArticles(oldManifest, new Set(manifest.map((a) => a.slug)));
 
     const dir = path.dirname(MANIFEST_FILE);
     if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
