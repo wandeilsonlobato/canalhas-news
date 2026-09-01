@@ -29,6 +29,11 @@ jobs:
           PANDASCORE_KEY: ${{ secrets.PANDASCORE_KEY }}
         run: node fetch-data.js
 
+      - name: Atualizar dados de LoL (LoL Esports)
+        env:
+          LOLESPORTS_KEY: ${{ secrets.LOLESPORTS_KEY }}
+        run: node fetch-lolesports.js
+
       - name: Buscar Notícias Externas
         run: node fetch-news.js
 
