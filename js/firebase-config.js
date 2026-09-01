@@ -9,12 +9,12 @@
 // Preencha com os valores do seu projeto Firebase:
 // Console do Firebase > Configurações do projeto > Seus apps > Web app > SDK setup and configuration
 export const firebaseConfig = {
-    apiKey: "COLE_AQUI_A_API_KEY",
-    authDomain: "COLE_AQUI_O_AUTH_DOMAIN",
-    projectId: "COLE_AQUI_O_PROJECT_ID",
-    storageBucket: "COLE_AQUI_O_STORAGE_BUCKET",
-    messagingSenderId: "COLE_AQUI_O_SENDER_ID",
-    appId: "COLE_AQUI_O_APP_ID",
+    apiKey: "AIzaSyCl2QVPCwLb81KHGvtHchtjmc6fWz1bO2c",
+    authDomain: "canalhasnews.firebaseapp.com",
+    projectId: "canalhasnews",
+    storageBucket: "canalhasnews.firebasestorage.app",
+    messagingSenderId: "321981307265",
+    appId: "1:321981307265:web:c55fb5442dfc4e10157080",
 };
 
 // E-mail(s) com permissão de apagar qualquer comentário (moderação).
