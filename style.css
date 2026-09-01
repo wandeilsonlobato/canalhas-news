@@ -1414,6 +1414,7 @@ body.light-mode .hero {
     transition: background-color 0.2s ease, transform 0.2s ease;
 }
 .auth-login-btn:hover { background-color: var(--red-dark); transform: translateY(-1px); }
+.auth-login-btn[hidden] { display: none; }
 
 .auth-google-icon {
     width: 20px;
