@@ -317,6 +317,7 @@ img { max-width: 100%; display: block; }
 
 .app-main {
     flex: 1;
+    min-width: 0;
     padding: 2rem 2.5rem;
     max-width: 1400px;
     width: 100%;
@@ -325,14 +326,14 @@ img { max-width: 100%; display: block; }
 /* Layout com trilha de widgets à direita */
 .app-layout {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     gap: 2rem;
     align-items: start;
 }
 
 @media (min-width: 1100px) {
     .app-layout.with-rail {
-        grid-template-columns: 1fr 320px;
+        grid-template-columns: minmax(0, 1fr) 320px;
     }
 }
 
@@ -1173,7 +1174,7 @@ h2.section-title::before {
 
 .champ-list { display: flex; flex-direction: column; gap: 1rem; margin-bottom: 2.5rem; }
 
-.champ-card { background-color: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; }
+.champ-card { background-color: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; min-width: 0; }
 .champ-card:hover { border-color: var(--text-muted); }
 
 .champ-header { padding: 1.25rem 1.5rem; display: flex; justify-content: space-between; align-items: center; cursor: pointer; }
@@ -1575,7 +1576,7 @@ body.light-mode .hero {
 
 @media (max-width: 640px) {
     .auth-user-name { display: none; }
-    .auth-login-btn span { display: none; }
+    .auth-login-btn span:not(.auth-google-icon) { display: none; }
     .auth-login-btn { padding: 0.5rem; }
 }
 
