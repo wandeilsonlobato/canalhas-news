@@ -127,6 +127,7 @@ img { max-width: 100%; display: block; }
 
 .app-logo-text {
     font-family: var(--font-display);
+    font-weight: 700;
     font-size: 1.35rem;
     text-transform: uppercase;
     letter-spacing: -0.3px;
@@ -483,6 +484,7 @@ h2.section-title::before {
 
 .hero-title {
     font-family: var(--font-display);
+    font-weight: 700;
     text-transform: uppercase;
     font-size: 2.6rem;
     line-height: 1.1;
@@ -728,40 +730,55 @@ h2.section-title::before {
 }
 
 .widget-title {
-    font-size: 0.95rem;
-    font-weight: 800;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1.05rem;
     text-transform: uppercase;
-    letter-spacing: 0.3px;
+    letter-spacing: 0.2px;
     margin-bottom: 1rem;
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 9px;
 }
 
-.widget-title svg { width: 16px; height: 16px; fill: var(--red); }
+.widget-title svg {
+    width: 17px;
+    height: 17px;
+    fill: none;
+    stroke: var(--red);
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    flex-shrink: 0;
+}
 
 .widget-social {
     display: flex;
     gap: 10px;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.9rem;
 }
 
 .widget-social a {
-    flex: 1;
+    width: 42px;
+    height: 42px;
+    flex: none;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
-    padding: 10px;
-    border-radius: 8px;
+    border-radius: 50%;
     background-color: var(--surface-alt);
-    color: var(--text);
-    font-size: 0.8rem;
-    font-weight: 700;
+    border: 1px solid var(--border);
+    color: var(--text-muted);
 }
 
-.widget-social a:hover { color: var(--red); }
-.widget-social svg { width: 16px; height: 16px; fill: currentColor; }
+.widget-social a:hover {
+    color: #fff;
+    background-color: var(--red);
+    border-color: var(--red);
+    transform: translateY(-2px);
+}
+
+.widget-social svg { width: 18px; height: 18px; fill: currentColor; }
 
 .widget-link-list { display: flex; flex-direction: column; gap: 0.6rem; }
 
@@ -857,6 +874,7 @@ h2.section-title::before {
 
 .article-title {
     font-family: var(--font-display);
+    font-weight: 700;
     font-size: 2.2rem;
     line-height: 1.2;
     text-transform: uppercase;
@@ -879,6 +897,7 @@ h2.section-title::before {
     margin-top: 2.2rem;
     margin-bottom: 1.2rem;
     font-family: var(--font-display);
+    font-weight: 700;
     text-transform: uppercase;
     font-size: 1.4rem;
     border-left: 3px solid var(--red);
@@ -1215,7 +1234,7 @@ h2.section-title::before {
 /* Playoffs bracket ------------------------------------------------------ */
 .playoffs-structure { display: flex; flex-wrap: wrap; gap: 1.5rem; padding: 1.25rem; background-color: var(--surface-alt); }
 .bracket-column { flex: 1; min-width: 260px; }
-.bracket-title { color: var(--red); font-family: var(--font-display); font-size: 1.1rem; text-transform: uppercase; margin-bottom: 1.25rem; border-bottom: 1px solid var(--border); padding-bottom: 0.5rem; }
+.bracket-title { color: var(--red); font-family: var(--font-display); font-weight: 700; font-size: 1.1rem; text-transform: uppercase; margin-bottom: 1.25rem; border-bottom: 1px solid var(--border); padding-bottom: 0.5rem; }
 .bracket-round { margin-bottom: 1.75rem; }
 .round-title { color: var(--text-muted); font-size: 0.72rem; font-weight: 700; text-transform: uppercase; margin-bottom: 0.7rem; letter-spacing: 1px; }
 .match-card { background-color: var(--surface); border: 1px solid var(--border); border-radius: 8px; margin-bottom: 0.9rem; overflow: hidden; }
@@ -1224,7 +1243,7 @@ h2.section-title::before {
 .match-team:last-child { border-bottom: none; }
 .match-team.winner { background-color: rgba(76, 175, 80, 0.1); color: #4caf50; }
 .match-team.loser { opacity: 0.55; }
-.match-team span:last-child { font-family: var(--font-display); }
+.match-team span:last-child { font-family: var(--font-display); font-weight: 700; }
 
 @media (max-width: 640px) {
     .playoffs-structure { flex-direction: column; padding: 1rem; }
@@ -1280,7 +1299,7 @@ h2.section-title::before {
 
 .footer-brand-logo { display: flex; align-items: center; gap: 10px; margin-bottom: 0.9rem; }
 .footer-brand-logo img { height: 32px; }
-.footer-brand-logo span { font-family: var(--font-display); font-size: 1.1rem; text-transform: uppercase; }
+.footer-brand-logo span { font-family: var(--font-display); font-weight: 700; font-size: 1.1rem; text-transform: uppercase; }
 .footer-brand-logo em { font-style: normal; color: var(--red); }
 
 .footer-grid p { color: var(--text-muted); font-size: 0.88rem; line-height: 1.6; margin-bottom: 1rem; max-width: 320px; }
