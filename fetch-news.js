@@ -34,7 +34,7 @@ async function fetchNews() {
             const title = extractTag(block, 'title');
             const rawLink = extractTag(block, 'link');
             const pubDate = extractTag(block, 'pubDate');
-            const source = extractTag(block, 'source') || 'Google News';
+            const source = extractTag(block, 'source') || 'News';
 
             return {
                 title,
