@@ -26,12 +26,13 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // AGENDA MANUAL (Fallback de última instância, caso data/matches.json falhe)
+    // Atualize a data conforme os confrontos dos playoffs do Split 2 forem definidos.
     const LOCAL_SCHEDULE = [
         {
             game: 'lol',
-            league: 'Copa CBLOL 2026 - MD3',
-            date: '2026-04-04T13:00:00',
-            opponent: 'Fluxo'
+            league: 'CBLOL 2026 - Split 2 (Playoffs)',
+            date: '2026-09-05T19:00:00',
+            opponent: 'A Definir'
         }
     ];
 
