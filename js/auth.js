@@ -61,7 +61,6 @@ async function ensureUserDoc(user) {
             email: user.email || '',
             photoURL: user.photoURL || '',
             theme: localStorage.getItem('theme') || 'dark',
-            newsletterOptIn: false,
             createdAt: serverTimestamp(),
         };
         await setDoc(ref, data);

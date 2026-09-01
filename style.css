@@ -1030,29 +1030,6 @@ h2.section-title::before {
 
 .form-success.visible { display: block; }
 
-/* newsletter form (widget lateral ou rodapé) */
-.newsletter-form { display: flex; flex-direction: column; gap: 8px; margin-top: 0.4rem; max-width: 280px; }
-.newsletter-form input {
-    background-color: var(--surface-alt);
-    border: 1px solid var(--border);
-    padding: 10px 12px;
-    border-radius: 8px;
-    color: var(--text);
-    font-size: 0.85rem;
-}
-.newsletter-form button {
-    background-color: var(--red);
-    color: #fff;
-    border: none;
-    padding: 10px;
-    border-radius: 8px;
-    font-weight: 700;
-    text-transform: uppercase;
-    font-size: 0.8rem;
-    cursor: pointer;
-}
-.newsletter-form button:hover { background-color: var(--red-dark); }
-
 /* ==========================================================================
    ROSTER / PLAYER CARDS
    ========================================================================== */
@@ -1292,7 +1269,7 @@ h2.section-title::before {
 
 .footer-grid {
     display: grid;
-    grid-template-columns: 1.4fr 1fr 1fr;
+    grid-template-columns: 1.4fr 1fr;
     gap: 2rem;
     max-width: 1400px;
     margin: 0 auto 2rem;

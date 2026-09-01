@@ -105,23 +105,6 @@
         });
     }
 
-    function initNewsletterForms() {
-        document.querySelectorAll('.newsletter-form').forEach((form) => {
-            const button = form.querySelector('button');
-            form.addEventListener('submit', (e) => {
-                e.preventDefault();
-                const original = button.textContent;
-                button.textContent = 'Inscrito!';
-                button.disabled = true;
-                form.reset();
-                setTimeout(() => {
-                    button.textContent = original;
-                    button.disabled = false;
-                }, 2500);
-            });
-        });
-    }
-
     function initBackToTop() {
         const btn = document.querySelector('.back-to-top');
         if (!btn) return;
@@ -136,7 +119,6 @@
         initThemeToggle();
         initActiveNav();
         initScrollReveal();
-        initNewsletterForms();
         initBackToTop();
     });
 })();
