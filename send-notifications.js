@@ -121,6 +121,22 @@ async function main() {
         return;
     }
 
+    const serviceAccount = JSON.parse(serviceAccountJson);
+    const app = admin.initializeApp({
+        credential: admin.credential.cert(serviceAccount),
+    });
+
+    // Confirma que a credencial funciona e mostra quantos inscritos existem,
+    // mesmo em execuções sem nenhuma novidade de agenda/resultado - assim dá
+    // pra saber que a configuração está certa sem esperar um jogo de verdade.
+    try {
+        const snap = await admin.firestore(app).collection('pushTokens').count().get();
+        console.log(`Autenticado no Firebase com sucesso. ${snap.data().count} inscrito(s) registrado(s) no momento.`);
+    } catch (error) {
+        console.error('Falha ao autenticar no Firebase:', error.message);
+        return;
+    }
+
     const oldMatches = readOldJsonFromGit('data/matches.json');
     const newMatches = readJsonSafe(MATCHES_FILE);
     const oldResults = readOldJsonFromGit('data/results.json');
@@ -132,11 +148,6 @@ async function main() {
         console.log('Nenhuma novidade de agenda/resultado nesta execução.');
         return;
     }
-
-    const serviceAccount = JSON.parse(serviceAccountJson);
-    const app = admin.initializeApp({
-        credential: admin.credential.cert(serviceAccount),
-    });
 
     try {
         await sendToAllTokens(app, notifications);
