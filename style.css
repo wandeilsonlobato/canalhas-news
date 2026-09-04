@@ -264,6 +264,7 @@ img { max-width: 100%; display: block; }
 
 .app-search {
     flex: 1;
+    min-width: 0;
     max-width: 420px;
     display: flex;
     align-items: center;
@@ -279,6 +280,7 @@ img { max-width: 100%; display: block; }
 
 .app-search input {
     flex: 1;
+    min-width: 0;
     background: none;
     border: none;
     outline: none;
@@ -314,6 +316,24 @@ img { max-width: 100%; display: block; }
 }
 
 .theme-toggle:hover { background-color: var(--surface-alt); color: var(--red); }
+
+.push-toggle-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--text-muted);
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+.push-toggle-btn:hover { background-color: var(--surface-alt); color: var(--red); }
+.push-toggle-btn svg { width: 20px; height: 20px; }
+.push-toggle-btn.is-active { color: var(--red); }
+.push-toggle-btn.is-active svg { fill: var(--red); }
 
 .app-main {
     flex: 1;

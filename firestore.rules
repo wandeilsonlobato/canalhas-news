@@ -51,5 +51,18 @@ service cloud.firestore {
       allow delete: if isSignedIn()
         && (resource.data.uid == request.auth.uid || isAdmin());
     }
+
+    // Tokens de notificação push (não exige login - qualquer visitante
+    // pode ativar). O robô do GitHub Actions lê essa coleção inteira
+    // usando o Admin SDK, que ignora essas regras - só o navegador do
+    // visitante fica limitado por elas. O ID do documento é o próprio
+    // token, então só quem tem aquele token (o próprio navegador que o
+    // gerou) consegue escrever nesse documento específico.
+    match /pushTokens/{token} {
+      allow read: if false;
+      allow create, update: if request.resource.data.token == token
+        && request.resource.data.token is string;
+      allow delete: if true;
+    }
   }
 }

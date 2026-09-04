@@ -21,3 +21,8 @@ export const firebaseConfig = {
 // A permissão de verdade é garantida pelas Regras de Segurança do
 // Firestore - isso aqui só controla se o botão "Apagar" aparece na tela.
 export const ADMIN_EMAILS = ["wandeilsonnunes190@gmail.com"];
+
+// Chave pública (VAPID) das notificações push. Também não é segredo -
+// Console do Firebase > Configurações do projeto > Cloud Messaging >
+// Certificados push da Web > gerar par de chaves.
+export const VAPID_KEY = "COLE_AQUI_A_CHAVE_VAPID";

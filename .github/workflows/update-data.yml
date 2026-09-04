@@ -24,6 +24,9 @@ jobs:
         with:
           node-version: '22'
 
+      - name: Instalar dependências
+        run: npm install
+
       - name: Rodar Script de Atualização (Agenda e Resultados)
         env:
           PANDASCORE_KEY: ${{ secrets.PANDASCORE_KEY }}
@@ -36,6 +39,11 @@ jobs:
 
       - name: Buscar Notícias Externas
         run: node fetch-news.js
+
+      - name: Enviar notificações push (jogo confirmado / resultado saiu)
+        env:
+          FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
+        run: node send-notifications.js
 
       - name: Salvar alterações (Commit & Push)
         run: |
