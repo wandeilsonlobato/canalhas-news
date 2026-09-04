@@ -25,4 +25,4 @@ export const ADMIN_EMAILS = ["wandeilsonnunes190@gmail.com"];
 // Chave pública (VAPID) das notificações push. Também não é segredo -
 // Console do Firebase > Configurações do projeto > Cloud Messaging >
 // Certificados push da Web > gerar par de chaves.
-export const VAPID_KEY = "COLE_AQUI_A_CHAVE_VAPID";
+export const VAPID_KEY = "BFFWYm4Ni3H6bfURJEnTvgFtyEda-xCN47qGyrEeu9VS1Vz3-zY08_ZoyZkRxJWwumekJGS07EcX46tZglL4tnY";
