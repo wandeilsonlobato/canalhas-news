@@ -1698,7 +1698,10 @@ body.light-mode .app-topbar { background-color: color-mix(in srgb, var(--bg) 80%
     background-color: var(--surface-alt);
     border: 2px solid var(--border);
     pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.25s ease;
 }
+.tier-chip img.loaded { opacity: 1; }
 .tier-chip span {
     font-size: 0.7rem;
     font-weight: 700;

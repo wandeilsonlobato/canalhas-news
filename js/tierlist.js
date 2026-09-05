@@ -38,6 +38,16 @@ document.addEventListener('DOMContentLoaded', () => {
         return name.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^a-z0-9]+/g, '-');
     }
 
+    // As fotos/logos da API da Riot vêm enormes pra caramba (o site só
+    // mostra um círculo de 60px) - isso sozinho já é o que deixa a tier
+    // list travando enquanto carrega. Passa pelo wsrv.nl (proxy de imagem
+    // gratuito e cacheado) pra baixar já no tamanho certo e bem mais leve.
+    // Imagens locais do site (fallback) não precisam disso.
+    function optimizedImg(url, size = 120) {
+        if (!url || !/^https?:\/\//.test(url)) return url;
+        return `https://wsrv.nl/?url=${encodeURIComponent(url)}&w=${size}&h=${size}&fit=cover&q=80&output=webp`;
+    }
+
     async function loadTeams() {
         try {
             const res = await fetch('data/standings.json');
@@ -108,7 +118,7 @@ document.addEventListener('DOMContentLoaded', () => {
         chip.className = 'tier-chip';
         chip.dataset.id = item.id;
         if (item.title) chip.title = item.title;
-        chip.innerHTML = `<img src="${item.img}" alt="${item.name}" loading="lazy" onerror="this.style.opacity='0'"><span>${item.name}</span>`;
+        chip.innerHTML = `<img src="${optimizedImg(item.img)}" alt="${item.name}" loading="lazy" decoding="async" onload="this.classList.add('loaded')" onerror="this.style.opacity='0'"><span>${item.name}</span>`;
         return chip;
     }
 
