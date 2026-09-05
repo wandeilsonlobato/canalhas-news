@@ -1,6 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const TIERS = ['S', 'A', 'B', 'C', 'D'];
-    const TIER_COLORS = { S: '#e30613', A: '#ff8a3d', B: '#ffd23d', C: '#7ed957', D: '#4d9de0' };
+    // A aba de times usa tier de verdade (S melhor, D pior). A de jogadores
+    // usa rotulos de rota, já que faz mais sentido separar por função.
+    const TIER_SETS = {
+        players: ['TOP', 'JG', 'MID', 'ADC', 'SUP'],
+        teams: ['S', 'A', 'B', 'C', 'D'],
+    };
+    const TIER_COLOR_PALETTE = ['#e30613', '#ff8a3d', '#ffd23d', '#7ed957', '#4d9de0'];
 
     // Usado só se data/cblol_players.json não carregar por algum motivo.
     const FALLBACK_PLAYERS = [
@@ -114,11 +119,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
         boardEl.innerHTML = '';
 
-        TIERS.forEach((tier) => {
+        const tiers = TIER_SETS[boardId] || TIER_SETS.teams;
+        tiers.forEach((tier, i) => {
             const row = document.createElement('div');
             row.className = 'tier-row';
             row.dataset.tier = tier;
-            row.style.setProperty('--tier-color', TIER_COLORS[tier]);
+            row.style.setProperty('--tier-color', TIER_COLOR_PALETTE[i % TIER_COLOR_PALETTE.length]);
 
             const label = document.createElement('div');
             label.className = 'tier-label';
@@ -150,7 +156,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Coloca cada item salvo na sua tier; o resto vai pro "não classificados".
         if (saved && saved.tiers) {
-            TIERS.forEach((tier) => {
+            tiers.forEach((tier) => {
                 const row = boardEl.querySelector(`.tier-row[data-tier="${tier}"] .tier-items`);
                 (saved.tiers[tier] || []).forEach((id) => {
                     const item = items.find((it) => it.id === id);
