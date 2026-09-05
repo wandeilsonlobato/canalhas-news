@@ -37,8 +37,9 @@ document.addEventListener('DOMContentLoaded', () => {
             const res = await fetch('data/standings.json');
             if (!res.ok) throw new Error('sem standings');
             const leagues = await res.json();
+            const cblolOnly = leagues.filter((league) => /^cblol/i.test(league.league || ''));
             const seen = new Map();
-            leagues.forEach((league) => {
+            cblolOnly.forEach((league) => {
                 (league.teams || []).forEach((team) => {
                     const id = slugify(team.name);
                     if (!seen.has(id)) {
