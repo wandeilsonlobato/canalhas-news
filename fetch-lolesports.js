@@ -17,6 +17,7 @@ const REGION_HINT = /brazil|brasil|cblol|desafiante/i;
 const MATCHES_FILE = path.join(__dirname, 'data', 'matches.json');
 const RESULTS_FILE = path.join(__dirname, 'data', 'results.json');
 const STANDINGS_FILE = path.join(__dirname, 'data', 'standings.json');
+const CBLOL_PLAYERS_FILE = path.join(__dirname, 'data', 'cblol_players.json');
 
 async function api(endpoint, params) {
     const url = new URL(`${BASE_URL}/${endpoint}`);
@@ -98,6 +99,7 @@ async function fetchStandings(league) {
             const t = r.teams?.[0];
             if (!t) return null;
             return {
+                id: t.id,
                 position: r.ordinal,
                 name: t.name,
                 code: t.code,
@@ -109,6 +111,37 @@ async function fetchStandings(league) {
         .filter(Boolean);
 
     return { league: league.name, tournamentSlug: current.slug, teams };
+}
+
+// Busca o elenco (nome, foto, função) de cada time listado na classificação
+// do CBLOL, pra alimentar a tier list de jogadores do site.
+async function fetchCblolPlayers(cblolStandings) {
+    const players = [];
+
+    for (const team of cblolStandings.teams) {
+        if (!team.id) continue;
+        let teamRes;
+        try {
+            teamRes = await api('getTeams', { id: team.id });
+        } catch (err) {
+            console.warn(`Falha ao buscar elenco de ${team.name}:`, err.message);
+            continue;
+        }
+
+        const teamData = teamRes?.data?.teams?.[0];
+        (teamData?.players || []).forEach((p) => {
+            players.push({
+                id: p.id,
+                name: p.summonerName,
+                role: p.role,
+                image: toHttps(p.image) || null,
+                team: team.name,
+                teamLogo: team.logo,
+            });
+        });
+    }
+
+    return players;
 }
 
 async function main() {
@@ -190,6 +223,12 @@ async function main() {
             if (result) standings.push(result);
         }
 
+        let cblolPlayers = [];
+        const cblolStandings = standings.find((s) => /^cblol/i.test(s.league || ''));
+        if (cblolStandings) {
+            cblolPlayers = await fetchCblolPlayers(cblolStandings);
+        }
+
         const existingMatches = readJsonSafe(MATCHES_FILE).filter((m) => m.game !== 'lol');
         const existingResults = readJsonSafe(RESULTS_FILE).filter((m) => m.game !== 'lol');
 
@@ -199,8 +238,9 @@ async function main() {
         fs.writeFileSync(MATCHES_FILE, JSON.stringify([...existingMatches, ...upcoming], null, 2));
         fs.writeFileSync(RESULTS_FILE, JSON.stringify([...existingResults, ...finished.slice(0, 10)], null, 2));
         fs.writeFileSync(STANDINGS_FILE, JSON.stringify(standings, null, 2));
+        fs.writeFileSync(CBLOL_PLAYERS_FILE, JSON.stringify(cblolPlayers, null, 2));
 
-        console.log(`LoL Esports: ${upcoming.length} partida(s) futura(s), ${finished.length} finalizada(s), classificação de ${standings.length} liga(s) encontrada(s) para a RED Canids.`);
+        console.log(`LoL Esports: ${upcoming.length} partida(s) futura(s), ${finished.length} finalizada(s), classificação de ${standings.length} liga(s), ${cblolPlayers.length} jogador(es) do CBLOL encontrado(s).`);
     } catch (error) {
         console.error('Falha ao buscar dados do LoL Esports:', error.message);
         // Não quebra o build; mantém os dados que já existiam.

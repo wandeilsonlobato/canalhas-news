@@ -2,7 +2,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const TIERS = ['S', 'A', 'B', 'C', 'D'];
     const TIER_COLORS = { S: '#e30613', A: '#ff8a3d', B: '#ffd23d', C: '#7ed957', D: '#4d9de0' };
 
-    const PLAYERS = [
+    // Usado só se data/cblol_players.json não carregar por algum motivo.
+    const FALLBACK_PLAYERS = [
         { id: 'zynts', name: 'Zynts', img: 'img/zynts.jpg' },
         { id: 'stepz', name: 'Stepz', img: 'img/stepz.jpg' },
         { id: 'fuuu', name: 'Fuuu', img: 'img/fuuu.jpg' },
@@ -54,6 +55,23 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    async function loadPlayers() {
+        try {
+            const res = await fetch('data/cblol_players.json');
+            if (!res.ok) throw new Error('sem elenco do CBLOL');
+            const players = await res.json();
+            if (!players.length) throw new Error('elenco vazio');
+            return players.map((p) => ({
+                id: p.id,
+                name: p.name,
+                title: `${p.name} - ${p.team}`,
+                img: p.image || 'img/redcanalhas-logo.png',
+            }));
+        } catch {
+            return FALLBACK_PLAYERS;
+        }
+    }
+
     function storageKey(boardId) {
         return `canalhas_tierlist_${boardId}`;
     }
@@ -84,6 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const chip = document.createElement('div');
         chip.className = 'tier-chip';
         chip.dataset.id = item.id;
+        if (item.title) chip.title = item.title;
         chip.innerHTML = `<img src="${item.img}" alt="${item.name}" loading="lazy" onerror="this.style.opacity='0'"><span>${item.name}</span>`;
         return chip;
     }
@@ -233,9 +252,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const teamsBoard = document.querySelector('.tier-board[data-board="teams"]');
 
         if (playersBoard) {
-            renderBoard(playersBoard, PLAYERS);
+            const players = await loadPlayers();
+            renderBoard(playersBoard, players);
             initDrag(playersBoard);
-            playersBoard.addEventListener('tierlist:rerender', () => renderBoard(playersBoard, PLAYERS));
+            playersBoard.addEventListener('tierlist:rerender', () => renderBoard(playersBoard, players));
         }
 
         if (teamsBoard) {

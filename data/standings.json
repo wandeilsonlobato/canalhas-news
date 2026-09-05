@@ -4,6 +4,7 @@
     "tournamentSlug": "cblol_split_3_2026",
     "teams": [
       {
+        "id": "105397404796640412",
         "position": 1,
         "name": "LOUD",
         "code": "LOUD",
@@ -12,6 +13,7 @@
         "losses": 1
       },
       {
+        "id": "109480204628225868",
         "position": 2,
         "name": "LOS",
         "code": "LOS",
@@ -20,6 +22,7 @@
         "losses": 1
       },
       {
+        "id": "99566408219409348",
         "position": 3,
         "name": "Vivo Keyd Stars",
         "code": "VKS",
@@ -28,6 +31,7 @@
         "losses": 2
       },
       {
+        "id": "100205576309502431",
         "position": 4,
         "name": "FURIA",
         "code": "FUR",
@@ -36,6 +40,7 @@
         "losses": 2
       },
       {
+        "id": "99566408221961358",
         "position": 5,
         "name": "RED Kalunga",
         "code": "RED",
@@ -44,6 +49,7 @@
         "losses": 5
       },
       {
+        "id": "99566408217955692",
         "position": 6,
         "name": "paiN Gaming",
         "code": "PAIN",
@@ -52,6 +58,7 @@
         "losses": 5
       },
       {
+        "id": "109480056092207899",
         "position": 7,
         "name": "Fluxo W7M",
         "code": "FX",
@@ -60,6 +67,7 @@
         "losses": 6
       },
       {
+        "id": "107598699275015260",
         "position": 8,
         "name": "LEVIATÁN",
         "code": "LEV",
@@ -74,6 +82,7 @@
     "tournamentSlug": "circuito_desafiante_split_2_2026",
     "teams": [
       {
+        "id": "104841890701948065",
         "position": 1,
         "name": "Estral Esports",
         "code": "EST",
@@ -82,6 +91,7 @@
         "losses": 0
       },
       {
+        "id": "99566408217116828",
         "position": 2,
         "name": "INTZ",
         "code": "INTZ",
@@ -90,6 +100,7 @@
         "losses": 2
       },
       {
+        "id": "105549995617170853",
         "position": 3,
         "name": "KaBuM! Eports",
         "code": "KBM",
@@ -98,6 +109,7 @@
         "losses": 4
       },
       {
+        "id": "105549998884468136",
         "position": 4,
         "name": "paiN Gaming Academy",
         "code": "PAIN",
@@ -106,6 +118,7 @@
         "losses": 4
       },
       {
+        "id": "116051242073399654",
         "position": 5,
         "name": "Ei Nerd Esports",
         "code": "NERD",
@@ -114,6 +127,7 @@
         "losses": 5
       },
       {
+        "id": "109485335453835911",
         "position": 6,
         "name": "Vivo Keyd Stars Academy",
         "code": "VKS",
@@ -122,6 +136,7 @@
         "losses": 5
       },
       {
+        "id": "116051268151231608",
         "position": 7,
         "name": "TEAM SOLID",
         "code": "TSS",
@@ -130,6 +145,7 @@
         "losses": 5
       },
       {
+        "id": "116051206657744637",
         "position": 8,
         "name": "7REX Team",
         "code": "7REX",
@@ -138,6 +154,7 @@
         "losses": 5
       },
       {
+        "id": "116051230771910011",
         "position": 9,
         "name": "RMD Gaming",
         "code": "RMD",
@@ -146,6 +163,7 @@
         "losses": 7
       },
       {
+        "id": "105550001032913831",
         "position": 10,
         "name": "RED Kalunga Academy",
         "code": "RED",

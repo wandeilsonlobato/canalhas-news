@@ -1,0 +1,458 @@
+[
+  {
+    "id": "110434225307697321",
+    "name": "Xyno",
+    "role": "top",
+    "image": "https://static.lolesports.com/players/1785138025769_Loud_Xyno-1copy.png",
+    "team": "LOUD",
+    "teamLogo": "https://static.lolesports.com/teams/Logo-LOUD-Esports_Original.png"
+  },
+  {
+    "id": "113684241495506037",
+    "name": "Mago",
+    "role": "mid",
+    "image": "https://static.lolesports.com/players/1768377459812_image6618.png",
+    "team": "LOUD",
+    "teamLogo": "https://static.lolesports.com/teams/Logo-LOUD-Esports_Original.png"
+  },
+  {
+    "id": "116287401640559707",
+    "name": "Sinatra",
+    "role": "jungle",
+    "image": "https://static.lolesports.com/players/1785138020504_Loud_Sinatra-1copy.png",
+    "team": "LOUD",
+    "teamLogo": "https://static.lolesports.com/teams/Logo-LOUD-Esports_Original.png"
+  },
+  {
+    "id": "109656280616610105",
+    "name": "Kaze",
+    "role": "mid",
+    "image": "https://static.lolesports.com/players/1785138015783_Loud_Kaze-1copy.png",
+    "team": "LOUD",
+    "teamLogo": "https://static.lolesports.com/teams/Logo-LOUD-Esports_Original.png"
+  },
+  {
+    "id": "112462284750329945",
+    "name": "Rabelo",
+    "role": "bottom",
+    "image": "https://static.lolesports.com/players/1785138010514_Loud_Rabelo-1copy.png",
+    "team": "LOUD",
+    "teamLogo": "https://static.lolesports.com/teams/Logo-LOUD-Esports_Original.png"
+  },
+  {
+    "id": "111734539087870444",
+    "name": "uZent",
+    "role": "support",
+    "image": "https://static.lolesports.com/players/1785138005226_Loud_Uzent-1copy.png",
+    "team": "LOUD",
+    "teamLogo": "https://static.lolesports.com/teams/Logo-LOUD-Esports_Original.png"
+  },
+  {
+    "id": "110434822594728434",
+    "name": "Curse",
+    "role": "jungle",
+    "image": "https://static.lolesports.com/players/1785139911386_LOS_Curse-1copy.png",
+    "team": "LOS",
+    "teamLogo": "https://static.lolesports.com/teams/1784013312149_LOS-OLaranja.png"
+  },
+  {
+    "id": "107492099069012459",
+    "name": "Zest",
+    "role": "top",
+    "image": "https://static.lolesports.com/players/1785139905307_LOS_Zest-1copy.png",
+    "team": "LOS",
+    "teamLogo": "https://static.lolesports.com/teams/1784013312149_LOS-OLaranja.png"
+  },
+  {
+    "id": "107492030596737445",
+    "name": "Feisty",
+    "role": "mid",
+    "image": "https://static.lolesports.com/players/1785139916710_LOS_Feisty-5copy.png",
+    "team": "LOS",
+    "teamLogo": "https://static.lolesports.com/teams/1784013312149_LOS-OLaranja.png"
+  },
+  {
+    "id": "112462169706118570",
+    "name": "Duduhh",
+    "role": "bottom",
+    "image": "https://static.lolesports.com/players/1785139922550_LOS_Duduhh-1copy.png",
+    "team": "LOS",
+    "teamLogo": "https://static.lolesports.com/teams/1784013312149_LOS-OLaranja.png"
+  },
+  {
+    "id": "105506922297942200",
+    "name": "Ackerman",
+    "role": "support",
+    "image": "https://static.lolesports.com/players/1785139928559_LOS_Ackerman-1copy.png",
+    "team": "LOS",
+    "teamLogo": "https://static.lolesports.com/teams/1784013312149_LOS-OLaranja.png"
+  },
+  {
+    "id": "106274177506022087",
+    "name": "SUPERCLEBER",
+    "role": "top",
+    "image": "https://static.lolesports.com/players/default-headshot.png",
+    "team": "Vivo Keyd Stars",
+    "teamLogo": "https://static.lolesports.com/teams/1670542079678_vks.png"
+  },
+  {
+    "id": "107559356925533344",
+    "name": "zay",
+    "role": "support",
+    "image": "https://static.lolesports.com/players/1717426916070_Zay.png",
+    "team": "Vivo Keyd Stars",
+    "teamLogo": "https://static.lolesports.com/teams/1670542079678_vks.png"
+  },
+  {
+    "id": "103889905542957250",
+    "name": "Jeskla",
+    "role": "bottom",
+    "image": "https://static.lolesports.com/players/1785142357541_VKS_Jeskla-1copy.png",
+    "team": "Vivo Keyd Stars",
+    "teamLogo": "https://static.lolesports.com/teams/1670542079678_vks.png"
+  },
+  {
+    "id": "105397234464043531",
+    "name": "Disamis",
+    "role": "jungle",
+    "image": "https://static.lolesports.com/players/1754037442082_disamis.png",
+    "team": "Vivo Keyd Stars",
+    "teamLogo": "https://static.lolesports.com/teams/1670542079678_vks.png"
+  },
+  {
+    "id": "104266800049354578",
+    "name": "Mireu",
+    "role": "mid",
+    "image": "https://static.lolesports.com/players/1754037358233_mireu.png",
+    "team": "Vivo Keyd Stars",
+    "teamLogo": "https://static.lolesports.com/teams/1670542079678_vks.png"
+  },
+  {
+    "id": "112462312538183833",
+    "name": "sarolu",
+    "role": "jungle",
+    "image": "https://static.lolesports.com/players/1754037575571_sarolu.png",
+    "team": "Vivo Keyd Stars",
+    "teamLogo": "https://static.lolesports.com/teams/1670542079678_vks.png"
+  },
+  {
+    "id": "105397295174824600",
+    "name": "Qats",
+    "role": "mid",
+    "image": "https://static.lolesports.com/players/1754037546970_qats.png",
+    "team": "Vivo Keyd Stars",
+    "teamLogo": "https://static.lolesports.com/teams/1670542079678_vks.png"
+  },
+  {
+    "id": "103743593842085398",
+    "name": "scamber",
+    "role": "support",
+    "image": "https://static.lolesports.com/players/1754037601928_scamber.png",
+    "team": "Vivo Keyd Stars",
+    "teamLogo": "https://static.lolesports.com/teams/1670542079678_vks.png"
+  },
+  {
+    "id": "114149036444094690",
+    "name": "BUERO",
+    "role": "bottom",
+    "image": "https://static.lolesports.com/players/default-headshot.png",
+    "team": "Vivo Keyd Stars",
+    "teamLogo": "https://static.lolesports.com/teams/1670542079678_vks.png"
+  },
+  {
+    "id": "112489397428558238",
+    "name": "zekas",
+    "role": "top",
+    "image": "https://static.lolesports.com/players/1785142363013_VKS_Zekas-1copy.png",
+    "team": "Vivo Keyd Stars",
+    "teamLogo": "https://static.lolesports.com/teams/1670542079678_vks.png"
+  },
+  {
+    "id": "108494063372887027",
+    "name": "Tatu",
+    "role": "jungle",
+    "image": "https://static.lolesports.com/players/1785137528696_FUR_Tatu-1copy.png",
+    "team": "FURIA",
+    "teamLogo": "https://static.lolesports.com/teams/FURIA---black.png"
+  },
+  {
+    "id": "100131733430915231",
+    "name": "Guigo",
+    "role": "top",
+    "image": "https://static.lolesports.com/players/1785137517154_FUR_Guigo-1copy.png",
+    "team": "FURIA",
+    "teamLogo": "https://static.lolesports.com/teams/FURIA---black.png"
+  },
+  {
+    "id": "103478281329357326",
+    "name": "Tutsz",
+    "role": "mid",
+    "image": "https://static.lolesports.com/players/1785137538274_FUR_Tutsz-1copy.png",
+    "team": "FURIA",
+    "teamLogo": "https://static.lolesports.com/teams/FURIA---black.png"
+  },
+  {
+    "id": "108613483446049530",
+    "name": "Ayu",
+    "role": "bottom",
+    "image": "https://static.lolesports.com/players/1785137510622_FUR_Ayu-1copy.png",
+    "team": "FURIA",
+    "teamLogo": "https://static.lolesports.com/teams/FURIA---black.png"
+  },
+  {
+    "id": "99566408211536727",
+    "name": "JoJo",
+    "role": "support",
+    "image": "https://static.lolesports.com/players/1785137522978_FUR_Jojo-1copy.png",
+    "team": "FURIA",
+    "teamLogo": "https://static.lolesports.com/teams/FURIA---black.png"
+  },
+  {
+    "id": "107781331811886924",
+    "name": "Luuukz",
+    "role": "jungle",
+    "image": "https://static.lolesports.com/players/1654466535795_Luuukzcopy.png",
+    "team": "FURIA",
+    "teamLogo": "https://static.lolesports.com/teams/FURIA---black.png"
+  },
+  {
+    "id": "116915008919095996",
+    "name": "smooth",
+    "role": "jungle",
+    "image": "https://static.lolesports.com/players/default-headshot.png",
+    "team": "RED Kalunga",
+    "teamLogo": "https://static.lolesports.com/teams/1631820575924_red-2021-worlds.png"
+  },
+  {
+    "id": "116915009014636741",
+    "name": "Nukenin",
+    "role": "mid",
+    "image": "https://static.lolesports.com/players/default-headshot.png",
+    "team": "RED Kalunga",
+    "teamLogo": "https://static.lolesports.com/teams/1631820575924_red-2021-worlds.png"
+  },
+  {
+    "id": "116915009116614247",
+    "name": "Nanashi",
+    "role": "bottom",
+    "image": "https://static.lolesports.com/players/default-headshot.png",
+    "team": "RED Kalunga",
+    "teamLogo": "https://static.lolesports.com/teams/1631820575924_red-2021-worlds.png"
+  },
+  {
+    "id": "109518716685978765",
+    "name": "Manel",
+    "role": "support",
+    "image": "https://static.lolesports.com/players/1717430231339_Manel.png",
+    "team": "RED Kalunga",
+    "teamLogo": "https://static.lolesports.com/teams/1631820575924_red-2021-worlds.png"
+  },
+  {
+    "id": "108395422235497387",
+    "name": "frosty",
+    "role": "support",
+    "image": "https://static.lolesports.com/players/1785142368737_RED_Frosty-1copy.png",
+    "team": "RED Kalunga",
+    "teamLogo": "https://static.lolesports.com/teams/1631820575924_red-2021-worlds.png"
+  },
+  {
+    "id": "107559338252333149",
+    "name": "Fuuu",
+    "role": "mid",
+    "image": "https://static.lolesports.com/players/1785142378404_RED_Fuuu-1copy.png",
+    "team": "RED Kalunga",
+    "teamLogo": "https://static.lolesports.com/teams/1631820575924_red-2021-worlds.png"
+  },
+  {
+    "id": "108395451349202875",
+    "name": "Morttheus",
+    "role": "bottom",
+    "image": "https://static.lolesports.com/players/1785142373432_RED_Morttheus-1copy.png",
+    "team": "RED Kalunga",
+    "teamLogo": "https://static.lolesports.com/teams/1631820575924_red-2021-worlds.png"
+  },
+  {
+    "id": "111734785118050063",
+    "name": "jmz",
+    "role": "top",
+    "image": "https://static.lolesports.com/players/1717435024791_Jmz.png",
+    "team": "RED Kalunga",
+    "teamLogo": "https://static.lolesports.com/teams/1631820575924_red-2021-worlds.png"
+  },
+  {
+    "id": "111734845200890741",
+    "name": "zynts",
+    "role": "top",
+    "image": "https://static.lolesports.com/players/1785142349477_RED_Zynts-1copy.png",
+    "team": "RED Kalunga",
+    "teamLogo": "https://static.lolesports.com/teams/1631820575924_red-2021-worlds.png"
+  },
+  {
+    "id": "107559668094235248",
+    "name": "STEPZ",
+    "role": "jungle",
+    "image": "https://static.lolesports.com/players/1785142383650_RED_Stepz-1copy.png",
+    "team": "RED Kalunga",
+    "teamLogo": "https://static.lolesports.com/teams/1631820575924_red-2021-worlds.png"
+  },
+  {
+    "id": "105541438961192885",
+    "name": "Samkz",
+    "role": "jungle",
+    "image": "https://static.lolesports.com/players/1774567150246_samkz.png",
+    "team": "paiN Gaming",
+    "teamLogo": "https://static.lolesports.com/teams/1674657011011_pain_logo_white.png"
+  },
+  {
+    "id": "111734539296970340",
+    "name": "Namiru",
+    "role": "mid",
+    "image": "https://static.lolesports.com/players/1717432498685_Namiru.png",
+    "team": "paiN Gaming",
+    "teamLogo": "https://static.lolesports.com/teams/1674657011011_pain_logo_white.png"
+  },
+  {
+    "id": "103619615096612421",
+    "name": "Keine",
+    "role": "mid",
+    "image": "https://static.lolesports.com/players/1785141987751_PNG_Keine-1copy.png",
+    "team": "paiN Gaming",
+    "teamLogo": "https://static.lolesports.com/teams/1674657011011_pain_logo_white.png"
+  },
+  {
+    "id": "100205576295412145",
+    "name": "CarioK",
+    "role": "jungle",
+    "image": "https://static.lolesports.com/players/1785141992129_PNG_Cariok-1copy.png",
+    "team": "paiN Gaming",
+    "teamLogo": "https://static.lolesports.com/teams/1674657011011_pain_logo_white.png"
+  },
+  {
+    "id": "107559111166843860",
+    "name": "Boal",
+    "role": "top",
+    "image": "https://static.lolesports.com/players/1785141997512_PNG_Boal-1copy.png",
+    "team": "paiN Gaming",
+    "teamLogo": "https://static.lolesports.com/teams/1674657011011_pain_logo_white.png"
+  },
+  {
+    "id": "105320670306436651",
+    "name": "Hena",
+    "role": "bottom",
+    "image": "https://static.lolesports.com/players/1785141982983_PNG_Hena-1copy.png",
+    "team": "paiN Gaming",
+    "teamLogo": "https://static.lolesports.com/teams/1674657011011_pain_logo_white.png"
+  },
+  {
+    "id": "101383793153915529",
+    "name": "Ceos",
+    "role": "support",
+    "image": "https://static.lolesports.com/players/1785141977929_PNG_Ceos-1copy.png",
+    "team": "paiN Gaming",
+    "teamLogo": "https://static.lolesports.com/teams/1674657011011_pain_logo_white.png"
+  },
+  {
+    "id": "111734812721889388",
+    "name": "curty",
+    "role": "top",
+    "image": "https://static.lolesports.com/players/1768375100964_image6236.png",
+    "team": "Fluxo W7M",
+    "teamLogo": "https://static.lolesports.com/teams/1766161431111_LogoColorida.png"
+  },
+  {
+    "id": "103478281332503056",
+    "name": "ProDelta",
+    "role": "support",
+    "image": "https://static.lolesports.com/players/1768376111969_image6336.png",
+    "team": "Fluxo W7M",
+    "teamLogo": "https://static.lolesports.com/teams/1766161431111_LogoColorida.png"
+  },
+  {
+    "id": "105501794903516897",
+    "name": "Peach",
+    "role": "jungle",
+    "image": "https://static.lolesports.com/players/1785139513908_FX_Peach-1copy.png",
+    "team": "Fluxo W7M",
+    "teamLogo": "https://static.lolesports.com/teams/1766161431111_LogoColorida.png"
+  },
+  {
+    "id": "100131567589299245",
+    "name": "hauz",
+    "role": "mid",
+    "image": "https://static.lolesports.com/players/1768376412875_image6617.png",
+    "team": "Fluxo W7M",
+    "teamLogo": "https://static.lolesports.com/teams/1766161431111_LogoColorida.png"
+  },
+  {
+    "id": "105320695377750123",
+    "name": "BAO",
+    "role": "bottom",
+    "image": "https://static.lolesports.com/players/1785139523706_FX_Bao-1copy.png",
+    "team": "Fluxo W7M",
+    "teamLogo": "https://static.lolesports.com/teams/1766161431111_LogoColorida.png"
+  },
+  {
+    "id": "102825747663199158",
+    "name": "cody",
+    "role": "mid",
+    "image": "https://static.lolesports.com/players/1785139531116_FX_Cody-1copy.png",
+    "team": "Fluxo W7M",
+    "teamLogo": "https://static.lolesports.com/teams/1766161431111_LogoColorida.png"
+  },
+  {
+    "id": "109519064896337328",
+    "name": "Momochi",
+    "role": "support",
+    "image": "https://static.lolesports.com/players/1785139537171_FX_Momochi-1copy.png",
+    "team": "Fluxo W7M",
+    "teamLogo": "https://static.lolesports.com/teams/1766161431111_LogoColorida.png"
+  },
+  {
+    "id": "105516185566739968",
+    "name": "Zothve",
+    "role": "top",
+    "image": "https://static.lolesports.com/players/1785139505968_FX_Zothve-1copy.png",
+    "team": "Fluxo W7M",
+    "teamLogo": "https://static.lolesports.com/teams/1766161431111_LogoColorida.png"
+  },
+  {
+    "id": "114194564351011213",
+    "name": "Devost",
+    "role": "top",
+    "image": "https://static.lolesports.com/players/1785138940948_LEV_Devost-1copy.png",
+    "team": "LEVIATÁN",
+    "teamLogo": "https://static.lolesports.com/teams/1643795049372_LEV-CLAROWhite.png"
+  },
+  {
+    "id": "114194572740209046",
+    "name": "Booki",
+    "role": "jungle",
+    "image": "https://static.lolesports.com/players/1785138935624_LEV_Booki-1copy.png",
+    "team": "LEVIATÁN",
+    "teamLogo": "https://static.lolesports.com/teams/1643795049372_LEV-CLAROWhite.png"
+  },
+  {
+    "id": "104843445932165305",
+    "name": "Enga",
+    "role": "mid",
+    "image": "https://static.lolesports.com/players/1785138930440_LEV_Enga-1copy.png",
+    "team": "LEVIATÁN",
+    "teamLogo": "https://static.lolesports.com/teams/1643795049372_LEV-CLAROWhite.png"
+  },
+  {
+    "id": "109716554374057462",
+    "name": "Shiku",
+    "role": "support",
+    "image": "https://static.lolesports.com/players/1785138919269_LEV_Shiku-1copy.png",
+    "team": "LEVIATÁN",
+    "teamLogo": "https://static.lolesports.com/teams/1643795049372_LEV-CLAROWhite.png"
+  },
+  {
+    "id": "107648370969609784",
+    "name": "Strensh",
+    "role": "bottom",
+    "image": "https://static.lolesports.com/players/1785138924996_LEV_Strens-1copy.png",
+    "team": "LEVIATÁN",
+    "teamLogo": "https://static.lolesports.com/teams/1643795049372_LEV-CLAROWhite.png"
+  }
+]
