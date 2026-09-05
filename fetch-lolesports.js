@@ -19,6 +19,7 @@ const REGION_HINT = /brazil|brasil|cblol|desafiante/i;
 const EXCLUDED_PLAYERS = new Set([
     'mago', 'supercleber', 'zay', 'qats', 'buero', 'smooth',
     'nukenin', 'nanashi', 'frosty', 'jmz', 'keine', 'curty', 'prodelta',
+    'luukz',
 ]);
 
 const MATCHES_FILE = path.join(__dirname, 'data', 'matches.json');

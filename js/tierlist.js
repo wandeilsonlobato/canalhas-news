@@ -138,10 +138,11 @@ document.addEventListener('DOMContentLoaded', () => {
             boardEl.appendChild(row);
         });
 
+        const poolLabel = boardId === 'teams' ? 'Times' : 'Jogadores';
         const pool = document.createElement('div');
         pool.className = 'tier-row tier-pool-row';
         pool.dataset.tier = '_pool';
-        pool.innerHTML = '<div class="tier-label tier-pool-label">Não classificados</div>';
+        pool.innerHTML = `<div class="tier-label tier-pool-label">${poolLabel}</div>`;
         const poolItems = document.createElement('div');
         poolItems.className = 'tier-items';
         pool.appendChild(poolItems);
