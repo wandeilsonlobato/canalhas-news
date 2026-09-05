@@ -1601,3 +1601,125 @@ body.light-mode .hero {
 }
 
 body.light-mode .app-topbar { background-color: color-mix(in srgb, var(--bg) 80%, transparent); }
+
+/* ==========================================================================
+   TIER LIST
+   ========================================================================== */
+
+.tier-board-wrap { position: relative; margin-bottom: 2.5rem; }
+
+.tier-reset-btn {
+    position: absolute;
+    top: -46px;
+    right: 0;
+    background-color: var(--surface-alt);
+    color: var(--text-muted);
+    border: 1px solid var(--border);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+.tier-reset-btn:hover { color: var(--red); border-color: var(--red); }
+
+.tier-board {
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+}
+
+.tier-row {
+    display: flex;
+    border-bottom: 1px solid var(--border);
+    min-height: 96px;
+}
+.tier-row:last-child { border-bottom: none; }
+
+.tier-label {
+    flex: none;
+    width: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 8px;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: #fff;
+    background-color: var(--tier-color, var(--surface-alt));
+    outline: none;
+    cursor: text;
+    word-break: break-word;
+}
+.tier-label:focus { box-shadow: inset 0 0 0 2px rgba(255,255,255,0.5); }
+
+.tier-pool-row { border-bottom: none; border-top: 2px dashed var(--border); min-height: 120px; }
+.tier-pool-label {
+    background-color: transparent;
+    color: var(--text-muted);
+    font-family: var(--font-body);
+    font-weight: 500;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    cursor: default;
+}
+
+.tier-items {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    gap: 10px;
+    padding: 10px;
+    background-color: var(--surface);
+}
+
+.tier-chip {
+    flex: none;
+    width: 76px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    cursor: grab;
+    touch-action: none;
+    user-select: none;
+    -webkit-user-select: none;
+}
+.tier-chip img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: var(--surface-alt);
+    border: 2px solid var(--border);
+    pointer-events: none;
+}
+.tier-chip span {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-align: center;
+    color: var(--text);
+    line-height: 1.2;
+    max-width: 76px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.tier-chip.dragging {
+    cursor: grabbing;
+    opacity: 0.9;
+    transform: scale(1.08);
+}
+.tier-chip.dragging img { border-color: var(--red); }
+
+@media (max-width: 640px) {
+    .tier-label { width: 60px; font-size: 1.05rem; padding: 6px; }
+    .tier-chip { width: 62px; }
+    .tier-chip img { width: 48px; height: 48px; }
+    .tier-reset-btn { position: static; margin-bottom: 0.75rem; display: inline-block; }
+}

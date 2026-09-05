@@ -3,23 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Canalhas News | Notícias da RED Canids Kalunga</title>
+    <title>Tier List | Canalhas News</title>
     <link rel="shortcut icon" href="img/redcanalhas-logo.png" type="image/png">
     <link rel="icon" href="img/redcanalhas-logo.png" type="image/png">
 
-    <meta name="description" content="Portal de notícias não-oficial da RED Canids Kalunga: cobertura de League of Legends e Brawl Stars, calendário de jogos, elenco completo e bastidores da Matilha.">
-    <meta name="author" content="Canalhas News">
-    <link rel="canonical" href="https://canalhasnews.com.br/">
+    <meta name="description" content="Monte sua própria tier list dos jogadores e times do CBLOL - arraste as fotos e logos pra S, A, B, C ou D, do seu jeito.">
+    <link rel="canonical" href="https://canalhasnews.com.br/tierlist.html">
 
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://canalhasnews.com.br/">
-    <meta property="og:title" content="Canalhas News | Notícias da RED Canids Kalunga">
-    <meta property="og:description" content="Cobertura completa da RED Canids Kalunga: notícias, calendário de jogos, elenco e bastidores da Matilha.">
+    <meta property="og:url" content="https://canalhasnews.com.br/tierlist.html">
+    <meta property="og:title" content="Tier List | Canalhas News">
+    <meta property="og:description" content="Monte sua própria tier list dos jogadores e times do CBLOL.">
     <meta property="og:image" content="https://canalhasnews.com.br/img/redcanalhas-logo.png">
 
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:title" content="Canalhas News | Notícias da RED Canids Kalunga">
-    <meta property="twitter:description" content="Cobertura completa da RED Canids Kalunga: notícias, calendário de jogos, elenco e bastidores da Matilha.">
+    <meta property="twitter:title" content="Tier List | Canalhas News">
     <meta property="twitter:image" content="https://canalhasnews.com.br/img/redcanalhas-logo.png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -101,138 +99,27 @@
                 </div>
             </header>
             <main class="app-main">
-                <div class="app-layout with-rail">
-                    <div>
-            <section class="hero reveal">
-                <span class="hero-tag">Ao vivo na temporada 2026</span>
-                <h1 class="hero-title">A voz da matilha em League of Legends e Brawl Stars</h1>
-                <p class="hero-subtitle">Cobertura completa da RED Canids Kalunga: resultados, bastidores, elenco e o calendário atualizado de cada partida da Matilha.</p>
-                <div class="hero-actions">
-                    <a href="#schedule" class="hero-btn primary">Ver próximos jogos</a>
-                    <a href="noticias.html" class="hero-btn secondary">Últimas notícias</a>
+                <div class="app-layout">
+            <section id="tierlist-page">
+                <h2 class="section-title reveal">MONTE SUA TIER LIST</h2>
+                <p class="reveal" style="color: var(--text-muted); margin-top: -1.5rem; margin-bottom: 1.5rem;">Arraste os jogadores e times pra cada tier. Clique no nome da tier (S, A, B...) pra renomear do seu jeito. Fica salvo só no seu navegador.</p>
+
+                <div class="filter-tabs reveal">
+                    <button class="tier-tab active" data-tab="players">Jogadores</button>
+                    <button class="tier-tab" data-tab="teams">Times do CBLOL</button>
+                </div>
+
+                <div class="tier-board-wrap reveal">
+                    <button class="tier-reset-btn" data-board="players" type="button">Resetar</button>
+                    <div class="tier-board" data-board="players"></div>
+                </div>
+
+                <div class="tier-board-wrap reveal" hidden>
+                    <button class="tier-reset-btn" data-board="teams" type="button">Resetar</button>
+                    <div class="tier-board" data-board="teams"></div>
                 </div>
             </section>
 
-            <!-- Seção de Calendário -->
-            <section id="schedule">
-                <h2 class="section-title reveal">Próximos Jogos</h2>
-                <div class="schedule-tabs reveal">
-                    <button class="active" data-filter="all">Todos</button>
-                    <button data-filter="lol">LoL</button>
-                    <button data-filter="brawlstars">Brawl Stars</button>
-                </div>
-                <div class="schedule-list">
-                    <div id="loading-schedule">
-                        <div class="skeleton-item"></div>
-                        <div class="skeleton-item"></div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Seção de Notícias -->
-            <section id="news">
-                <h2 class="section-title reveal">Destaques da Matilha</h2>
-                <div class="news-grid magazine">
-                    <article class="news-card feature reveal">
-                        <div class="image-wrapper">
-                            <span class="news-tag">Institucional</span>
-                            <div class="news-image" style="background-image: url('img/img-noticias/cs2-iem.jpg');"></div>
-                        </div>
-                        <div class="news-content">
-                            <h3 class="news-title"><a href="noticia-red-canids-encerra-cs2-valorant.html" class="card-link">RED Canids encerra CS2 e Valorant e garante vaga no Mundial de Brawl Stars</a></h3>
-                            <p class="news-excerpt">A organização descontinuou CS2 e Valorant e agora compete só em LoL e Brawl Stars — modalidade em que já está classificada para o Mundial em Tóquio.</p>
-                            <span class="read-more">Ler matéria &rarr;</span>
-                        </div>
-                    </article>
-
-                    <div class="news-list">
-                        <article class="news-card compact reveal">
-                            <div class="image-wrapper">
-                                <div class="news-image" style="background-image: url('img/img-noticias/capa-playoffs4.jpg');"></div>
-                            </div>
-                            <div class="news-content">
-                                <span class="compact-tag">League of Legends</span>
-                                <h3 class="news-title"><a href="noticia-cblol-split2-atualizacao.html" class="card-link">RED Canids muda de cara no Split 2 e garante vaga nos playoffs do CBLOL</a></h3>
-                            </div>
-                        </article>
-
-                        <article class="news-card compact reveal">
-                            <div class="image-wrapper">
-                                <div class="news-image" style="background-image: url('img/img-noticias/capa-cblols1.jpg');"></div>
-                            </div>
-                            <div class="news-content">
-                                <span class="compact-tag">League of Legends</span>
-                                <h3 class="news-title"><a href="noticia-cblol-estreia-2026.html" class="card-link">RED Canids Atropela a LOUD na Estreia do CBLOL 2026</a></h3>
-                            </div>
-                        </article>
-
-                        <article class="news-card compact reveal">
-                            <div class="image-wrapper">
-                                <div class="news-image" style="background-image: url('img/img-noticias/noticias-semana%203.jpg');"></div>
-                            </div>
-                            <div class="news-content">
-                                <span class="compact-tag">League of Legends</span>
-                                <h3 class="news-title"><a href="noticia-cblol-semana3.html" class="card-link">Matilha garante vaga nos playoffs mesmo com revés</a></h3>
-                            </div>
-                        </article>
-
-                        <article class="news-card compact reveal">
-                            <div class="image-wrapper">
-                                <div class="news-image" style="background-image: url('img/img-noticias/cs2-iem.jpg');"></div>
-                            </div>
-                            <div class="news-content">
-                                <span class="compact-tag">CS2</span>
-                                <h3 class="news-title"><a href="noticia-cs2-iem.html" class="card-link">RED CS se classifica para o IEM Rio 2026</a></h3>
-                            </div>
-                        </article>
-
-                        <article class="news-card compact reveal">
-                            <div class="image-wrapper">
-                                <div class="news-image" style="background-image: url('img/img-noticias/academy.jpg');"></div>
-                            </div>
-                            <div class="news-content">
-                                <span class="compact-tag">Academy</span>
-                                <h3 class="news-title"><a href="noticia-academy.html" class="card-link">Academy anuncia Fuuu como novo mid laner</a></h3>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-
-                <div class="view-all-container">
-                    <a href="noticias.html" class="view-all-btn">Ver todas as notícias</a>
-                </div>
-            </section>
-
-            <section id="cms-articles-section" data-limit="3" hidden>
-                <h2 class="section-title reveal">Matérias da Redação</h2>
-                <p class="reveal" style="color: var(--text-muted); margin-top: -1.5rem; margin-bottom: 1.5rem;">Publicadas pelo time do Canalhas News:</p>
-                <div class="news-grid" id="cms-articles-grid"></div>
-                <div class="view-all-container">
-                    <a href="noticias.html" class="view-all-btn">Ver todas as notícias</a>
-                </div>
-            </section>
-
-                    </div>
-                <aside class="rail">
-                    <div class="widget reveal">
-                        <h3 class="widget-title"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>Siga a Matilha</h3>
-                        <div class="widget-social">
-                            <a href="https://x.com/REDcanalhas_" target="_blank" aria-label="X (Twitter)"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
-                            <a href="https://www.instagram.com/redcanalhas_/" target="_blank" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
-                        </div>
-                        <p>Acompanhe bastidores e reações da torcida em tempo real.</p>
-                    </div>
-
-                    <div class="widget reveal">
-                        <h3 class="widget-title"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>Elenco em Destaque</h3>
-                        <div class="widget-link-list">
-                            <a href="times.html">League of Legends <span class="tag">6 atletas</span></a>
-                            <a href="times.html">Brawl Stars <span class="tag">Mundial em Tóquio</span></a>
-                        </div>
-                        <a href="times.html" class="widget-cta">Ver elenco completo</a>
-                    </div>
-
-                </aside>
                 </div>
             </main>
             <footer class="app-footer">
@@ -272,7 +159,6 @@
     <script src="js/main.js" defer></script>
     <script src="js/auth.js" type="module"></script>
     <script src="js/push-notifications.js" type="module"></script>
-    <script src="js/schedule.js" defer></script>
-    <script src="js/cms-articles.js" defer></script>
+    <script src="js/tierlist.js" defer></script>
 </body>
 </html>
