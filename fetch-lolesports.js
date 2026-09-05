@@ -14,6 +14,13 @@ const BASE_URL = 'https://esports-api.lolesports.com/persisted/gw';
 const TEAM_MATCH = /red\s*canids|red\s*kalunga/i;
 const REGION_HINT = /brazil|brasil|cblol|desafiante/i;
 
+// Jogadores que a API da Riot ainda lista no elenco, mas que não devem
+// aparecer na tier list (saíram do time, são registros antigos etc.).
+const EXCLUDED_PLAYERS = new Set([
+    'mago', 'supercleber', 'zay', 'qats', 'buero', 'smooth',
+    'nukenin', 'nanashi', 'frosty', 'jmz', 'keine', 'curty', 'prodelta',
+]);
+
 const MATCHES_FILE = path.join(__dirname, 'data', 'matches.json');
 const RESULTS_FILE = path.join(__dirname, 'data', 'results.json');
 const STANDINGS_FILE = path.join(__dirname, 'data', 'standings.json');
@@ -130,6 +137,7 @@ async function fetchCblolPlayers(cblolStandings) {
 
         const teamData = teamRes?.data?.teams?.[0];
         (teamData?.players || []).forEach((p) => {
+            if (EXCLUDED_PLAYERS.has((p.summonerName || '').toLowerCase())) return;
             players.push({
                 id: p.id,
                 name: p.summonerName,
