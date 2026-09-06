@@ -6,24 +6,12 @@
 // Depois de rodar e conferir o resultado, pode apagar este arquivo.
 
 const API_KEY = process.env.PANDASCORE_KEY;
-const TEAM_ID = 1266; // RED Canids
+const TEAM_ID = 161; // RED Canids - ID confirmado na PandaScore (o antigo, 1266, estava errado)
 
 async function main() {
     if (!API_KEY) {
         console.log('PANDASCORE_KEY nao configurada.');
         return;
-    }
-
-    console.log('--- Procurando o time "RED" na PandaScore (pra achar o ID certo) ---');
-    const searchUrl = `https://api.pandascore.co/lol/teams?search[name]=RED&per_page=20&token=${API_KEY}`;
-    const searchRes = await fetch(searchUrl);
-    console.log('Status da busca:', searchRes.status);
-    if (searchRes.ok) {
-        const teams = await searchRes.json();
-        console.log(`Times encontrados (${teams.length}):`);
-        teams.forEach((t) => console.log(' -', t.id, '|', t.name, '| acronym:', t.acronym, '| location:', t.location));
-    } else {
-        console.log(await searchRes.text());
     }
 
     console.log('\n--- Buscando as ultimas partidas finalizadas da RED (todos os jogos) ---');
