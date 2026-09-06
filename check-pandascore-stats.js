@@ -14,7 +14,19 @@ async function main() {
         return;
     }
 
-    console.log('--- Buscando as ultimas partidas finalizadas da RED (todos os jogos) ---');
+    console.log('--- Procurando o time "RED" na PandaScore (pra achar o ID certo) ---');
+    const searchUrl = `https://api.pandascore.co/lol/teams?search[name]=RED&per_page=20&token=${API_KEY}`;
+    const searchRes = await fetch(searchUrl);
+    console.log('Status da busca:', searchRes.status);
+    if (searchRes.ok) {
+        const teams = await searchRes.json();
+        console.log(`Times encontrados (${teams.length}):`);
+        teams.forEach((t) => console.log(' -', t.id, '|', t.name, '| acronym:', t.acronym, '| location:', t.location));
+    } else {
+        console.log(await searchRes.text());
+    }
+
+    console.log('\n--- Buscando as ultimas partidas finalizadas da RED (todos os jogos) ---');
     const pastUrl = `https://api.pandascore.co/matches/past?filter[opponent_id]=${TEAM_ID}&sort=-begin_at&page[size]=10&token=${API_KEY}`;
     const pastRes = await fetch(pastUrl);
     if (!pastRes.ok) {
