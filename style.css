@@ -1756,6 +1756,86 @@ body.light-mode .app-topbar { background-color: color-mix(in srgb, var(--bg) 80%
 .compare-select:hover { border-color: var(--red); }
 .compare-select:focus { outline: none; border-color: var(--red); box-shadow: 0 0 0 3px var(--red-tint); }
 
+.compare-picker { position: relative; flex: 1; }
+
+.compare-select-btn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 0.6rem 1rem;
+    color: var(--text);
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: left;
+}
+
+.compare-select-btn:hover { border-color: var(--red); }
+.compare-picker.open .compare-select-btn { border-color: var(--red); box-shadow: 0 0 0 3px var(--red-tint); }
+
+.compare-select-logo {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: var(--surface-alt);
+    flex-shrink: 0;
+}
+
+.compare-select-label { flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+.compare-select-caret {
+    flex-shrink: 0;
+    width: 16px;
+    height: 16px;
+    color: var(--text-muted);
+    transition: transform 0.2s ease;
+}
+.compare-picker.open .compare-select-caret { transform: rotate(180deg); }
+
+.compare-select-menu {
+    position: absolute;
+    top: calc(100% + 6px);
+    left: 0;
+    right: 0;
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: 0 16px 34px rgba(0,0,0,0.35);
+    max-height: 320px;
+    overflow-y: auto;
+    padding: 6px;
+    z-index: 30;
+}
+
+.compare-select-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0.55rem 0.65rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.88rem;
+    font-weight: 600;
+}
+
+.compare-select-option:hover { background-color: var(--surface-alt); }
+.compare-select-option.is-active { background-color: var(--red-tint); color: var(--red); }
+
+.compare-select-option img {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: var(--surface-alt);
+    flex-shrink: 0;
+}
+
 .compare-vs {
     flex-shrink: 0;
     color: var(--text-muted);

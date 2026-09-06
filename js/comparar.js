@@ -1,9 +1,9 @@
 document.addEventListener('DOMContentLoaded', async () => {
-    const teamASelect = document.getElementById('teamA-select');
-    const teamBSelect = document.getElementById('teamB-select');
+    const teamAPickerEl = document.getElementById('teamA-picker');
+    const teamBPickerEl = document.getElementById('teamB-picker');
     const teamsResult = document.getElementById('teams-result');
 
-    if (!teamASelect) return;
+    if (!teamAPickerEl) return;
 
     // Mesmo truque da tier list: as fotos/logos da API da Riot vem enormes
     // pra um avatar pequeno, passa pelo wsrv.nl pra baixar ja no tamanho
@@ -29,13 +29,69 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     const matches = await fetchJson('data/cblol_matches.json', []);
 
-    function fillSelect(select, options, labelFn) {
-        select.innerHTML = options.map((opt, i) => `<option value="${i}">${labelFn(opt)}</option>`).join('');
+    // Dropdown customizado (o <select> nativo não mostra imagem nas opções),
+    // com o escudo do time tanto no botão fechado quanto na lista aberta.
+    function buildPicker(pickerEl, initialIndex, onChange) {
+        const btnEl = pickerEl.querySelector('.compare-select-btn');
+        const menuEl = pickerEl.querySelector('.compare-select-menu');
+        const logoEl = btnEl.querySelector('.compare-select-logo');
+        const labelEl = btnEl.querySelector('.compare-select-label');
+        let selectedIndex = initialIndex;
+
+        function teamLogo(t) { return optimizedImg(t.logo, 60) || 'img/redcanalhas-logo.png'; }
+
+        function renderButton() {
+            const t = teams[selectedIndex];
+            logoEl.src = teamLogo(t);
+            logoEl.alt = t.name;
+            labelEl.textContent = t.name;
+        }
+
+        function renderMenu() {
+            menuEl.innerHTML = teams.map((t, i) => `
+                <div class="compare-select-option${i === selectedIndex ? ' is-active' : ''}" data-index="${i}">
+                    <img src="${teamLogo(t)}" alt="">
+                    <span>${t.name}</span>
+                </div>
+            `).join('');
+        }
+
+        function closeMenu() {
+            pickerEl.classList.remove('open');
+            menuEl.hidden = true;
+        }
+
+        btnEl.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const willOpen = menuEl.hidden;
+            document.querySelectorAll('.compare-picker').forEach((p) => p.classList.remove('open'));
+            document.querySelectorAll('.compare-select-menu').forEach((m) => { m.hidden = true; });
+            if (willOpen) {
+                pickerEl.classList.add('open');
+                menuEl.hidden = false;
+            }
+        });
+
+        menuEl.addEventListener('click', (e) => {
+            const optEl = e.target.closest('.compare-select-option');
+            if (!optEl) return;
+            selectedIndex = Number(optEl.dataset.index);
+            renderButton();
+            renderMenu();
+            closeMenu();
+            onChange();
+        });
+
+        renderButton();
+        renderMenu();
+
+        return { get index() { return selectedIndex; } };
     }
 
-    fillSelect(teamASelect, teams, (t) => t.name);
-    fillSelect(teamBSelect, teams, (t) => t.name);
-    if (teams.length > 1) teamBSelect.selectedIndex = 1;
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.compare-picker').forEach((p) => p.classList.remove('open'));
+        document.querySelectorAll('.compare-select-menu').forEach((m) => { m.hidden = true; });
+    });
 
     function seriesFormat(gamesPlayed) {
         if (gamesPlayed <= 1) return 'bo1';
@@ -82,9 +138,12 @@ document.addEventListener('DOMContentLoaded', async () => {
         return d.toLocaleDateString('pt-BR', { day: '2-digit', month: '2-digit', year: 'numeric' });
     }
 
+    let teamAPicker;
+    let teamBPicker;
+
     function renderTeams() {
-        const teamA = teams[teamASelect.value];
-        const teamB = teams[teamBSelect.value];
+        const teamA = teams[teamAPicker.index];
+        const teamB = teams[teamBPicker.index];
         if (!teamA || !teamB) return;
 
         if (teamA.name === teamB.name) {
@@ -183,8 +242,9 @@ document.addEventListener('DOMContentLoaded', async () => {
         `;
     }
 
-    teamASelect.addEventListener('change', renderTeams);
-    teamBSelect.addEventListener('change', renderTeams);
-
-    if (teams.length) renderTeams();
+    if (teams.length) {
+        teamAPicker = buildPicker(teamAPickerEl, 0, renderTeams);
+        teamBPicker = buildPicker(teamBPickerEl, teams.length > 1 ? 1 : 0, renderTeams);
+        renderTeams();
+    }
 });

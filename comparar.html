@@ -107,9 +107,23 @@
 
                 <div class="compare-board reveal" data-board="teams">
                     <div class="compare-pickers">
-                        <select class="compare-select" id="teamA-select"></select>
+                        <div class="compare-picker" id="teamA-picker">
+                            <button type="button" class="compare-select-btn" id="teamA-btn">
+                                <img class="compare-select-logo" src="" alt="">
+                                <span class="compare-select-label"></span>
+                                <svg class="compare-select-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                            </button>
+                            <div class="compare-select-menu" id="teamA-menu" hidden></div>
+                        </div>
                         <span class="compare-vs">VS</span>
-                        <select class="compare-select" id="teamB-select"></select>
+                        <div class="compare-picker" id="teamB-picker">
+                            <button type="button" class="compare-select-btn" id="teamB-btn">
+                                <img class="compare-select-logo" src="" alt="">
+                                <span class="compare-select-label"></span>
+                                <svg class="compare-select-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                            </button>
+                            <div class="compare-select-menu" id="teamB-menu" hidden></div>
+                        </div>
                     </div>
                     <div class="compare-result" id="teams-result"></div>
                 </div>
