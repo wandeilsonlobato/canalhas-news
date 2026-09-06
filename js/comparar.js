@@ -3,10 +3,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     const teamBSelect = document.getElementById('teamB-select');
     const teamsResult = document.getElementById('teams-result');
 
-    const playerASelect = document.getElementById('playerA-select');
-    const playerBSelect = document.getElementById('playerB-select');
-    const playersResult = document.getElementById('players-result');
-
     if (!teamASelect) return;
 
     // Mesmo truque da tier list: as fotos/logos da API da Riot vem enormes
@@ -32,7 +28,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     const teams = cblolStandings ? cblolStandings.teams : [];
 
     const matches = await fetchJson('data/cblol_matches.json', []);
-    const players = await fetchJson('data/cblol_players.json', []);
 
     function fillSelect(select, options, labelFn) {
         select.innerHTML = options.map((opt, i) => `<option value="${i}">${labelFn(opt)}</option>`).join('');
@@ -41,10 +36,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     fillSelect(teamASelect, teams, (t) => t.name);
     fillSelect(teamBSelect, teams, (t) => t.name);
     if (teams.length > 1) teamBSelect.selectedIndex = 1;
-
-    fillSelect(playerASelect, players, (p) => `${p.name} (${p.team})`);
-    fillSelect(playerBSelect, players, (p) => `${p.name} (${p.team})`);
-    if (players.length > 1) playerBSelect.selectedIndex = 1;
 
     function seriesFormat(gamesPlayed) {
         if (gamesPlayed <= 1) return 'bo1';
@@ -163,63 +154,8 @@ document.addEventListener('DOMContentLoaded', async () => {
         `;
     }
 
-    function renderPlayers() {
-        const playerA = players[playerASelect.value];
-        const playerB = players[playerBSelect.value];
-        if (!playerA || !playerB) return;
-
-        if (playerA.id === playerB.id) {
-            playersResult.innerHTML = '<p class="compare-note">Escolha dois jogadores diferentes pra comparar.</p>';
-            return;
-        }
-
-        let contextHtml;
-        if (playerA.team === playerB.team) {
-            contextHtml = `<p class="compare-note">${playerA.name} e ${playerB.name} são companheiros de time na ${playerA.team}.</p>`;
-        } else {
-            const h2h = headToHead(playerA.team, playerB.team);
-            const totalGames = h2h.winsA + h2h.winsB;
-            contextHtml = totalGames
-                ? `<p class="compare-note">Times dos dois já se enfrentaram no histórico do CBLOL: <strong>${playerA.team} ${h2h.winsA} x ${h2h.winsB} ${playerB.team}</strong>.</p>`
-                : `<p class="compare-note">${playerA.team} e ${playerB.team} ainda não se enfrentaram no histórico do CBLOL.</p>`;
-        }
-
-        playersResult.innerHTML = `
-            <div class="compare-cards">
-                <div class="compare-card">
-                    <img src="${optimizedImg(playerA.image) || 'img/redcanalhas-logo.png'}" alt="${playerA.name}" loading="lazy">
-                    <h3>${playerA.name}</h3>
-                    <span class="compare-tag-pos">${(playerA.role || '').toUpperCase()}</span>
-                    <span class="compare-tag-record">${playerA.team}</span>
-                </div>
-                <div class="compare-vs-big">VS</div>
-                <div class="compare-card">
-                    <img src="${optimizedImg(playerB.image) || 'img/redcanalhas-logo.png'}" alt="${playerB.name}" loading="lazy">
-                    <h3>${playerB.name}</h3>
-                    <span class="compare-tag-pos">${(playerB.role || '').toUpperCase()}</span>
-                    <span class="compare-tag-record">${playerB.team}</span>
-                </div>
-            </div>
-            ${contextHtml}
-        `;
-    }
-
     teamASelect.addEventListener('change', renderTeams);
     teamBSelect.addEventListener('change', renderTeams);
-    playerASelect.addEventListener('change', renderPlayers);
-    playerBSelect.addEventListener('change', renderPlayers);
 
     if (teams.length) renderTeams();
-    if (players.length) renderPlayers();
-
-    const tabs = document.querySelectorAll('.compare-tab');
-    tabs.forEach((tab) => {
-        tab.addEventListener('click', () => {
-            tabs.forEach((t) => t.classList.remove('active'));
-            tab.classList.add('active');
-            document.querySelectorAll('.compare-board').forEach((board) => {
-                board.hidden = board.dataset.board !== tab.dataset.tab;
-            });
-        });
-    });
 });
