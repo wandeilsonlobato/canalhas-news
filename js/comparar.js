@@ -98,22 +98,37 @@ document.addEventListener('DOMContentLoaded', async () => {
         const pctA = totalGamesPlayed ? Math.round((h2h.gamesWonA / totalGamesPlayed) * 100) : 50;
 
         const matchListHtml = h2h.matches.length
-            ? h2h.matches.map((m) => `
+            ? h2h.matches.map((m) => {
+                const aWon = m.result?.winner === m.teamA.name;
+                return `
                 <div class="h2h-match">
                     <span class="h2h-date">${formatDate(m.date)}</span>
-                    <span class="h2h-teams">${m.teamA.code} <strong>${m.result.teamAWins}-${m.result.teamBWins}</strong> ${m.teamB.code}</span>
+                    <span class="h2h-teams"><span class="${aWon ? 'h2h-winner' : 'h2h-loser'}">${m.teamA.code}</span> <strong>${m.result.teamAWins}-${m.result.teamBWins}</strong> <span class="${aWon ? 'h2h-loser' : 'h2h-winner'}">${m.teamB.code}</span></span>
                     <span class="h2h-block">${m.block || ''}</span>
                 </div>
-            `).join('')
+            `;
+            }).join('')
             : '<p class="compare-note">Esses dois times ainda não se enfrentaram no histórico do CBLOL.</p>';
 
-        const breakdownRow = (label, key) => `
+        const breakdownRow = (label, key) => {
+            const { a, b } = h2h.byFormat[key];
+            const total = a + b;
+            const pctA = total ? (a / total) * 100 : 50;
+            const pctB = 100 - pctA;
+            return `
             <div class="h2h-breakdown-row">
-                <span class="h2h-breakdown-value">${h2h.byFormat[key].a}</span>
-                <span class="h2h-breakdown-label">${label}</span>
-                <span class="h2h-breakdown-value">${h2h.byFormat[key].b}</span>
+                <span class="h2h-breakdown-value${a > b ? ' is-leading' : ''}">${a}</span>
+                <div class="h2h-breakdown-mid">
+                    <span class="h2h-breakdown-label">${label}</span>
+                    <div class="h2h-breakdown-bar">
+                        <div class="h2h-breakdown-fill h2h-bar-a" style="width:${pctA}%"></div>
+                        <div class="h2h-breakdown-fill h2h-bar-b" style="width:${pctB}%"></div>
+                    </div>
+                </div>
+                <span class="h2h-breakdown-value${b > a ? ' is-leading' : ''}">${b}</span>
             </div>
         `;
+        };
 
         teamsResult.innerHTML = `
             <div class="compare-cards">
@@ -135,12 +150,15 @@ document.addEventListener('DOMContentLoaded', async () => {
             <h4 class="compare-section-title">Confronto direto (histórico completo do CBLOL)</h4>
 
             <div class="h2h-summary">
-                <span class="h2h-score">${h2h.gamesWonA}</span>
+                <span class="h2h-score${h2h.gamesWonA > h2h.gamesWonB ? ' is-leading' : ''}">${h2h.gamesWonA}</span>
                 <div class="h2h-summary-mid">
                     <span class="h2h-summary-label">Jogos ganhos</span>
-                    <div class="h2h-bar"><div class="h2h-bar-fill" style="width:${pctA}%"></div></div>
+                    <div class="h2h-bar">
+                        <div class="h2h-bar-fill h2h-bar-a" style="width:${pctA}%"></div>
+                        <div class="h2h-bar-fill h2h-bar-b" style="width:${100 - pctA}%"></div>
+                    </div>
                 </div>
-                <span class="h2h-score">${h2h.gamesWonB}</span>
+                <span class="h2h-score${h2h.gamesWonB > h2h.gamesWonA ? ' is-leading' : ''}">${h2h.gamesWonB}</span>
             </div>
 
             <div class="h2h-breakdown">
