@@ -97,13 +97,24 @@ document.addEventListener('DOMContentLoaded', async () => {
         const totalGamesPlayed = h2h.gamesWonA + h2h.gamesWonB;
         const pctA = totalGamesPlayed ? Math.round((h2h.gamesWonA / totalGamesPlayed) * 100) : 50;
 
+        const logoByName = { [teamA.name]: teamA.logo, [teamB.name]: teamB.logo };
+        const fallbackLogo = 'img/redcanalhas-logo.png';
+
         const matchListHtml = h2h.matches.length
             ? h2h.matches.map((m) => {
                 const aWon = m.result?.winner === m.teamA.name;
+                const logoA = optimizedImg(logoByName[m.teamA.name], 40) || fallbackLogo;
+                const logoB = optimizedImg(logoByName[m.teamB.name], 40) || fallbackLogo;
                 return `
                 <div class="h2h-match">
                     <span class="h2h-date">${formatDate(m.date)}</span>
-                    <span class="h2h-teams"><span class="${aWon ? 'h2h-winner' : 'h2h-loser'}">${m.teamA.code}</span> <strong>${m.result.teamAWins}-${m.result.teamBWins}</strong> <span class="${aWon ? 'h2h-loser' : 'h2h-winner'}">${m.teamB.code}</span></span>
+                    <span class="h2h-teams">
+                        <img class="h2h-logo" src="${logoA}" alt="${m.teamA.name}" loading="lazy">
+                        <span class="${aWon ? 'h2h-winner' : 'h2h-loser'}">${m.teamA.code}</span>
+                        <strong>${m.result.teamAWins}-${m.result.teamBWins}</strong>
+                        <span class="${aWon ? 'h2h-loser' : 'h2h-winner'}">${m.teamB.code}</span>
+                        <img class="h2h-logo" src="${logoB}" alt="${m.teamB.name}" loading="lazy">
+                    </span>
                     <span class="h2h-block">${m.block || ''}</span>
                 </div>
             `;

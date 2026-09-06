@@ -1996,9 +1996,10 @@ body.light-mode .app-topbar { background-color: color-mix(in srgb, var(--bg) 80%
 .h2h-match:hover { border-color: var(--red); }
 
 .h2h-date { color: var(--text-muted); flex-shrink: 0; width: 90px; }
-.h2h-teams { font-weight: 700; flex: 1; text-align: center; }
+.h2h-teams { font-weight: 700; flex: 1; display: flex; align-items: center; justify-content: center; gap: 8px; }
 .h2h-teams .h2h-winner { color: var(--red); }
 .h2h-teams .h2h-loser { color: var(--text-muted); }
+.h2h-logo { width: 22px; height: 22px; border-radius: 50%; object-fit: cover; background-color: var(--surface-alt); flex-shrink: 0; }
 .h2h-block { color: var(--text-muted); font-size: 0.75rem; flex-shrink: 0; width: 110px; text-align: right; }
 
 .compare-note { color: var(--text-muted); font-size: 0.9rem; }
