@@ -1,0 +1,21 @@
+name: Diagnostico PandaScore (temporario)
+
+on:
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v7
+
+      - name: Instalar Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: '22'
+
+      - name: Rodar diagnostico
+        env:
+          PANDASCORE_KEY: ${{ secrets.PANDASCORE_KEY }}
+        run: node check-pandascore-stats.js
