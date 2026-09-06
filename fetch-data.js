@@ -3,7 +3,7 @@ const path = require('path');
 
 // Configurações
 const API_KEY = process.env.PANDASCORE_KEY; // A chave virá do GitHub Secrets
-const TEAM_ID = 1266; // ID da RED Canids (Confirme se é este mesmo)
+const TEAM_ID = 161; // ID da RED Canids na PandaScore (confirmado via /lol/teams?search[name]=RED)
 const OUTPUT_FILE = path.join(__dirname, 'data', 'matches.json');
 const OUTPUT_FILE_RESULTS = path.join(__dirname, 'data', 'results.json');
 
