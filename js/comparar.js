@@ -46,6 +46,12 @@ document.addEventListener('DOMContentLoaded', async () => {
     fillSelect(playerBSelect, players, (p) => `${p.name} (${p.team})`);
     if (players.length > 1) playerBSelect.selectedIndex = 1;
 
+    function seriesFormat(gamesPlayed) {
+        if (gamesPlayed <= 1) return 'bo1';
+        if (gamesPlayed <= 3) return 'bo3';
+        return 'bo5';
+    }
+
     function headToHead(nameA, nameB) {
         const relevant = matches.filter((m) => {
             const names = [m.teamA.name, m.teamB.name];
@@ -54,12 +60,30 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         let winsA = 0;
         let winsB = 0;
+        let gamesWonA = 0;
+        let gamesWonB = 0;
+        const byFormat = {
+            bo1: { a: 0, b: 0 },
+            bo3: { a: 0, b: 0 },
+            bo5: { a: 0, b: 0 },
+        };
+
         relevant.forEach((m) => {
-            if (m.result?.winner === nameA) winsA += 1;
-            else if (m.result?.winner === nameB) winsB += 1;
+            const aIsTeamA = m.teamA.name === nameA;
+            const gamesA = aIsTeamA ? m.result.teamAWins : m.result.teamBWins;
+            const gamesB = aIsTeamA ? m.result.teamBWins : m.result.teamAWins;
+            gamesWonA += gamesA;
+            gamesWonB += gamesB;
+
+            const format = seriesFormat(gamesA + gamesB);
+            const won = m.result?.winner === nameA;
+            if (won) { winsA += 1; byFormat[format].a += 1; }
+            else { winsB += 1; byFormat[format].b += 1; }
         });
 
-        return { matches: relevant, winsA, winsB };
+        return {
+            matches: relevant, winsA, winsB, gamesWonA, gamesWonB, byFormat,
+        };
     }
 
     function formatDate(dateStr) {
@@ -79,8 +103,8 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         const h2h = headToHead(teamA.name, teamB.name);
 
-        const totalGames = h2h.winsA + h2h.winsB;
-        const pctA = totalGames ? Math.round((h2h.winsA / totalGames) * 100) : 50;
+        const totalGamesPlayed = h2h.gamesWonA + h2h.gamesWonB;
+        const pctA = totalGamesPlayed ? Math.round((h2h.gamesWonA / totalGamesPlayed) * 100) : 50;
 
         const matchListHtml = h2h.matches.length
             ? h2h.matches.map((m) => `
@@ -91,6 +115,14 @@ document.addEventListener('DOMContentLoaded', async () => {
                 </div>
             `).join('')
             : '<p class="compare-note">Esses dois times ainda não se enfrentaram no histórico do CBLOL.</p>';
+
+        const breakdownRow = (label, key) => `
+            <div class="h2h-breakdown-row">
+                <span class="h2h-breakdown-value">${h2h.byFormat[key].a}</span>
+                <span class="h2h-breakdown-label">${label}</span>
+                <span class="h2h-breakdown-value">${h2h.byFormat[key].b}</span>
+            </div>
+        `;
 
         teamsResult.innerHTML = `
             <div class="compare-cards">
@@ -110,11 +142,23 @@ document.addEventListener('DOMContentLoaded', async () => {
             </div>
 
             <h4 class="compare-section-title">Confronto direto (histórico completo do CBLOL)</h4>
+
             <div class="h2h-summary">
-                <span class="h2h-score">${h2h.winsA}</span>
-                <div class="h2h-bar"><div class="h2h-bar-fill" style="width:${pctA}%"></div></div>
-                <span class="h2h-score">${h2h.winsB}</span>
+                <span class="h2h-score">${h2h.gamesWonA}</span>
+                <div class="h2h-summary-mid">
+                    <span class="h2h-summary-label">Jogos ganhos</span>
+                    <div class="h2h-bar"><div class="h2h-bar-fill" style="width:${pctA}%"></div></div>
+                </div>
+                <span class="h2h-score">${h2h.gamesWonB}</span>
             </div>
+
+            <div class="h2h-breakdown">
+                ${breakdownRow('BO1', 'bo1')}
+                ${breakdownRow('BO3', 'bo3')}
+                ${breakdownRow('BO5', 'bo5')}
+            </div>
+
+            <h4 class="compare-section-title">Jogos entre os dois</h4>
             <div class="h2h-list">${matchListHtml}</div>
         `;
     }
