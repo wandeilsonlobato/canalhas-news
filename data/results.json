@@ -1,6 +1,14 @@
 [
   {
     "game": "lol",
+    "league": "CBLOL - Eliminatórias",
+    "date": "2026-09-06T16:00:00Z",
+    "opponent": "FURIA",
+    "logo": "https://static.lolesports.com/teams/FURIA---black.png",
+    "result": "D 0-3"
+  },
+  {
+    "game": "lol",
     "league": "CBLOL - Semana 6",
     "date": "2026-08-29T16:00:00Z",
     "opponent": "LOUD",
@@ -70,13 +78,5 @@
     "opponent": "KaBuM! Eports",
     "logo": "https://static.lolesports.com/teams/1774199720854_kbm_c_w.png",
     "result": "D 0-1"
-  },
-  {
-    "game": "lol",
-    "league": "CBLOL - Semana 2",
-    "date": "2026-08-02T19:00:00Z",
-    "opponent": "LOS",
-    "logo": "https://static.lolesports.com/teams/1784013312149_LOS-OLaranja.png",
-    "result": "D 0-2"
   }
 ]
