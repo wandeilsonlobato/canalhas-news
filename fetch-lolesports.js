@@ -26,6 +26,7 @@ const MATCHES_FILE = path.join(__dirname, 'data', 'matches.json');
 const RESULTS_FILE = path.join(__dirname, 'data', 'results.json');
 const STANDINGS_FILE = path.join(__dirname, 'data', 'standings.json');
 const CBLOL_PLAYERS_FILE = path.join(__dirname, 'data', 'cblol_players.json');
+const CBLOL_MATCHES_FILE = path.join(__dirname, 'data', 'cblol_matches.json');
 
 async function api(endpoint, params) {
     const url = new URL(`${BASE_URL}/${endpoint}`);
@@ -153,6 +154,40 @@ async function fetchCblolPlayers(cblolStandings) {
     return players;
 }
 
+// Extrai TODAS as partidas do CBLOL (não só as da RED), pra dar pra
+// comparar quaisquer dois times/jogadores por confronto direto.
+function extractAllCblolMatches(events) {
+    const matches = [];
+
+    events.forEach((event) => {
+        const match = event.match;
+        if (!match || !match.teams || match.teams.length !== 2) return;
+
+        const [t1, t2] = match.teams;
+        let result = null;
+        if (event.state === 'completed' && t1.result && t2.result) {
+            result = {
+                teamAWins: t1.result.gameWins,
+                teamBWins: t2.result.gameWins,
+                winner: t1.result.outcome === 'win' ? t1.name : t2.name,
+            };
+        }
+
+        matches.push({
+            id: match.id,
+            date: event.startTime,
+            state: event.state,
+            block: event.blockName || null,
+            teamA: { name: t1.name, code: t1.code },
+            teamB: { name: t2.name, code: t2.code },
+            result,
+        });
+    });
+
+    matches.sort((a, b) => new Date(b.date) - new Date(a.date));
+    return matches;
+}
+
 async function main() {
     if (!API_KEY) {
         console.log('LOLESPORTS_KEY não configurada, pulando busca de dados de LoL Esports.');
@@ -177,6 +212,7 @@ async function main() {
 
         const upcoming = [];
         const finished = [];
+        let cblolMatches = [];
 
         for (const league of brazilLeagues) {
             let scheduleRes;
@@ -188,6 +224,10 @@ async function main() {
             }
 
             const events = scheduleRes?.data?.schedule?.events || [];
+
+            if (/^cblol/i.test(league.name || '')) {
+                cblolMatches = extractAllCblolMatches(events);
+            }
 
             events.forEach((event) => {
                 const match = event.match;
@@ -248,8 +288,9 @@ async function main() {
         fs.writeFileSync(RESULTS_FILE, JSON.stringify([...existingResults, ...finished.slice(0, 10)], null, 2));
         fs.writeFileSync(STANDINGS_FILE, JSON.stringify(standings, null, 2));
         fs.writeFileSync(CBLOL_PLAYERS_FILE, JSON.stringify(cblolPlayers, null, 2));
+        fs.writeFileSync(CBLOL_MATCHES_FILE, JSON.stringify(cblolMatches, null, 2));
 
-        console.log(`LoL Esports: ${upcoming.length} partida(s) futura(s), ${finished.length} finalizada(s), classificação de ${standings.length} liga(s), ${cblolPlayers.length} jogador(es) do CBLOL encontrado(s).`);
+        console.log(`LoL Esports: ${upcoming.length} partida(s) futura(s), ${finished.length} finalizada(s), classificação de ${standings.length} liga(s), ${cblolPlayers.length} jogador(es), ${cblolMatches.length} partida(s) do CBLOL (todos os times).`);
     } catch (error) {
         console.error('Falha ao buscar dados do LoL Esports:', error.message);
         // Não quebra o build; mantém os dados que já existiam.

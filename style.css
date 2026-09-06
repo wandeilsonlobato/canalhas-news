@@ -1726,3 +1726,163 @@ body.light-mode .app-topbar { background-color: color-mix(in srgb, var(--bg) 80%
     .tier-chip img { width: 48px; height: 48px; }
     .tier-reset-btn { position: static; margin-bottom: 0.75rem; display: inline-block; }
 }
+
+/* ==========================================================================
+   COMPARAR (times e jogadores)
+   ========================================================================== */
+
+.compare-board { margin-bottom: 2.5rem; }
+
+.compare-pickers {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.compare-select {
+    flex: 1;
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 0.75rem 1rem;
+    color: var(--text);
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.compare-vs {
+    flex-shrink: 0;
+    color: var(--text-muted);
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 0.85rem;
+}
+
+.compare-cards {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.compare-card {
+    flex: 1;
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.75rem 1.25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    text-align: center;
+}
+
+.compare-card img {
+    width: 88px;
+    height: 88px;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: var(--surface-alt);
+    border: 3px solid var(--border);
+    margin-bottom: 6px;
+}
+
+.compare-card h3 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1.15rem;
+    text-transform: uppercase;
+}
+
+.compare-tag-pos {
+    color: var(--red);
+    font-weight: 700;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+}
+
+.compare-tag-record {
+    color: var(--text-muted);
+    font-size: 0.82rem;
+}
+
+.compare-vs-big {
+    flex-shrink: 0;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: var(--text-muted);
+}
+
+.compare-section-title {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 0.9rem;
+}
+
+.h2h-summary {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.h2h-score {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: var(--text);
+    flex-shrink: 0;
+    width: 30px;
+    text-align: center;
+}
+
+.h2h-bar {
+    flex: 1;
+    height: 8px;
+    background-color: var(--surface-alt);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.h2h-bar-fill {
+    height: 100%;
+    background-color: var(--red);
+    border-radius: 20px;
+}
+
+.h2h-list { display: flex; flex-direction: column; gap: 8px; }
+
+.h2h-match {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 0.7rem 1rem;
+    font-size: 0.85rem;
+}
+
+.h2h-date { color: var(--text-muted); flex-shrink: 0; width: 90px; }
+.h2h-teams { font-weight: 700; flex: 1; text-align: center; }
+.h2h-block { color: var(--text-muted); font-size: 0.75rem; flex-shrink: 0; width: 110px; text-align: right; }
+
+.compare-note { color: var(--text-muted); font-size: 0.9rem; }
+
+@media (max-width: 640px) {
+    .compare-pickers { flex-direction: column; }
+    .compare-vs { display: none; }
+    .compare-cards { flex-direction: column; }
+    .compare-vs-big { padding: 4px 0; }
+    .h2h-match { flex-wrap: wrap; }
+    .h2h-block { width: auto; text-align: left; }
+}

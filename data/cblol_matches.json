@@ -1,0 +1,1486 @@
+[
+  {
+    "id": "115565671526468647",
+    "date": "2026-10-10T16:00:00Z",
+    "state": "unstarted",
+    "block": "Finais",
+    "teamA": {
+      "name": "TBD",
+      "code": "TBD"
+    },
+    "teamB": {
+      "name": "TBD",
+      "code": "TBD"
+    },
+    "result": null
+  },
+  {
+    "id": "115565671526468641",
+    "date": "2026-10-03T16:00:00Z",
+    "state": "unstarted",
+    "block": "Eliminatórias",
+    "teamA": {
+      "name": "TBD",
+      "code": "TBD"
+    },
+    "teamB": {
+      "name": "TBD",
+      "code": "TBD"
+    },
+    "result": null
+  },
+  {
+    "id": "115565671526468635",
+    "date": "2026-09-27T16:00:00Z",
+    "state": "unstarted",
+    "block": "Eliminatórias",
+    "teamA": {
+      "name": "TBD",
+      "code": "TBD"
+    },
+    "teamB": {
+      "name": "TBD",
+      "code": "TBD"
+    },
+    "result": null
+  },
+  {
+    "id": "115565671526468623",
+    "date": "2026-09-26T16:00:00Z",
+    "state": "unstarted",
+    "block": "Eliminatórias",
+    "teamA": {
+      "name": "TBD",
+      "code": "TBD"
+    },
+    "teamB": {
+      "name": "TBD",
+      "code": "TBD"
+    },
+    "result": null
+  },
+  {
+    "id": "115565671526468629",
+    "date": "2026-09-20T16:00:00Z",
+    "state": "unstarted",
+    "block": "Eliminatórias",
+    "teamA": {
+      "name": "TBD",
+      "code": "TBD"
+    },
+    "teamB": {
+      "name": "TBD",
+      "code": "TBD"
+    },
+    "result": null
+  },
+  {
+    "id": "115565671526403081",
+    "date": "2026-09-19T16:00:00Z",
+    "state": "unstarted",
+    "block": "Eliminatórias",
+    "teamA": {
+      "name": "TBD",
+      "code": "TBD"
+    },
+    "teamB": {
+      "name": "Vivo Keyd Stars",
+      "code": "VKS"
+    },
+    "result": null
+  },
+  {
+    "id": "115565671526403075",
+    "date": "2026-09-13T16:00:00Z",
+    "state": "unstarted",
+    "block": "Eliminatórias",
+    "teamA": {
+      "name": "TBD",
+      "code": "TBD"
+    },
+    "teamB": {
+      "name": "paiN Gaming",
+      "code": "PAIN"
+    },
+    "result": null
+  },
+  {
+    "id": "115565671526403069",
+    "date": "2026-09-12T16:00:00Z",
+    "state": "unstarted",
+    "block": "Eliminatórias",
+    "teamA": {
+      "name": "TBD",
+      "code": "TBD"
+    },
+    "teamB": {
+      "name": "TBD",
+      "code": "TBD"
+    },
+    "result": null
+  },
+  {
+    "id": "115565671526403057",
+    "date": "2026-09-06T16:00:00Z",
+    "state": "unstarted",
+    "block": "Eliminatórias",
+    "teamA": {
+      "name": "FURIA",
+      "code": "FUR"
+    },
+    "teamB": {
+      "name": "RED Kalunga",
+      "code": "RED"
+    },
+    "result": null
+  },
+  {
+    "id": "115565671526403063",
+    "date": "2026-09-05T16:00:00Z",
+    "state": "completed",
+    "block": "Eliminatórias",
+    "teamA": {
+      "name": "paiN Gaming",
+      "code": "PAIN"
+    },
+    "teamB": {
+      "name": "Vivo Keyd Stars",
+      "code": "VKS"
+    },
+    "result": {
+      "teamAWins": 3,
+      "teamBWins": 1,
+      "winner": "paiN Gaming"
+    }
+  },
+  {
+    "id": "115565671526402961",
+    "date": "2026-08-30T19:00:00Z",
+    "state": "completed",
+    "block": "Semana 6",
+    "teamA": {
+      "name": "FURIA",
+      "code": "FUR"
+    },
+    "teamB": {
+      "name": "LEVIATÁN",
+      "code": "LEV"
+    },
+    "result": {
+      "teamAWins": 2,
+      "teamBWins": 0,
+      "winner": "FURIA"
+    }
+  },
+  {
+    "id": "115565671526403029",
+    "date": "2026-08-30T16:00:00Z",
+    "state": "completed",
+    "block": "Semana 6",
+    "teamA": {
+      "name": "paiN Gaming",
+      "code": "PAIN"
+    },
+    "teamB": {
+      "name": "Vivo Keyd Stars",
+      "code": "VKS"
+    },
+    "result": {
+      "teamAWins": 1,
+      "teamBWins": 2,
+      "winner": "Vivo Keyd Stars"
+    }
+  },
+  {
+    "id": "115565671526402981",
+    "date": "2026-08-29T19:00:00Z",
+    "state": "completed",
+    "block": "Semana 6",
+    "teamA": {
+      "name": "Fluxo W7M",
+      "code": "FX"
+    },
+    "teamB": {
+      "name": "LOS",
+      "code": "LOS"
+    },
+    "result": {
+      "teamAWins": 1,
+      "teamBWins": 2,
+      "winner": "LOS"
+    }
+  },
+  {
+    "id": "115565671526403009",
+    "date": "2026-08-29T16:00:00Z",
+    "state": "completed",
+    "block": "Semana 6",
+    "teamA": {
+      "name": "LOUD",
+      "code": "LOUD"
+    },
+    "teamB": {
+      "name": "RED Kalunga",
+      "code": "RED"
+    },
+    "result": {
+      "teamAWins": 2,
+      "teamBWins": 0,
+      "winner": "LOUD"
+    }
+  },
+  {
+    "id": "115565671526402973",
+    "date": "2026-08-23T19:00:00Z",
+    "state": "completed",
+    "block": "Semana 5",
+    "teamA": {
+      "name": "LOUD",
+      "code": "LOUD"
+    },
+    "teamB": {
+      "name": "LOS",
+      "code": "LOS"
+    },
+    "result": {
+      "teamAWins": 2,
+      "teamBWins": 0,
+      "winner": "LOUD"
+    }
+  },
+  {
+    "id": "115565671526403037",
+    "date": "2026-08-23T16:00:00Z",
+    "state": "completed",
+    "block": "Semana 5",
+    "teamA": {
+      "name": "RED Kalunga",
+      "code": "RED"
+    },
+    "teamB": {
+      "name": "Fluxo W7M",
+      "code": "FX"
+    },
+    "result": {
+      "teamAWins": 2,
+      "teamBWins": 0,
+      "winner": "RED Kalunga"
+    }
+  },
+  {
+    "id": "115565671526402953",
+    "date": "2026-08-22T19:00:00Z",
+    "state": "completed",
+    "block": "Semana 5",
+    "teamA": {
+      "name": "paiN Gaming",
+      "code": "PAIN"
+    },
+    "teamB": {
+      "name": "FURIA",
+      "code": "FUR"
+    },
+    "result": {
+      "teamAWins": 0,
+      "teamBWins": 2,
+      "winner": "FURIA"
+    }
+  },
+  {
+    "id": "115565671526403049",
+    "date": "2026-08-22T16:00:00Z",
+    "state": "completed",
+    "block": "Semana 5",
+    "teamA": {
+      "name": "Vivo Keyd Stars",
+      "code": "VKS"
+    },
+    "teamB": {
+      "name": "LEVIATÁN",
+      "code": "LEV"
+    },
+    "result": {
+      "teamAWins": 2,
+      "teamBWins": 0,
+      "winner": "Vivo Keyd Stars"
+    }
+  },
+  {
+    "id": "115565671526403017",
+    "date": "2026-08-16T19:00:00Z",
+    "state": "completed",
+    "block": "Semana 4",
+    "teamA": {
+      "name": "paiN Gaming",
+      "code": "PAIN"
+    },
+    "teamB": {
+      "name": "Fluxo W7M",
+      "code": "FX"
+    },
+    "result": {
+      "teamAWins": 2,
+      "teamBWins": 0,
+      "winner": "paiN Gaming"
+    }
+  },
+  {
+    "id": "115565671526403005",
+    "date": "2026-08-16T16:00:00Z",
+    "state": "completed",
+    "block": "Semana 4",
+    "teamA": {
+      "name": "LEVIATÁN",
+      "code": "LEV"
+    },
+    "teamB": {
+      "name": "LOUD",
+      "code": "LOUD"
+    },
+    "result": {
+      "teamAWins": 0,
+      "teamBWins": 2,
+      "winner": "LOUD"
+    }
+  },
+  {
+    "id": "115565671526402993",
+    "date": "2026-08-15T19:00:00Z",
+    "state": "completed",
+    "block": "Semana 4",
+    "teamA": {
+      "name": "LOS",
+      "code": "LOS"
+    },
+    "teamB": {
+      "name": "Vivo Keyd Stars",
+      "code": "VKS"
+    },
+    "result": {
+      "teamAWins": 2,
+      "teamBWins": 0,
+      "winner": "LOS"
+    }
+  },
+  {
+    "id": "115565671526402965",
+    "date": "2026-08-15T16:00:00Z",
+    "state": "completed",
+    "block": "Semana 4",
+    "teamA": {
+      "name": "RED Kalunga",
+      "code": "RED"
+    },
+    "teamB": {
+      "name": "FURIA",
+      "code": "FUR"
+    },
+    "result": {
+      "teamAWins": 1,
+      "teamBWins": 2,
+      "winner": "FURIA"
+    }
+  },
+  {
+    "id": "115565671526402977",
+    "date": "2026-08-11T00:00:00Z",
+    "state": "completed",
+    "block": "Semana 3",
+    "teamA": {
+      "name": "LOS",
+      "code": "LOS"
+    },
+    "teamB": {
+      "name": "paiN Gaming",
+      "code": "PAIN"
+    },
+    "result": {
+      "teamAWins": 2,
+      "teamBWins": 0,
+      "winner": "LOS"
+    }
+  },
+  {
+    "id": "115565671526403045",
+    "date": "2026-08-10T21:00:00Z",
+    "state": "completed",
+    "block": "Semana 3",
+    "teamA": {
+      "name": "LEVIATÁN",
+      "code": "LEV"
+    },
+    "teamB": {
+      "name": "RED Kalunga",
+      "code": "RED"
+    },
+    "result": {
+      "teamAWins": 2,
+      "teamBWins": 0,
+      "winner": "LEVIATÁN"
+    }
+  },
+  {
+    "id": "115565671526402957",
+    "date": "2026-08-09T19:00:00Z",
+    "state": "completed",
+    "block": "Semana 3",
+    "teamA": {
+      "name": "Fluxo W7M",
+      "code": "FX"
+    },
+    "teamB": {
+      "name": "FURIA",
+      "code": "FUR"
+    },
+    "result": {
+      "teamAWins": 0,
+      "teamBWins": 2,
+      "winner": "FURIA"
+    }
+  },
+  {
+    "id": "115565671526403013",
+    "date": "2026-08-09T16:00:00Z",
+    "state": "completed",
+    "block": "Semana 3",
+    "teamA": {
+      "name": "LOUD",
+      "code": "LOUD"
+    },
+    "teamB": {
+      "name": "Vivo Keyd Stars",
+      "code": "VKS"
+    },
+    "result": {
+      "teamAWins": 2,
+      "teamBWins": 0,
+      "winner": "LOUD"
+    }
+  },
+  {
+    "id": "115565671526402985",
+    "date": "2026-08-08T19:00:00Z",
+    "state": "completed",
+    "block": "Semana 3",
+    "teamA": {
+      "name": "LEVIATÁN",
+      "code": "LEV"
+    },
+    "teamB": {
+      "name": "LOS",
+      "code": "LOS"
+    },
+    "result": {
+      "teamAWins": 0,
+      "teamBWins": 2,
+      "winner": "LOS"
+    }
+  },
+  {
+    "id": "115565671526403025",
+    "date": "2026-08-08T16:00:00Z",
+    "state": "completed",
+    "block": "Semana 3",
+    "teamA": {
+      "name": "RED Kalunga",
+      "code": "RED"
+    },
+    "teamB": {
+      "name": "paiN Gaming",
+      "code": "PAIN"
+    },
+    "result": {
+      "teamAWins": 2,
+      "teamBWins": 0,
+      "winner": "RED Kalunga"
+    }
+  },
+  {
+    "id": "115565671526402949",
+    "date": "2026-08-08T00:00:00Z",
+    "state": "completed",
+    "block": "Semana 3",
+    "teamA": {
+      "name": "LOUD",
+      "code": "LOUD"
+    },
+    "teamB": {
+      "name": "FURIA",
+      "code": "FUR"
+    },
+    "result": {
+      "teamAWins": 0,
+      "teamBWins": 2,
+      "winner": "FURIA"
+    }
+  },
+  {
+    "id": "115565671526403041",
+    "date": "2026-08-07T21:00:00Z",
+    "state": "completed",
+    "block": "Semana 3",
+    "teamA": {
+      "name": "Vivo Keyd Stars",
+      "code": "VKS"
+    },
+    "teamB": {
+      "name": "Fluxo W7M",
+      "code": "FX"
+    },
+    "result": {
+      "teamAWins": 2,
+      "teamBWins": 1,
+      "winner": "Vivo Keyd Stars"
+    }
+  },
+  {
+    "id": "115565671526402989",
+    "date": "2026-08-02T19:00:00Z",
+    "state": "completed",
+    "block": "Semana 2",
+    "teamA": {
+      "name": "LOS",
+      "code": "LOS"
+    },
+    "teamB": {
+      "name": "RED Kalunga",
+      "code": "RED"
+    },
+    "result": {
+      "teamAWins": 2,
+      "teamBWins": 0,
+      "winner": "LOS"
+    }
+  },
+  {
+    "id": "115565671526403001",
+    "date": "2026-08-02T16:00:00Z",
+    "state": "completed",
+    "block": "Semana 2",
+    "teamA": {
+      "name": "Fluxo W7M",
+      "code": "FX"
+    },
+    "teamB": {
+      "name": "LOUD",
+      "code": "LOUD"
+    },
+    "result": {
+      "teamAWins": 0,
+      "teamBWins": 2,
+      "winner": "LOUD"
+    }
+  },
+  {
+    "id": "115565671526403021",
+    "date": "2026-08-01T19:00:00Z",
+    "state": "completed",
+    "block": "Semana 2",
+    "teamA": {
+      "name": "paiN Gaming",
+      "code": "PAIN"
+    },
+    "teamB": {
+      "name": "LEVIATÁN",
+      "code": "LEV"
+    },
+    "result": {
+      "teamAWins": 2,
+      "teamBWins": 0,
+      "winner": "paiN Gaming"
+    }
+  },
+  {
+    "id": "115565671526402969",
+    "date": "2026-08-01T16:00:00Z",
+    "state": "completed",
+    "block": "Semana 2",
+    "teamA": {
+      "name": "Vivo Keyd Stars",
+      "code": "VKS"
+    },
+    "teamB": {
+      "name": "FURIA",
+      "code": "FUR"
+    },
+    "result": {
+      "teamAWins": 2,
+      "teamBWins": 0,
+      "winner": "Vivo Keyd Stars"
+    }
+  },
+  {
+    "id": "115565671526403053",
+    "date": "2026-07-26T19:00:00Z",
+    "state": "completed",
+    "block": "Semana 1",
+    "teamA": {
+      "name": "Vivo Keyd Stars",
+      "code": "VKS"
+    },
+    "teamB": {
+      "name": "RED Kalunga",
+      "code": "RED"
+    },
+    "result": {
+      "teamAWins": 2,
+      "teamBWins": 1,
+      "winner": "Vivo Keyd Stars"
+    }
+  },
+  {
+    "id": "115565671526403033",
+    "date": "2026-07-26T16:00:00Z",
+    "state": "completed",
+    "block": "Semana 1",
+    "teamA": {
+      "name": "LEVIATÁN",
+      "code": "LEV"
+    },
+    "teamB": {
+      "name": "Fluxo W7M",
+      "code": "FX"
+    },
+    "result": {
+      "teamAWins": 0,
+      "teamBWins": 2,
+      "winner": "Fluxo W7M"
+    }
+  },
+  {
+    "id": "115565671526402997",
+    "date": "2026-07-25T19:00:00Z",
+    "state": "completed",
+    "block": "Semana 1",
+    "teamA": {
+      "name": "paiN Gaming",
+      "code": "PAIN"
+    },
+    "teamB": {
+      "name": "LOUD",
+      "code": "LOUD"
+    },
+    "result": {
+      "teamAWins": 1,
+      "teamBWins": 2,
+      "winner": "LOUD"
+    }
+  },
+  {
+    "id": "115565671526402945",
+    "date": "2026-07-25T16:00:00Z",
+    "state": "completed",
+    "block": "Semana 1",
+    "teamA": {
+      "name": "FURIA",
+      "code": "FUR"
+    },
+    "teamB": {
+      "name": "LOS",
+      "code": "LOS"
+    },
+    "result": {
+      "teamAWins": 0,
+      "teamBWins": 2,
+      "winner": "LOS"
+    }
+  },
+  {
+    "id": "115565670260181875",
+    "date": "2026-06-06T16:00:00Z",
+    "state": "completed",
+    "block": "Finais",
+    "teamA": {
+      "name": "LOS",
+      "code": "LOS"
+    },
+    "teamB": {
+      "name": "FURIA",
+      "code": "FUR"
+    },
+    "result": {
+      "teamAWins": 1,
+      "teamBWins": 3,
+      "winner": "FURIA"
+    }
+  },
+  {
+    "id": "115565670260181869",
+    "date": "2026-05-31T16:00:00Z",
+    "state": "completed",
+    "block": "Eliminatórias",
+    "teamA": {
+      "name": "LOS",
+      "code": "LOS"
+    },
+    "teamB": {
+      "name": "RED Kalunga",
+      "code": "RED"
+    },
+    "result": {
+      "teamAWins": 3,
+      "teamBWins": 0,
+      "winner": "LOS"
+    }
+  },
+  {
+    "id": "115565670260181863",
+    "date": "2026-05-30T16:00:00Z",
+    "state": "completed",
+    "block": "Eliminatórias",
+    "teamA": {
+      "name": "LOS",
+      "code": "LOS"
+    },
+    "teamB": {
+      "name": "Fluxo W7M",
+      "code": "FX"
+    },
+    "result": {
+      "teamAWins": 3,
+      "teamBWins": 2,
+      "winner": "LOS"
+    }
+  },
+  {
+    "id": "115565670260181857",
+    "date": "2026-05-25T21:00:00Z",
+    "state": "completed",
+    "block": "Eliminatórias",
+    "teamA": {
+      "name": "LOS",
+      "code": "LOS"
+    },
+    "teamB": {
+      "name": "LOUD",
+      "code": "LOUD"
+    },
+    "result": {
+      "teamAWins": 3,
+      "teamBWins": 2,
+      "winner": "LOS"
+    }
+  },
+  {
+    "id": "115565670260181851",
+    "date": "2026-05-24T16:00:00Z",
+    "state": "completed",
+    "block": "Eliminatórias",
+    "teamA": {
+      "name": "FURIA",
+      "code": "FUR"
+    },
+    "teamB": {
+      "name": "RED Kalunga",
+      "code": "RED"
+    },
+    "result": {
+      "teamAWins": 3,
+      "teamBWins": 0,
+      "winner": "FURIA"
+    }
+  },
+  {
+    "id": "115565670260181845",
+    "date": "2026-05-23T16:00:00Z",
+    "state": "completed",
+    "block": "Eliminatórias",
+    "teamA": {
+      "name": "LOS",
+      "code": "LOS"
+    },
+    "teamB": {
+      "name": "Vivo Keyd Stars",
+      "code": "VKS"
+    },
+    "result": {
+      "teamAWins": 3,
+      "teamBWins": 0,
+      "winner": "LOS"
+    }
+  },
+  {
+    "id": "115565670260181833",
+    "date": "2026-05-17T16:00:00Z",
+    "state": "completed",
+    "block": "Eliminatórias",
+    "teamA": {
+      "name": "LOUD",
+      "code": "LOUD"
+    },
+    "teamB": {
+      "name": "FURIA",
+      "code": "FUR"
+    },
+    "result": {
+      "teamAWins": 0,
+      "teamBWins": 3,
+      "winner": "FURIA"
+    }
+  },
+  {
+    "id": "115565670260181839",
+    "date": "2026-05-16T16:00:00Z",
+    "state": "completed",
+    "block": "Eliminatórias",
+    "teamA": {
+      "name": "Fluxo W7M",
+      "code": "FX"
+    },
+    "teamB": {
+      "name": "RED Kalunga",
+      "code": "RED"
+    },
+    "result": {
+      "teamAWins": 1,
+      "teamBWins": 3,
+      "winner": "RED Kalunga"
+    }
+  },
+  {
+    "id": "115565670260181827",
+    "date": "2026-05-10T16:00:00Z",
+    "state": "completed",
+    "block": "Eliminatórias",
+    "teamA": {
+      "name": "Fluxo W7M",
+      "code": "FX"
+    },
+    "teamB": {
+      "name": "LOS",
+      "code": "LOS"
+    },
+    "result": {
+      "teamAWins": 3,
+      "teamBWins": 2,
+      "winner": "Fluxo W7M"
+    }
+  },
+  {
+    "id": "115565670260181821",
+    "date": "2026-05-09T16:00:00Z",
+    "state": "completed",
+    "block": "Eliminatórias",
+    "teamA": {
+      "name": "LOUD",
+      "code": "LOUD"
+    },
+    "teamB": {
+      "name": "Vivo Keyd Stars",
+      "code": "VKS"
+    },
+    "result": {
+      "teamAWins": 3,
+      "teamBWins": 1,
+      "winner": "LOUD"
+    }
+  },
+  {
+    "id": "115565670260116269",
+    "date": "2026-05-03T19:00:00Z",
+    "state": "completed",
+    "block": "Semana 6",
+    "teamA": {
+      "name": "LOUD",
+      "code": "LOUD"
+    },
+    "teamB": {
+      "name": "Vivo Keyd Stars",
+      "code": "VKS"
+    },
+    "result": {
+      "teamAWins": 2,
+      "teamBWins": 0,
+      "winner": "LOUD"
+    }
+  },
+  {
+    "id": "115565670260050645",
+    "date": "2026-05-03T16:00:00Z",
+    "state": "completed",
+    "block": "Semana 6",
+    "teamA": {
+      "name": "Fluxo W7M",
+      "code": "FX"
+    },
+    "teamB": {
+      "name": "LOS",
+      "code": "LOS"
+    },
+    "result": {
+      "teamAWins": 1,
+      "teamBWins": 2,
+      "winner": "LOS"
+    }
+  },
+  {
+    "id": "115565670260116217",
+    "date": "2026-05-02T19:00:00Z",
+    "state": "completed",
+    "block": "Semana 6",
+    "teamA": {
+      "name": "RED Kalunga",
+      "code": "RED"
+    },
+    "teamB": {
+      "name": "FURIA",
+      "code": "FUR"
+    },
+    "result": {
+      "teamAWins": 1,
+      "teamBWins": 2,
+      "winner": "FURIA"
+    }
+  },
+  {
+    "id": "115565670260116233",
+    "date": "2026-05-02T16:00:00Z",
+    "state": "completed",
+    "block": "Semana 6",
+    "teamA": {
+      "name": "paiN Gaming",
+      "code": "PAIN"
+    },
+    "teamB": {
+      "name": "LEVIATÁN",
+      "code": "LEV"
+    },
+    "result": {
+      "teamAWins": 2,
+      "teamBWins": 0,
+      "winner": "paiN Gaming"
+    }
+  },
+  {
+    "id": "115565670260116241",
+    "date": "2026-04-26T19:00:00Z",
+    "state": "completed",
+    "block": "Semana 5",
+    "teamA": {
+      "name": "Vivo Keyd Stars",
+      "code": "VKS"
+    },
+    "teamB": {
+      "name": "LEVIATÁN",
+      "code": "LEV"
+    },
+    "result": {
+      "teamAWins": 2,
+      "teamBWins": 0,
+      "winner": "Vivo Keyd Stars"
+    }
+  },
+  {
+    "id": "115565670260116209",
+    "date": "2026-04-26T16:00:00Z",
+    "state": "completed",
+    "block": "Semana 5",
+    "teamA": {
+      "name": "FURIA",
+      "code": "FUR"
+    },
+    "teamB": {
+      "name": "LOUD",
+      "code": "LOUD"
+    },
+    "result": {
+      "teamAWins": 2,
+      "teamBWins": 1,
+      "winner": "FURIA"
+    }
+  },
+  {
+    "id": "115565670260050653",
+    "date": "2026-04-25T19:00:00Z",
+    "state": "completed",
+    "block": "Semana 5",
+    "teamA": {
+      "name": "paiN Gaming",
+      "code": "PAIN"
+    },
+    "teamB": {
+      "name": "Fluxo W7M",
+      "code": "FX"
+    },
+    "result": {
+      "teamAWins": 0,
+      "teamBWins": 2,
+      "winner": "Fluxo W7M"
+    }
+  },
+  {
+    "id": "115565670260116253",
+    "date": "2026-04-25T16:00:00Z",
+    "state": "completed",
+    "block": "Semana 5",
+    "teamA": {
+      "name": "LOS",
+      "code": "LOS"
+    },
+    "teamB": {
+      "name": "RED Kalunga",
+      "code": "RED"
+    },
+    "result": {
+      "teamAWins": 0,
+      "teamBWins": 2,
+      "winner": "RED Kalunga"
+    }
+  },
+  {
+    "id": "115565670260116281",
+    "date": "2026-04-19T19:00:00Z",
+    "state": "completed",
+    "block": "Semana 4",
+    "teamA": {
+      "name": "Vivo Keyd Stars",
+      "code": "VKS"
+    },
+    "teamB": {
+      "name": "RED Kalunga",
+      "code": "RED"
+    },
+    "result": {
+      "teamAWins": 1,
+      "teamBWins": 2,
+      "winner": "RED Kalunga"
+    }
+  },
+  {
+    "id": "115565670260116229",
+    "date": "2026-04-19T16:00:00Z",
+    "state": "completed",
+    "block": "Semana 4",
+    "teamA": {
+      "name": "LOUD",
+      "code": "LOUD"
+    },
+    "teamB": {
+      "name": "LEVIATÁN",
+      "code": "LEV"
+    },
+    "result": {
+      "teamAWins": 1,
+      "teamBWins": 2,
+      "winner": "LEVIATÁN"
+    }
+  },
+  {
+    "id": "115565670260116249",
+    "date": "2026-04-18T19:00:00Z",
+    "state": "completed",
+    "block": "Semana 4",
+    "teamA": {
+      "name": "LOS",
+      "code": "LOS"
+    },
+    "teamB": {
+      "name": "paiN Gaming",
+      "code": "PAIN"
+    },
+    "result": {
+      "teamAWins": 2,
+      "teamBWins": 1,
+      "winner": "LOS"
+    }
+  },
+  {
+    "id": "115565670260050637",
+    "date": "2026-04-18T16:00:00Z",
+    "state": "completed",
+    "block": "Semana 4",
+    "teamA": {
+      "name": "Fluxo W7M",
+      "code": "FX"
+    },
+    "teamB": {
+      "name": "FURIA",
+      "code": "FUR"
+    },
+    "result": {
+      "teamAWins": 2,
+      "teamBWins": 0,
+      "winner": "Fluxo W7M"
+    }
+  },
+  {
+    "id": "115565670260050649",
+    "date": "2026-04-15T00:00:00Z",
+    "state": "completed",
+    "block": "Semana 3",
+    "teamA": {
+      "name": "LOUD",
+      "code": "LOUD"
+    },
+    "teamB": {
+      "name": "Fluxo W7M",
+      "code": "FX"
+    },
+    "result": {
+      "teamAWins": 1,
+      "teamBWins": 2,
+      "winner": "Fluxo W7M"
+    }
+  },
+  {
+    "id": "115565670260116257",
+    "date": "2026-04-14T21:00:00Z",
+    "state": "completed",
+    "block": "Semana 3",
+    "teamA": {
+      "name": "Vivo Keyd Stars",
+      "code": "VKS"
+    },
+    "teamB": {
+      "name": "LOS",
+      "code": "LOS"
+    },
+    "result": {
+      "teamAWins": 2,
+      "teamBWins": 1,
+      "winner": "Vivo Keyd Stars"
+    }
+  },
+  {
+    "id": "115565670260116237",
+    "date": "2026-04-14T00:00:00Z",
+    "state": "completed",
+    "block": "Semana 3",
+    "teamA": {
+      "name": "RED Kalunga",
+      "code": "RED"
+    },
+    "teamB": {
+      "name": "LEVIATÁN",
+      "code": "LEV"
+    },
+    "result": {
+      "teamAWins": 2,
+      "teamBWins": 0,
+      "winner": "RED Kalunga"
+    }
+  },
+  {
+    "id": "115565670260116213",
+    "date": "2026-04-13T21:00:00Z",
+    "state": "completed",
+    "block": "Semana 3",
+    "teamA": {
+      "name": "FURIA",
+      "code": "FUR"
+    },
+    "teamB": {
+      "name": "paiN Gaming",
+      "code": "PAIN"
+    },
+    "result": {
+      "teamAWins": 2,
+      "teamBWins": 1,
+      "winner": "FURIA"
+    }
+  },
+  {
+    "id": "115565670260116245",
+    "date": "2026-04-12T19:00:00Z",
+    "state": "completed",
+    "block": "Semana 3",
+    "teamA": {
+      "name": "LOUD",
+      "code": "LOUD"
+    },
+    "teamB": {
+      "name": "LOS",
+      "code": "LOS"
+    },
+    "result": {
+      "teamAWins": 2,
+      "teamBWins": 0,
+      "winner": "LOUD"
+    }
+  },
+  {
+    "id": "115565670260116197",
+    "date": "2026-04-12T16:00:00Z",
+    "state": "completed",
+    "block": "Semana 3",
+    "teamA": {
+      "name": "Fluxo W7M",
+      "code": "FX"
+    },
+    "teamB": {
+      "name": "Vivo Keyd Stars",
+      "code": "VKS"
+    },
+    "result": {
+      "teamAWins": 0,
+      "teamBWins": 2,
+      "winner": "Vivo Keyd Stars"
+    }
+  },
+  {
+    "id": "115565670260116273",
+    "date": "2026-04-11T19:00:00Z",
+    "state": "completed",
+    "block": "Semana 3",
+    "teamA": {
+      "name": "paiN Gaming",
+      "code": "PAIN"
+    },
+    "teamB": {
+      "name": "RED Kalunga",
+      "code": "RED"
+    },
+    "result": {
+      "teamAWins": 0,
+      "teamBWins": 2,
+      "winner": "RED Kalunga"
+    }
+  },
+  {
+    "id": "115565670260116201",
+    "date": "2026-04-11T16:00:00Z",
+    "state": "completed",
+    "block": "Semana 3",
+    "teamA": {
+      "name": "LEVIATÁN",
+      "code": "LEV"
+    },
+    "teamB": {
+      "name": "FURIA",
+      "code": "FUR"
+    },
+    "result": {
+      "teamAWins": 0,
+      "teamBWins": 2,
+      "winner": "FURIA"
+    }
+  },
+  {
+    "id": "115565670260116221",
+    "date": "2026-04-05T19:00:00Z",
+    "state": "completed",
+    "block": "Semana 2",
+    "teamA": {
+      "name": "Vivo Keyd Stars",
+      "code": "VKS"
+    },
+    "teamB": {
+      "name": "FURIA",
+      "code": "FUR"
+    },
+    "result": {
+      "teamAWins": 0,
+      "teamBWins": 2,
+      "winner": "FURIA"
+    }
+  },
+  {
+    "id": "115565670260116225",
+    "date": "2026-04-05T16:00:00Z",
+    "state": "completed",
+    "block": "Semana 2",
+    "teamA": {
+      "name": "LOS",
+      "code": "LOS"
+    },
+    "teamB": {
+      "name": "LEVIATÁN",
+      "code": "LEV"
+    },
+    "result": {
+      "teamAWins": 2,
+      "teamBWins": 0,
+      "winner": "LOS"
+    }
+  },
+  {
+    "id": "115565670260116261",
+    "date": "2026-04-04T19:00:00Z",
+    "state": "completed",
+    "block": "Semana 2",
+    "teamA": {
+      "name": "LOUD",
+      "code": "LOUD"
+    },
+    "teamB": {
+      "name": "paiN Gaming",
+      "code": "PAIN"
+    },
+    "result": {
+      "teamAWins": 2,
+      "teamBWins": 0,
+      "winner": "LOUD"
+    }
+  },
+  {
+    "id": "115565670260116193",
+    "date": "2026-04-04T16:00:00Z",
+    "state": "completed",
+    "block": "Semana 2",
+    "teamA": {
+      "name": "Fluxo W7M",
+      "code": "FX"
+    },
+    "teamB": {
+      "name": "RED Kalunga",
+      "code": "RED"
+    },
+    "result": {
+      "teamAWins": 0,
+      "teamBWins": 2,
+      "winner": "RED Kalunga"
+    }
+  },
+  {
+    "id": "115565670260050641",
+    "date": "2026-03-29T19:00:00Z",
+    "state": "completed",
+    "block": "Semana 1",
+    "teamA": {
+      "name": "Fluxo W7M",
+      "code": "FX"
+    },
+    "teamB": {
+      "name": "LEVIATÁN",
+      "code": "LEV"
+    },
+    "result": {
+      "teamAWins": 2,
+      "teamBWins": 0,
+      "winner": "Fluxo W7M"
+    }
+  },
+  {
+    "id": "115565670260116277",
+    "date": "2026-03-29T16:00:00Z",
+    "state": "completed",
+    "block": "Semana 1",
+    "teamA": {
+      "name": "Vivo Keyd Stars",
+      "code": "VKS"
+    },
+    "teamB": {
+      "name": "paiN Gaming",
+      "code": "PAIN"
+    },
+    "result": {
+      "teamAWins": 2,
+      "teamBWins": 0,
+      "winner": "Vivo Keyd Stars"
+    }
+  },
+  {
+    "id": "115565670260116205",
+    "date": "2026-03-28T19:00:00Z",
+    "state": "completed",
+    "block": "Semana 1",
+    "teamA": {
+      "name": "FURIA",
+      "code": "FUR"
+    },
+    "teamB": {
+      "name": "LOS",
+      "code": "LOS"
+    },
+    "result": {
+      "teamAWins": 1,
+      "teamBWins": 2,
+      "winner": "LOS"
+    }
+  },
+  {
+    "id": "115565670260116265",
+    "date": "2026-03-28T16:00:00Z",
+    "state": "completed",
+    "block": "Semana 1",
+    "teamA": {
+      "name": "RED Kalunga",
+      "code": "RED"
+    },
+    "teamB": {
+      "name": "LOUD",
+      "code": "LOUD"
+    },
+    "result": {
+      "teamAWins": 2,
+      "teamBWins": 0,
+      "winner": "RED Kalunga"
+    }
+  },
+  {
+    "id": "115565621821672127",
+    "date": "2026-03-01T16:00:00Z",
+    "state": "completed",
+    "block": "Finais",
+    "teamA": {
+      "name": "RED Kalunga",
+      "code": "RED"
+    },
+    "teamB": {
+      "name": "LOUD",
+      "code": "LOUD"
+    },
+    "result": {
+      "teamAWins": 0,
+      "teamBWins": 3,
+      "winner": "LOUD"
+    }
+  },
+  {
+    "id": "115565621821672121",
+    "date": "2026-02-28T16:00:00Z",
+    "state": "completed",
+    "block": "Eliminatórias",
+    "teamA": {
+      "name": "FURIA",
+      "code": "FUR"
+    },
+    "teamB": {
+      "name": "RED Kalunga",
+      "code": "RED"
+    },
+    "result": {
+      "teamAWins": 1,
+      "teamBWins": 3,
+      "winner": "RED Kalunga"
+    }
+  },
+  {
+    "id": "115565621821672115",
+    "date": "2026-02-22T16:00:00Z",
+    "state": "completed",
+    "block": "Eliminatórias",
+    "teamA": {
+      "name": "FURIA",
+      "code": "FUR"
+    },
+    "teamB": {
+      "name": "LOS",
+      "code": "LOS"
+    },
+    "result": {
+      "teamAWins": 3,
+      "teamBWins": 1,
+      "winner": "FURIA"
+    }
+  },
+  {
+    "id": "115565621821672103",
+    "date": "2026-02-21T16:00:00Z",
+    "state": "completed",
+    "block": "Eliminatórias",
+    "teamA": {
+      "name": "RED Kalunga",
+      "code": "RED"
+    },
+    "teamB": {
+      "name": "LOUD",
+      "code": "LOUD"
+    },
+    "result": {
+      "teamAWins": 1,
+      "teamBWins": 3,
+      "winner": "LOUD"
+    }
+  }
+]
