@@ -14,21 +14,24 @@ async function main() {
         return;
     }
 
-    console.log('--- Buscando a ultima partida finalizada da RED (LoL) ---');
-    const pastUrl = `https://api.pandascore.co/lol/matches/past?filter[opponent_id]=${TEAM_ID}&sort=-begin_at&page[size]=1&token=${API_KEY}`;
+    console.log('--- Buscando as ultimas partidas finalizadas da RED (todos os jogos) ---');
+    const pastUrl = `https://api.pandascore.co/matches/past?filter[opponent_id]=${TEAM_ID}&sort=-begin_at&page[size]=10&token=${API_KEY}`;
     const pastRes = await fetch(pastUrl);
     if (!pastRes.ok) {
         console.log('Falha ao buscar partida:', pastRes.status, await pastRes.text());
         return;
     }
     const matches = await pastRes.json();
-    if (!matches.length) {
-        console.log('Nenhuma partida encontrada.');
+    console.log(`Encontradas ${matches.length} partida(s) no total (todos os jogos).`);
+    matches.forEach((m) => console.log(' -', m.videogame?.slug, '|', m.name, '| id:', m.id));
+
+    const match = matches.find((m) => m.videogame?.slug === 'league-of-legends');
+    if (!match) {
+        console.log('Nenhuma partida de League of Legends encontrada nessas 10.');
         return;
     }
 
-    const match = matches[0];
-    console.log('Partida encontrada:', match.name, '| id:', match.id, '| games:', (match.games || []).map((g) => g.id));
+    console.log('\nUsando esta partida de LoL:', match.name, '| id:', match.id, '| games:', (match.games || []).map((g) => g.id));
 
     if (!match.games || !match.games.length) {
         console.log('A partida nao tem sub-jogos listados.');
