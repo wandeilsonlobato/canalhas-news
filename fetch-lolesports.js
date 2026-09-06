@@ -38,6 +38,40 @@ async function api(endpoint, params) {
     return res.json();
 }
 
+// getSchedule só devolve uma janela de eventos por chamada, mas tem um
+// cursor "older" pra ir buscando pra trás. Isso vai puxando página por
+// página até acabar o histórico (a API simplesmente para de devolver
+// "older" quando chega no começo) - assim pegamos TODO o histórico da
+// liga, não só a temporada atual. Trava em 30 páginas por segurança.
+async function fetchFullSchedule(leagueId) {
+    const allEvents = [];
+    let pageToken = null;
+    let page = 0;
+
+    while (page < 30) {
+        page += 1;
+        const params = { leagueId };
+        if (pageToken) params.pageToken = pageToken;
+
+        let res;
+        try {
+            res = await api('getSchedule', params);
+        } catch (err) {
+            console.warn(`Falha ao buscar página ${page} da agenda:`, err.message);
+            break;
+        }
+
+        const schedule = res?.data?.schedule;
+        const events = schedule?.events || [];
+        allEvents.push(...events);
+
+        pageToken = schedule?.pages?.older || null;
+        if (!pageToken) break;
+    }
+
+    return allEvents;
+}
+
 function readJsonSafe(file) {
     try {
         return JSON.parse(fs.readFileSync(file, 'utf8'));
@@ -215,15 +249,11 @@ async function main() {
         let cblolMatches = [];
 
         for (const league of brazilLeagues) {
-            let scheduleRes;
-            try {
-                scheduleRes = await api('getSchedule', { leagueId: league.id });
-            } catch (err) {
-                console.warn(`Falha ao buscar agenda de ${league.name}:`, err.message);
+            const events = await fetchFullSchedule(league.id);
+            if (!events.length) {
+                console.warn(`Nenhum evento encontrado na agenda de ${league.name}.`);
                 continue;
             }
-
-            const events = scheduleRes?.data?.schedule?.events || [];
 
             if (/^cblol/i.test(league.name || '')) {
                 cblolMatches = extractAllCblolMatches(events);

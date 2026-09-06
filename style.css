@@ -1858,7 +1858,14 @@ body.light-mode .app-topbar { background-color: color-mix(in srgb, var(--bg) 80%
     border-radius: 20px;
 }
 
-.h2h-list { display: flex; flex-direction: column; gap: 8px; }
+.h2h-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-height: 420px;
+    overflow-y: auto;
+    padding-right: 4px;
+}
 
 .h2h-match {
     display: flex;

@@ -83,14 +83,14 @@ document.addEventListener('DOMContentLoaded', async () => {
         const pctA = totalGames ? Math.round((h2h.winsA / totalGames) * 100) : 50;
 
         const matchListHtml = h2h.matches.length
-            ? h2h.matches.slice(0, 8).map((m) => `
+            ? h2h.matches.map((m) => `
                 <div class="h2h-match">
                     <span class="h2h-date">${formatDate(m.date)}</span>
                     <span class="h2h-teams">${m.teamA.code} <strong>${m.result.teamAWins}-${m.result.teamBWins}</strong> ${m.teamB.code}</span>
                     <span class="h2h-block">${m.block || ''}</span>
                 </div>
             `).join('')
-            : '<p class="compare-note">Esses dois times ainda não se enfrentaram nesta temporada.</p>';
+            : '<p class="compare-note">Esses dois times ainda não se enfrentaram no histórico do CBLOL.</p>';
 
         teamsResult.innerHTML = `
             <div class="compare-cards">
@@ -109,7 +109,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 </div>
             </div>
 
-            <h4 class="compare-section-title">Confronto direto nesta temporada</h4>
+            <h4 class="compare-section-title">Confronto direto (histórico completo do CBLOL)</h4>
             <div class="h2h-summary">
                 <span class="h2h-score">${h2h.winsA}</span>
                 <div class="h2h-bar"><div class="h2h-bar-fill" style="width:${pctA}%"></div></div>
@@ -136,8 +136,8 @@ document.addEventListener('DOMContentLoaded', async () => {
             const h2h = headToHead(playerA.team, playerB.team);
             const totalGames = h2h.winsA + h2h.winsB;
             contextHtml = totalGames
-                ? `<p class="compare-note">Times dos dois já se enfrentaram nesta temporada: <strong>${playerA.team} ${h2h.winsA} x ${h2h.winsB} ${playerB.team}</strong>.</p>`
-                : `<p class="compare-note">${playerA.team} e ${playerB.team} ainda não se enfrentaram nesta temporada.</p>`;
+                ? `<p class="compare-note">Times dos dois já se enfrentaram no histórico do CBLOL: <strong>${playerA.team} ${h2h.winsA} x ${h2h.winsB} ${playerB.team}</strong>.</p>`
+                : `<p class="compare-note">${playerA.team} e ${playerB.team} ainda não se enfrentaram no histórico do CBLOL.</p>`;
         }
 
         playersResult.innerHTML = `
