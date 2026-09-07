@@ -80,12 +80,12 @@
     "state": "unstarted",
     "block": "Eliminatórias",
     "teamA": {
-      "name": "Vivo Keyd Stars",
-      "code": "VKS"
-    },
-    "teamB": {
       "name": "RED Kalunga",
       "code": "RED"
+    },
+    "teamB": {
+      "name": "Vivo Keyd Stars",
+      "code": "VKS"
     },
     "result": null
   },
@@ -95,8 +95,8 @@
     "state": "unstarted",
     "block": "Eliminatórias",
     "teamA": {
-      "name": "TBD",
-      "code": "TBD"
+      "name": "LOUD",
+      "code": "LOUD"
     },
     "teamB": {
       "name": "paiN Gaming",
@@ -110,8 +110,8 @@
     "state": "unstarted",
     "block": "Eliminatórias",
     "teamA": {
-      "name": "TBD",
-      "code": "TBD"
+      "name": "LOS",
+      "code": "LOS"
     },
     "teamB": {
       "name": "FURIA",
