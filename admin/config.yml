@@ -36,5 +36,5 @@ collections:
           ]
       - { label: "Imagem de capa", name: "coverImage", widget: "image" }
       - { label: "Data de publicação", name: "date", widget: "datetime" }
-      - { label: "Autor", name: "author", widget: "string", default: "Redação Canalhas" }
+      - { label: "Autor", name: "author", widget: "string", default: "Redação Canalhas", hint: "Digite exatamente um dos nomes cadastrados em generate-articles.js pra aparecer a caixa com foto e redes sociais no fim da matéria." }
       - { label: "Texto da matéria", name: "body", widget: "markdown" }

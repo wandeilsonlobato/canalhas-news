@@ -962,6 +962,62 @@ h2.section-title::before {
 
 .share-btn:hover { border-color: var(--red); color: var(--red); }
 
+.author-box {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    background-color: var(--surface-alt);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    margin-top: 1.75rem;
+}
+
+.author-box-photo {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: var(--surface);
+    border: 2px solid var(--border);
+    flex-shrink: 0;
+}
+
+.author-box-info { flex: 1; min-width: 0; }
+
+.author-box-name {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1.05rem;
+    text-transform: uppercase;
+}
+
+.author-box-bio { color: var(--text-muted); font-size: 0.85rem; margin-top: 4px; line-height: 1.5; }
+
+.author-box-socials { display: flex; gap: 8px; margin-top: 12px; flex-wrap: wrap; }
+
+.author-box-social-link {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 6px 14px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--text);
+    transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.author-box-social-link:hover { border-color: var(--red); color: var(--red); }
+.author-box-social-link svg { width: 15px; height: 15px; }
+
+@media (max-width: 560px) {
+    .author-box { flex-direction: column; text-align: center; }
+    .author-box-socials { justify-content: center; }
+}
+
 /* ==========================================================================
    ABOUT PAGE
    ========================================================================== */
