@@ -106,7 +106,7 @@ function renderAuthorBox(authorName) {
 
 function renderArticleHtml(article) {
     const {
-        slug, title, excerpt, category, coverImage, date, author,
+        slug, title, excerpt, category, coverImage, date, author, imageCredit,
     } = article;
 
     const image = normalizeImagePath(coverImage);
@@ -220,6 +220,7 @@ function renderArticleHtml(article) {
                     <h1 class="article-title">${escapeHtml(title)}</h1>
                 </header>
                 <div class="article-image" style="background-image: url('${image}'); height: 450px; background-size: cover; background-position: center;"></div>
+                ${imageCredit ? `<span class="article-image-credit">${escapeHtml(imageCredit)}</span>` : ''}
                 <div class="article-body">
                     <div class="article-lead reveal">${escapeHtml(excerpt)}</div>
                     ${bodyHtml}

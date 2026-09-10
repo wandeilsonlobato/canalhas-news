@@ -906,8 +906,16 @@ h2.section-title::before {
     background-size: cover;
     background-position: center;
     border-radius: 8px;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.4rem;
     background-color: var(--surface-alt);
+}
+
+.article-image-credit {
+    display: block;
+    color: var(--text-muted);
+    font-size: 0.75rem;
+    margin-bottom: 1.5rem;
+    text-align: right;
 }
 
 .article-body { font-size: 1.05rem; line-height: 1.8; color: var(--text-muted); }

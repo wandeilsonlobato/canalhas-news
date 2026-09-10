@@ -2,7 +2,8 @@
 title: "RED Kalunga cai para a FURIA na estreia dos playoffs e vai para a chave inferior do CBLOL"
 excerpt: "Em confronto direto na primeira rodada da chave superior, a RED não venceu nenhum mapa e foi varrida pela FURIA por 3 a 0, mas segue viva no mata-mata pela chave inferior."
 category: "League of Legends"
-coverImage: "/img/img-noticias/capa-playoffs4.jpg"
+coverImage: "/img/img-noticias/red-furia-playoffs-etapa2.jpg"
+imageCredit: "Foto: Divulgação/CBLOL"
 date: 2026-09-06T16:00:00.000Z
 author: "Redação Canalhas"
 ---
