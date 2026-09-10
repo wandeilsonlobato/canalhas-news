@@ -134,80 +134,10 @@
             <section id="news">
                 <h2 class="section-title reveal">Destaques da Matilha</h2>
                 <div class="news-grid magazine">
-                    <article class="news-card feature reveal">
-                        <div class="image-wrapper">
-                            <span class="news-tag">Institucional</span>
-                            <div class="news-image" style="background-image: url('img/img-noticias/cs2-iem.jpg');"></div>
-                        </div>
-                        <div class="news-content">
-                            <h3 class="news-title"><a href="noticia-red-canids-encerra-cs2-valorant.html" class="card-link">RED Canids encerra CS2 e Valorant e garante vaga no Mundial de Brawl Stars</a></h3>
-                            <p class="news-excerpt">A organização descontinuou CS2 e Valorant e agora compete só em LoL e Brawl Stars — modalidade em que já está classificada para o Mundial em Tóquio.</p>
-                            <span class="read-more">Ler matéria &rarr;</span>
-                        </div>
-                    </article>
-
-                    <div class="news-list">
-                        <article class="news-card compact reveal">
-                            <div class="image-wrapper">
-                                <div class="news-image" style="background-image: url('img/img-noticias/capa-playoffs4.jpg');"></div>
-                            </div>
-                            <div class="news-content">
-                                <span class="compact-tag">League of Legends</span>
-                                <h3 class="news-title"><a href="noticia-cblol-split2-atualizacao.html" class="card-link">RED Canids muda de cara no Split 2 e garante vaga nos playoffs do CBLOL</a></h3>
-                            </div>
-                        </article>
-
-                        <article class="news-card compact reveal">
-                            <div class="image-wrapper">
-                                <div class="news-image" style="background-image: url('img/img-noticias/capa-cblols1.jpg');"></div>
-                            </div>
-                            <div class="news-content">
-                                <span class="compact-tag">League of Legends</span>
-                                <h3 class="news-title"><a href="noticia-cblol-estreia-2026.html" class="card-link">RED Canids Atropela a LOUD na Estreia do CBLOL 2026</a></h3>
-                            </div>
-                        </article>
-
-                        <article class="news-card compact reveal">
-                            <div class="image-wrapper">
-                                <div class="news-image" style="background-image: url('img/img-noticias/noticias-semana%203.jpg');"></div>
-                            </div>
-                            <div class="news-content">
-                                <span class="compact-tag">League of Legends</span>
-                                <h3 class="news-title"><a href="noticia-cblol-semana3.html" class="card-link">Matilha garante vaga nos playoffs mesmo com revés</a></h3>
-                            </div>
-                        </article>
-
-                        <article class="news-card compact reveal">
-                            <div class="image-wrapper">
-                                <div class="news-image" style="background-image: url('img/img-noticias/cs2-iem.jpg');"></div>
-                            </div>
-                            <div class="news-content">
-                                <span class="compact-tag">CS2</span>
-                                <h3 class="news-title"><a href="noticia-cs2-iem.html" class="card-link">RED CS se classifica para o IEM Rio 2026</a></h3>
-                            </div>
-                        </article>
-
-                        <article class="news-card compact reveal">
-                            <div class="image-wrapper">
-                                <div class="news-image" style="background-image: url('img/img-noticias/academy.jpg');"></div>
-                            </div>
-                            <div class="news-content">
-                                <span class="compact-tag">Academy</span>
-                                <h3 class="news-title"><a href="noticia-academy.html" class="card-link">Academy anuncia Fuuu como novo mid laner</a></h3>
-                            </div>
-                        </article>
-                    </div>
+                    <div id="news-feature-slot"></div>
+                    <div class="news-list" id="news-list-slot" data-limit="5"></div>
                 </div>
 
-                <div class="view-all-container">
-                    <a href="noticias.html" class="view-all-btn">Ver todas as notícias</a>
-                </div>
-            </section>
-
-            <section id="cms-articles-section" data-limit="3" hidden>
-                <h2 class="section-title reveal">Matérias da Redação</h2>
-                <p class="reveal" style="color: var(--text-muted); margin-top: -1.5rem; margin-bottom: 1.5rem;">Publicadas pelo time do Canalhas News:</p>
-                <div class="news-grid" id="cms-articles-grid"></div>
                 <div class="view-all-container">
                     <a href="noticias.html" class="view-all-btn">Ver todas as notícias</a>
                 </div>
@@ -274,6 +204,6 @@
     <script src="js/auth.js" type="module"></script>
     <script src="js/push-notifications.js" type="module"></script>
     <script src="js/schedule.js" defer></script>
-    <script src="js/cms-articles.js" defer></script>
+    <script src="js/news-feed.js" defer></script>
 </body>
 </html>
