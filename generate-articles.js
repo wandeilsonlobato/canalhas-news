@@ -39,6 +39,16 @@ const AUTHORS = {
         twitter: 'https://x.com/REDcanalhas_',
         instagram: 'https://www.instagram.com/redcanalhas_/',
     },
+    'GGG narutin': {
+        photo: 'https://pbs.twimg.com/profile_images/1986563681379872768/C-0zphDl_200x200.jpg',
+        bio: 'Redator(a) da Canalhas News.',
+        twitter: 'https://x.com/fluxo_naruto',
+    },
+    'efêmero {••}': {
+        photo: 'https://pbs.twimg.com/profile_images/2088725417616130048/Aksa_41a_200x200.jpg',
+        bio: 'Redator(a) da Canalhas News.',
+        twitter: 'https://x.com/ddiasney',
+    },
 };
 
 function readMarkdownFiles() {
