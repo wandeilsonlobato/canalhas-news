@@ -168,6 +168,14 @@
     "teamLogo": "https://static.lolesports.com/teams/FURIA---black.png"
   },
   {
+    "id": "99566407782209288",
+    "name": "Shini",
+    "role": "jungle",
+    "image": "https://static.lolesports.com/players/default-headshot.png",
+    "team": "FURIA",
+    "teamLogo": "https://static.lolesports.com/teams/FURIA---black.png"
+  },
+  {
     "id": "109518716685978765",
     "name": "Manel",
     "role": "support",
