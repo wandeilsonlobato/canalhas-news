@@ -50,8 +50,8 @@
     "state": "unstarted",
     "block": "Eliminatórias",
     "teamA": {
-      "name": "TBD",
-      "code": "TBD"
+      "name": "LOUD",
+      "code": "LOUD"
     },
     "teamB": {
       "name": "LOS",
@@ -92,17 +92,21 @@
   {
     "id": "115565671526403075",
     "date": "2026-09-13T16:00:00Z",
-    "state": "unstarted",
+    "state": "completed",
     "block": "Eliminatórias",
     "teamA": {
-      "name": "LOUD",
-      "code": "LOUD"
-    },
-    "teamB": {
       "name": "paiN Gaming",
       "code": "PAIN"
     },
-    "result": null
+    "teamB": {
+      "name": "LOUD",
+      "code": "LOUD"
+    },
+    "result": {
+      "teamAWins": 1,
+      "teamBWins": 3,
+      "winner": "LOUD"
+    }
   },
   {
     "id": "115565671526403069",
