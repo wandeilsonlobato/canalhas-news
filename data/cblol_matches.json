@@ -6031,24 +6031,5 @@
       "teamBWins": 1,
       "winner": "LOUD"
     }
-  },
-  {
-    "id": "110471059652887260",
-    "date": "2023-09-09T16:00:00Z",
-    "state": "completed",
-    "block": "Finais",
-    "teamA": {
-      "name": "LOUD",
-      "code": "LOUD"
-    },
-    "teamB": {
-      "name": "paiN Gaming",
-      "code": "PAIN"
-    },
-    "result": {
-      "teamAWins": 3,
-      "teamBWins": 1,
-      "winner": "LOUD"
-    }
   }
 ]
