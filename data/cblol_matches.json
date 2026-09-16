@@ -1,9 +1,54 @@
 [
   {
+    "id": "117275453885353242",
+    "date": "2026-10-12T21:00:00Z",
+    "state": "unstarted",
+    "block": "Finais",
+    "teamA": {
+      "name": "TBD",
+      "code": "TBD"
+    },
+    "teamB": {
+      "name": "TBD",
+      "code": "TBD"
+    },
+    "result": null
+  },
+  {
     "id": "115565671526468647",
     "date": "2026-10-10T16:00:00Z",
     "state": "unstarted",
     "block": "Finais",
+    "teamA": {
+      "name": "TBD",
+      "code": "TBD"
+    },
+    "teamB": {
+      "name": "TBD",
+      "code": "TBD"
+    },
+    "result": null
+  },
+  {
+    "id": "117275453885353236",
+    "date": "2026-10-06T21:00:00Z",
+    "state": "unstarted",
+    "block": "Classificatórias Regionais",
+    "teamA": {
+      "name": "TBD",
+      "code": "TBD"
+    },
+    "teamB": {
+      "name": "TBD",
+      "code": "TBD"
+    },
+    "result": null
+  },
+  {
+    "id": "117275453885353230",
+    "date": "2026-10-05T21:00:00Z",
+    "state": "unstarted",
+    "block": "Classificatórias Regionais",
     "teamA": {
       "name": "TBD",
       "code": "TBD"
@@ -26,6 +71,66 @@
     "teamB": {
       "name": "TBD",
       "code": "TBD"
+    },
+    "result": null
+  },
+  {
+    "id": "117275453885353224",
+    "date": "2026-10-01T21:00:00Z",
+    "state": "unstarted",
+    "block": "Classificatórias Regionais",
+    "teamA": {
+      "name": "TBD",
+      "code": "TBD"
+    },
+    "teamB": {
+      "name": "TBD",
+      "code": "TBD"
+    },
+    "result": null
+  },
+  {
+    "id": "117275453885353218",
+    "date": "2026-09-30T21:00:00Z",
+    "state": "unstarted",
+    "block": "Classificatórias Regionais",
+    "teamA": {
+      "name": "TBD",
+      "code": "TBD"
+    },
+    "teamB": {
+      "name": "LOS",
+      "code": "LOS"
+    },
+    "result": null
+  },
+  {
+    "id": "117275453885353212",
+    "date": "2026-09-29T21:00:00Z",
+    "state": "unstarted",
+    "block": "Classificatórias Regionais",
+    "teamA": {
+      "name": "TBD",
+      "code": "TBD"
+    },
+    "teamB": {
+      "name": "Estral Esports",
+      "code": "EST"
+    },
+    "result": null
+  },
+  {
+    "id": "117275453885353206",
+    "date": "2026-09-28T21:00:00Z",
+    "state": "unstarted",
+    "block": "Classificatórias Regionais",
+    "teamA": {
+      "name": "TBD",
+      "code": "TBD"
+    },
+    "teamB": {
+      "name": "KaBuM! Eports",
+      "code": "KBM"
     },
     "result": null
   },
