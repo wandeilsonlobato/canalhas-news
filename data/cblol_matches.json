@@ -170,8 +170,8 @@
     "state": "unstarted",
     "block": "Eliminatórias",
     "teamA": {
-      "name": "TBD",
-      "code": "TBD"
+      "name": "RED Kalunga",
+      "code": "RED"
     },
     "teamB": {
       "name": "paiN Gaming",
@@ -182,7 +182,7 @@
   {
     "id": "115565671526403081",
     "date": "2026-09-19T16:00:00Z",
-    "state": "unstarted",
+    "state": "completed",
     "block": "Eliminatórias",
     "teamA": {
       "name": "RED Kalunga",
@@ -192,7 +192,11 @@
       "name": "Vivo Keyd Stars",
       "code": "VKS"
     },
-    "result": null
+    "result": {
+      "teamAWins": 3,
+      "teamBWins": 0,
+      "winner": "RED Kalunga"
+    }
   },
   {
     "id": "115565671526403075",
