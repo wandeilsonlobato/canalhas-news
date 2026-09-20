@@ -155,8 +155,8 @@
     "state": "unstarted",
     "block": "Eliminatórias",
     "teamA": {
-      "name": "TBD",
-      "code": "TBD"
+      "name": "RED Kalunga",
+      "code": "RED"
     },
     "teamB": {
       "name": "FURIA",
@@ -167,7 +167,7 @@
   {
     "id": "115565671526468629",
     "date": "2026-09-20T16:00:00Z",
-    "state": "unstarted",
+    "state": "completed",
     "block": "Eliminatórias",
     "teamA": {
       "name": "RED Kalunga",
@@ -177,7 +177,11 @@
       "name": "paiN Gaming",
       "code": "PAIN"
     },
-    "result": null
+    "result": {
+      "teamAWins": 3,
+      "teamBWins": 1,
+      "winner": "RED Kalunga"
+    }
   },
   {
     "id": "115565671526403081",

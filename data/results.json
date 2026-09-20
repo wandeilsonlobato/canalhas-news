@@ -2,6 +2,14 @@
   {
     "game": "lol",
     "league": "CBLOL - Eliminatórias",
+    "date": "2026-09-20T16:00:00Z",
+    "opponent": "paiN Gaming",
+    "logo": "https://static.lolesports.com/teams/1674657011011_pain_logo_white.png",
+    "result": "V 3-1"
+  },
+  {
+    "game": "lol",
+    "league": "CBLOL - Eliminatórias",
     "date": "2026-09-19T16:00:00Z",
     "opponent": "Vivo Keyd Stars",
     "logo": "https://static.lolesports.com/teams/1670542079678_vks.png",
@@ -69,14 +77,6 @@
     "date": "2026-08-05T23:00:00Z",
     "opponent": "Vivo Keyd Stars Academy",
     "logo": "https://static.lolesports.com/teams/1774200249450_vks_c.png",
-    "result": "D 0-1"
-  },
-  {
-    "game": "lol",
-    "league": "Circuito Desafiante - Semana 3",
-    "date": "2026-08-04T21:00:00Z",
-    "opponent": "TEAM SOLID",
-    "logo": "https://static.lolesports.com/teams/1774199850391_solid_w.png",
     "result": "D 0-1"
   }
 ]
