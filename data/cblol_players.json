@@ -104,10 +104,10 @@
     "teamLogo": "https://static.lolesports.com/teams/1670542079678_vks.png"
   },
   {
-    "id": "104266800049354578",
-    "name": "Mireu",
-    "role": "mid",
-    "image": "https://static.lolesports.com/players/1754037358233_mireu.png",
+    "id": "105397234464043531",
+    "name": "Disamis",
+    "role": "jungle",
+    "image": "https://static.lolesports.com/players/1754037442082_disamis.png",
     "team": "Vivo Keyd Stars",
     "teamLogo": "https://static.lolesports.com/teams/1670542079678_vks.png"
   },
@@ -120,10 +120,10 @@
     "teamLogo": "https://static.lolesports.com/teams/1670542079678_vks.png"
   },
   {
-    "id": "105397234464043531",
-    "name": "Disamis",
-    "role": "jungle",
-    "image": "https://static.lolesports.com/players/1754037442082_disamis.png",
+    "id": "104266800049354578",
+    "name": "Mireu",
+    "role": "mid",
+    "image": "https://static.lolesports.com/players/1754037358233_mireu.png",
     "team": "Vivo Keyd Stars",
     "teamLogo": "https://static.lolesports.com/teams/1670542079678_vks.png"
   },
@@ -312,6 +312,22 @@
     "teamLogo": "https://static.lolesports.com/teams/1766161431111_LogoColorida.png"
   },
   {
+    "id": "109716554374057462",
+    "name": "Shiku",
+    "role": "support",
+    "image": "https://static.lolesports.com/players/1785138919269_LEV_Shiku-1copy.png",
+    "team": "LEVIATÁN",
+    "teamLogo": "https://static.lolesports.com/teams/1643795049372_LEV-CLAROWhite.png"
+  },
+  {
+    "id": "107648370969609784",
+    "name": "Strensh",
+    "role": "bottom",
+    "image": "https://static.lolesports.com/players/1785138924996_LEV_Strens-1copy.png",
+    "team": "LEVIATÁN",
+    "teamLogo": "https://static.lolesports.com/teams/1643795049372_LEV-CLAROWhite.png"
+  },
+  {
     "id": "114194564351011213",
     "name": "Devost",
     "role": "top",
@@ -332,22 +348,6 @@
     "name": "Enga",
     "role": "mid",
     "image": "https://static.lolesports.com/players/1785138930440_LEV_Enga-1copy.png",
-    "team": "LEVIATÁN",
-    "teamLogo": "https://static.lolesports.com/teams/1643795049372_LEV-CLAROWhite.png"
-  },
-  {
-    "id": "109716554374057462",
-    "name": "Shiku",
-    "role": "support",
-    "image": "https://static.lolesports.com/players/1785138919269_LEV_Shiku-1copy.png",
-    "team": "LEVIATÁN",
-    "teamLogo": "https://static.lolesports.com/teams/1643795049372_LEV-CLAROWhite.png"
-  },
-  {
-    "id": "107648370969609784",
-    "name": "Strensh",
-    "role": "bottom",
-    "image": "https://static.lolesports.com/players/1785138924996_LEV_Strens-1copy.png",
     "team": "LEVIATÁN",
     "teamLogo": "https://static.lolesports.com/teams/1643795049372_LEV-CLAROWhite.png"
   }
