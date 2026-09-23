@@ -110,12 +110,12 @@
     "state": "unstarted",
     "block": "Classificatórias Regionais",
     "teamA": {
-      "name": "TBD",
-      "code": "TBD"
-    },
-    "teamB": {
       "name": "Estral Esports",
       "code": "EST"
+    },
+    "teamB": {
+      "name": "9z Globant",
+      "code": "9ZG"
     },
     "result": null
   },
@@ -125,12 +125,12 @@
     "state": "unstarted",
     "block": "Classificatórias Regionais",
     "teamA": {
-      "name": "TBD",
-      "code": "TBD"
-    },
-    "teamB": {
       "name": "KaBuM! Eports",
       "code": "KBM"
+    },
+    "teamB": {
+      "name": "Golden Lions",
+      "code": "GLE"
     },
     "result": null
   },
