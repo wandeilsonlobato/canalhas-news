@@ -80,6 +80,14 @@
     "teamLogo": "https://static.lolesports.com/teams/1784013312149_LOS-OLaranja.png"
   },
   {
+    "id": "112489397428558238",
+    "name": "zekas",
+    "role": "top",
+    "image": "https://static.lolesports.com/players/1785142363013_VKS_Zekas-1copy.png",
+    "team": "Vivo Keyd Stars",
+    "teamLogo": "https://static.lolesports.com/teams/1670542079678_vks.png"
+  },
+  {
     "id": "112462312538183833",
     "name": "sarolu",
     "role": "jungle",
@@ -92,14 +100,6 @@
     "name": "scamber",
     "role": "support",
     "image": "https://static.lolesports.com/players/1754037601928_scamber.png",
-    "team": "Vivo Keyd Stars",
-    "teamLogo": "https://static.lolesports.com/teams/1670542079678_vks.png"
-  },
-  {
-    "id": "112489397428558238",
-    "name": "zekas",
-    "role": "top",
-    "image": "https://static.lolesports.com/players/1785142363013_VKS_Zekas-1copy.png",
     "team": "Vivo Keyd Stars",
     "teamLogo": "https://static.lolesports.com/teams/1670542079678_vks.png"
   },
@@ -176,22 +176,6 @@
     "teamLogo": "https://static.lolesports.com/teams/FURIA---black.png"
   },
   {
-    "id": "107559338252333149",
-    "name": "Fuuu",
-    "role": "mid",
-    "image": "https://static.lolesports.com/players/1785142378404_RED_Fuuu-1copy.png",
-    "team": "RED Kalunga",
-    "teamLogo": "https://static.lolesports.com/teams/1631820575924_red-2021-worlds.png"
-  },
-  {
-    "id": "108395451349202875",
-    "name": "Morttheus",
-    "role": "bottom",
-    "image": "https://static.lolesports.com/players/1785142373432_RED_Morttheus-1copy.png",
-    "team": "RED Kalunga",
-    "teamLogo": "https://static.lolesports.com/teams/1631820575924_red-2021-worlds.png"
-  },
-  {
     "id": "111734845200890741",
     "name": "zynts",
     "role": "top",
@@ -204,6 +188,22 @@
     "name": "STEPZ",
     "role": "jungle",
     "image": "https://static.lolesports.com/players/1785142383650_RED_Stepz-1copy.png",
+    "team": "RED Kalunga",
+    "teamLogo": "https://static.lolesports.com/teams/1631820575924_red-2021-worlds.png"
+  },
+  {
+    "id": "108395451349202875",
+    "name": "Morttheus",
+    "role": "bottom",
+    "image": "https://static.lolesports.com/players/1785142373432_RED_Morttheus-1copy.png",
+    "team": "RED Kalunga",
+    "teamLogo": "https://static.lolesports.com/teams/1631820575924_red-2021-worlds.png"
+  },
+  {
+    "id": "107559338252333149",
+    "name": "Fuuu",
+    "role": "mid",
+    "image": "https://static.lolesports.com/players/1785142378404_RED_Fuuu-1copy.png",
     "team": "RED Kalunga",
     "teamLogo": "https://static.lolesports.com/teams/1631820575924_red-2021-worlds.png"
   },
