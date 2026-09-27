@@ -24,8 +24,8 @@
       "code": "TBD"
     },
     "teamB": {
-      "name": "TBD",
-      "code": "TBD"
+      "name": "LOS",
+      "code": "LOS"
     },
     "result": null
   },
@@ -65,12 +65,12 @@
     "state": "unstarted",
     "block": "Eliminatórias",
     "teamA": {
-      "name": "TBD",
-      "code": "TBD"
-    },
-    "teamB": {
       "name": "FURIA",
       "code": "FUR"
+    },
+    "teamB": {
+      "name": "LOUD",
+      "code": "LOUD"
     },
     "result": null
   },
@@ -137,15 +137,15 @@
   {
     "id": "115565671526468623",
     "date": "2026-09-27T16:00:00Z",
-    "state": "unstarted",
+    "state": "inProgress",
     "block": "Eliminatórias",
     "teamA": {
-      "name": "LOS",
-      "code": "LOS"
-    },
-    "teamB": {
       "name": "LOUD",
       "code": "LOUD"
+    },
+    "teamB": {
+      "name": "LOS",
+      "code": "LOS"
     },
     "result": null
   },
