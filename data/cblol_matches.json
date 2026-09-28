@@ -137,7 +137,7 @@
   {
     "id": "115565671526468623",
     "date": "2026-09-27T16:00:00Z",
-    "state": "inProgress",
+    "state": "completed",
     "block": "Eliminatórias",
     "teamA": {
       "name": "LOUD",
@@ -147,7 +147,11 @@
       "name": "LOS",
       "code": "LOS"
     },
-    "result": null
+    "result": {
+      "teamAWins": 2,
+      "teamBWins": 3,
+      "winner": "LOS"
+    }
   },
   {
     "id": "115565671526468635",
