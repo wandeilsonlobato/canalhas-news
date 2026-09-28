@@ -122,15 +122,15 @@
   {
     "id": "117275453885353206",
     "date": "2026-09-28T21:00:00Z",
-    "state": "unstarted",
+    "state": "inProgress",
     "block": "Classificatórias Regionais",
     "teamA": {
-      "name": "KaBuM! Eports",
-      "code": "KBM"
-    },
-    "teamB": {
       "name": "Golden Lions",
       "code": "GLE"
+    },
+    "teamB": {
+      "name": "KaBuM! Eports",
+      "code": "KBM"
     },
     "result": null
   },
