@@ -92,15 +92,15 @@
   {
     "id": "117275453885353218",
     "date": "2026-09-30T21:00:00Z",
-    "state": "unstarted",
+    "state": "inProgress",
     "block": "Classificatórias Regionais",
     "teamA": {
-      "name": "KaBuM! Eports",
-      "code": "KBM"
-    },
-    "teamB": {
       "name": "LOS",
       "code": "LOS"
+    },
+    "teamB": {
+      "name": "KaBuM! Eports",
+      "code": "KBM"
     },
     "result": null
   },
