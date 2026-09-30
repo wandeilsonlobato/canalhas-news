@@ -54,8 +54,8 @@
       "code": "TBD"
     },
     "teamB": {
-      "name": "TBD",
-      "code": "TBD"
+      "name": "9z Globant",
+      "code": "9ZG"
     },
     "result": null
   },
@@ -84,8 +84,8 @@
       "code": "TBD"
     },
     "teamB": {
-      "name": "TBD",
-      "code": "TBD"
+      "name": "Estral Esports",
+      "code": "EST"
     },
     "result": null
   },
@@ -107,7 +107,7 @@
   {
     "id": "117275453885353212",
     "date": "2026-09-29T21:00:00Z",
-    "state": "inProgress",
+    "state": "completed",
     "block": "Classificatórias Regionais",
     "teamA": {
       "name": "Estral Esports",
@@ -117,7 +117,11 @@
       "name": "9z Globant",
       "code": "9ZG"
     },
-    "result": null
+    "result": {
+      "teamAWins": 3,
+      "teamBWins": 0,
+      "winner": "Estral Esports"
+    }
   },
   {
     "id": "117275453885353206",
