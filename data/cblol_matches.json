@@ -77,15 +77,15 @@
   {
     "id": "117275453885353224",
     "date": "2026-10-01T21:00:00Z",
-    "state": "unstarted",
+    "state": "inProgress",
     "block": "Classificatórias Regionais",
     "teamA": {
-      "name": "LOS",
-      "code": "LOS"
-    },
-    "teamB": {
       "name": "Estral Esports",
       "code": "EST"
+    },
+    "teamB": {
+      "name": "LOS",
+      "code": "LOS"
     },
     "result": null
   },
