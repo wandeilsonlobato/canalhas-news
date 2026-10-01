@@ -50,8 +50,8 @@
     "state": "unstarted",
     "block": "Classificatórias Regionais",
     "teamA": {
-      "name": "TBD",
-      "code": "TBD"
+      "name": "KaBuM! Eports",
+      "code": "KBM"
     },
     "teamB": {
       "name": "9z Globant",
@@ -80,8 +80,8 @@
     "state": "unstarted",
     "block": "Classificatórias Regionais",
     "teamA": {
-      "name": "TBD",
-      "code": "TBD"
+      "name": "LOS",
+      "code": "LOS"
     },
     "teamB": {
       "name": "Estral Esports",
@@ -92,7 +92,7 @@
   {
     "id": "117275453885353218",
     "date": "2026-09-30T21:00:00Z",
-    "state": "inProgress",
+    "state": "completed",
     "block": "Classificatórias Regionais",
     "teamA": {
       "name": "LOS",
@@ -102,7 +102,11 @@
       "name": "KaBuM! Eports",
       "code": "KBM"
     },
-    "result": null
+    "result": {
+      "teamAWins": 3,
+      "teamBWins": 0,
+      "winner": "LOS"
+    }
   },
   {
     "id": "117275453885353212",
