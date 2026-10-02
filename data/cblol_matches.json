@@ -9,8 +9,8 @@
       "code": "TBD"
     },
     "teamB": {
-      "name": "TBD",
-      "code": "TBD"
+      "name": "LOS",
+      "code": "LOS"
     },
     "result": null
   },
@@ -39,8 +39,8 @@
       "code": "TBD"
     },
     "teamB": {
-      "name": "TBD",
-      "code": "TBD"
+      "name": "Estral Esports",
+      "code": "EST"
     },
     "result": null
   },
@@ -77,7 +77,7 @@
   {
     "id": "117275453885353224",
     "date": "2026-10-01T21:00:00Z",
-    "state": "inProgress",
+    "state": "completed",
     "block": "Classificatórias Regionais",
     "teamA": {
       "name": "Estral Esports",
@@ -87,7 +87,11 @@
       "name": "LOS",
       "code": "LOS"
     },
-    "result": null
+    "result": {
+      "teamAWins": 0,
+      "teamBWins": 3,
+      "winner": "LOS"
+    }
   },
   {
     "id": "117275453885353218",
