@@ -1,5 +1,83 @@
 [
   {
+    "league": "CBLOL",
+    "tournamentSlug": "cblol_split_3_2026",
+    "teams": [
+      {
+        "id": "105397404796640412",
+        "position": 1,
+        "name": "LOUD",
+        "code": "LOUD",
+        "logo": "https://static.lolesports.com/teams/Logo-LOUD-Esports_Original.png",
+        "wins": 6,
+        "losses": 1
+      },
+      {
+        "id": "109480204628225868",
+        "position": 2,
+        "name": "LOS",
+        "code": "LOS",
+        "logo": "https://static.lolesports.com/teams/1784013312149_LOS-OLaranja.png",
+        "wins": 6,
+        "losses": 1
+      },
+      {
+        "id": "99566408219409348",
+        "position": 3,
+        "name": "Vivo Keyd Stars",
+        "code": "VKS",
+        "logo": "https://static.lolesports.com/teams/1670542079678_vks.png",
+        "wins": 5,
+        "losses": 2
+      },
+      {
+        "id": "100205576309502431",
+        "position": 4,
+        "name": "FURIA",
+        "code": "FUR",
+        "logo": "https://static.lolesports.com/teams/FURIA---black.png",
+        "wins": 5,
+        "losses": 2
+      },
+      {
+        "id": "99566408221961358",
+        "position": 5,
+        "name": "RED Kalunga",
+        "code": "RED",
+        "logo": "https://static.lolesports.com/teams/1631820575924_red-2021-worlds.png",
+        "wins": 2,
+        "losses": 5
+      },
+      {
+        "id": "99566408217955692",
+        "position": 6,
+        "name": "paiN Gaming",
+        "code": "PAIN",
+        "logo": "https://static.lolesports.com/teams/1674657011011_pain_logo_white.png",
+        "wins": 2,
+        "losses": 5
+      },
+      {
+        "id": "109480056092207899",
+        "position": 7,
+        "name": "Fluxo W7M",
+        "code": "FX",
+        "logo": "https://static.lolesports.com/teams/1766161431111_LogoColorida.png",
+        "wins": 1,
+        "losses": 6
+      },
+      {
+        "id": "107598699275015260",
+        "position": 8,
+        "name": "LEVIATÁN",
+        "code": "LEV",
+        "logo": "https://static.lolesports.com/teams/1643795049372_LEV-CLAROWhite.png",
+        "wins": 1,
+        "losses": 6
+      }
+    ]
+  },
+  {
     "league": "Circuito Desafiante",
     "tournamentSlug": "circuito_desafiante_split_2_2026",
     "teams": [
