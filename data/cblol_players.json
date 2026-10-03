@@ -104,18 +104,18 @@
     "teamLogo": "https://static.lolesports.com/teams/1670542079678_vks.png"
   },
   {
-    "id": "105397234464043531",
-    "name": "Disamis",
-    "role": "jungle",
-    "image": "https://static.lolesports.com/players/1754037442082_disamis.png",
-    "team": "Vivo Keyd Stars",
-    "teamLogo": "https://static.lolesports.com/teams/1670542079678_vks.png"
-  },
-  {
     "id": "104266800049354578",
     "name": "Mireu",
     "role": "mid",
     "image": "https://static.lolesports.com/players/1754037358233_mireu.png",
+    "team": "Vivo Keyd Stars",
+    "teamLogo": "https://static.lolesports.com/teams/1670542079678_vks.png"
+  },
+  {
+    "id": "105397234464043531",
+    "name": "Disamis",
+    "role": "jungle",
+    "image": "https://static.lolesports.com/players/1754037442082_disamis.png",
     "team": "Vivo Keyd Stars",
     "teamLogo": "https://static.lolesports.com/teams/1670542079678_vks.png"
   },
@@ -176,10 +176,10 @@
     "teamLogo": "https://static.lolesports.com/teams/FURIA---black.png"
   },
   {
-    "id": "103743617977630492",
-    "name": "Aegis",
-    "role": "jungle",
-    "image": "https://static.lolesports.com/players/1737725725326_image634.png",
+    "id": "109518716685978765",
+    "name": "Manel",
+    "role": "support",
+    "image": "https://static.lolesports.com/players/1717430231339_Manel.png",
     "team": "RED Kalunga",
     "teamLogo": "https://static.lolesports.com/teams/1631820575924_red-2021-worlds.png"
   },
@@ -216,10 +216,10 @@
     "teamLogo": "https://static.lolesports.com/teams/1631820575924_red-2021-worlds.png"
   },
   {
-    "id": "109518716685978765",
-    "name": "Manel",
-    "role": "support",
-    "image": "https://static.lolesports.com/players/1717430231339_Manel.png",
+    "id": "103743617977630492",
+    "name": "Aegis",
+    "role": "jungle",
+    "image": "https://static.lolesports.com/players/1737725725326_image634.png",
     "team": "RED Kalunga",
     "teamLogo": "https://static.lolesports.com/teams/1631820575924_red-2021-worlds.png"
   },
