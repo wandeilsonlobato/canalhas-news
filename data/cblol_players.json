@@ -80,14 +80,6 @@
     "teamLogo": "https://static.lolesports.com/teams/1784013312149_LOS-OLaranja.png"
   },
   {
-    "id": "103889905542957250",
-    "name": "Jeskla",
-    "role": "bottom",
-    "image": "https://static.lolesports.com/players/1785142357541_VKS_Jeskla-1copy.png",
-    "team": "Vivo Keyd Stars",
-    "teamLogo": "https://static.lolesports.com/teams/1670542079678_vks.png"
-  },
-  {
     "id": "112462312538183833",
     "name": "sarolu",
     "role": "jungle",
@@ -124,6 +116,14 @@
     "name": "Mireu",
     "role": "mid",
     "image": "https://static.lolesports.com/players/1754037358233_mireu.png",
+    "team": "Vivo Keyd Stars",
+    "teamLogo": "https://static.lolesports.com/teams/1670542079678_vks.png"
+  },
+  {
+    "id": "103889905542957250",
+    "name": "Jeskla",
+    "role": "bottom",
+    "image": "https://static.lolesports.com/players/1785142357541_VKS_Jeskla-1copy.png",
     "team": "Vivo Keyd Stars",
     "teamLogo": "https://static.lolesports.com/teams/1670542079678_vks.png"
   },
@@ -224,6 +224,22 @@
     "teamLogo": "https://static.lolesports.com/teams/1631820575924_red-2021-worlds.png"
   },
   {
+    "id": "105320670306436651",
+    "name": "Hena",
+    "role": "bottom",
+    "image": "https://static.lolesports.com/players/1785141982983_PNG_Hena-1copy.png",
+    "team": "paiN Gaming",
+    "teamLogo": "https://static.lolesports.com/teams/1674657011011_pain_logo_white.png"
+  },
+  {
+    "id": "101383793153915529",
+    "name": "Ceos",
+    "role": "support",
+    "image": "https://static.lolesports.com/players/1785141977929_PNG_Ceos-1copy.png",
+    "team": "paiN Gaming",
+    "teamLogo": "https://static.lolesports.com/teams/1674657011011_pain_logo_white.png"
+  },
+  {
     "id": "105541438961192885",
     "name": "Samkz",
     "role": "jungle",
@@ -252,22 +268,6 @@
     "name": "Boal",
     "role": "top",
     "image": "https://static.lolesports.com/players/1785141997512_PNG_Boal-1copy.png",
-    "team": "paiN Gaming",
-    "teamLogo": "https://static.lolesports.com/teams/1674657011011_pain_logo_white.png"
-  },
-  {
-    "id": "105320670306436651",
-    "name": "Hena",
-    "role": "bottom",
-    "image": "https://static.lolesports.com/players/1785141982983_PNG_Hena-1copy.png",
-    "team": "paiN Gaming",
-    "teamLogo": "https://static.lolesports.com/teams/1674657011011_pain_logo_white.png"
-  },
-  {
-    "id": "101383793153915529",
-    "name": "Ceos",
-    "role": "support",
-    "image": "https://static.lolesports.com/players/1785141977929_PNG_Ceos-1copy.png",
     "team": "paiN Gaming",
     "teamLogo": "https://static.lolesports.com/teams/1674657011011_pain_logo_white.png"
   },
