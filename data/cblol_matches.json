@@ -17,15 +17,15 @@
   {
     "id": "117275453885353236",
     "date": "2026-10-06T21:00:00Z",
-    "state": "unstarted",
+    "state": "inProgress",
     "block": "Classificatórias Regionais",
     "teamA": {
-      "name": "KaBuM! Eports",
-      "code": "KBM"
-    },
-    "teamB": {
       "name": "Estral Esports",
       "code": "EST"
+    },
+    "teamB": {
+      "name": "KaBuM! Eports",
+      "code": "KBM"
     },
     "result": null
   },
