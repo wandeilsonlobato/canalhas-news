@@ -5,8 +5,8 @@
     "state": "unstarted",
     "block": "Finais",
     "teamA": {
-      "name": "TBD",
-      "code": "TBD"
+      "name": "KaBuM! Eports",
+      "code": "KBM"
     },
     "teamB": {
       "name": "LOS",
@@ -17,7 +17,7 @@
   {
     "id": "117275453885353236",
     "date": "2026-10-06T21:00:00Z",
-    "state": "inProgress",
+    "state": "completed",
     "block": "Classificatórias Regionais",
     "teamA": {
       "name": "Estral Esports",
@@ -27,7 +27,11 @@
       "name": "KaBuM! Eports",
       "code": "KBM"
     },
-    "result": null
+    "result": {
+      "teamAWins": 2,
+      "teamBWins": 3,
+      "winner": "KaBuM! Eports"
+    }
   },
   {
     "id": "117275453885353230",
