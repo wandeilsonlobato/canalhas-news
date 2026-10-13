@@ -2,7 +2,7 @@
   {
     "id": "117275453885353242",
     "date": "2026-10-12T21:00:00Z",
-    "state": "inProgress",
+    "state": "completed",
     "block": "Finais",
     "teamA": {
       "name": "LOS",
@@ -12,7 +12,11 @@
       "name": "KaBuM! Eports",
       "code": "KBM"
     },
-    "result": null
+    "result": {
+      "teamAWins": 3,
+      "teamBWins": 1,
+      "winner": "LOS"
+    }
   },
   {
     "id": "117275453885353236",
