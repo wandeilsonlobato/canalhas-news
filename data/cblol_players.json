@@ -248,14 +248,6 @@
     "teamLogo": "https://static.lolesports.com/teams/1674657011011_pain_logo_white.png"
   },
   {
-    "id": "100205576295412145",
-    "name": "CarioK",
-    "role": "jungle",
-    "image": "https://static.lolesports.com/players/1785141992129_PNG_Cariok-1copy.png",
-    "team": "paiN Gaming",
-    "teamLogo": "https://static.lolesports.com/teams/1674657011011_pain_logo_white.png"
-  },
-  {
     "id": "111734539296970340",
     "name": "Namiru",
     "role": "mid",
@@ -268,6 +260,14 @@
     "name": "Boal",
     "role": "top",
     "image": "https://static.lolesports.com/players/1785141997512_PNG_Boal-1copy.png",
+    "team": "paiN Gaming",
+    "teamLogo": "https://static.lolesports.com/teams/1674657011011_pain_logo_white.png"
+  },
+  {
+    "id": "100205576295412145",
+    "name": "CarioK",
+    "role": "jungle",
+    "image": "https://static.lolesports.com/players/1785141992129_PNG_Cariok-1copy.png",
     "team": "paiN Gaming",
     "teamLogo": "https://static.lolesports.com/teams/1674657011011_pain_logo_white.png"
   },
