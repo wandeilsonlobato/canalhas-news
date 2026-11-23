@@ -1,21 +1,5 @@
 [
   {
-    "id": "111734539087870444",
-    "name": "uZent",
-    "role": "support",
-    "image": "https://static.lolesports.com/players/1785138005226_Loud_Uzent-1copy.png",
-    "team": "LOUD",
-    "teamLogo": "https://static.lolesports.com/teams/Logo-LOUD-Esports_Original.png"
-  },
-  {
-    "id": "110434225307697321",
-    "name": "Xyno",
-    "role": "top",
-    "image": "https://static.lolesports.com/players/1785138025769_Loud_Xyno-1copy.png",
-    "team": "LOUD",
-    "teamLogo": "https://static.lolesports.com/teams/Logo-LOUD-Esports_Original.png"
-  },
-  {
     "id": "116287401640559707",
     "name": "Sinatra",
     "role": "jungle",
@@ -36,6 +20,22 @@
     "name": "Rabelo",
     "role": "bottom",
     "image": "https://static.lolesports.com/players/1785138010514_Loud_Rabelo-1copy.png",
+    "team": "LOUD",
+    "teamLogo": "https://static.lolesports.com/teams/Logo-LOUD-Esports_Original.png"
+  },
+  {
+    "id": "110434225307697321",
+    "name": "Xyno",
+    "role": "top",
+    "image": "https://static.lolesports.com/players/1785138025769_Loud_Xyno-1copy.png",
+    "team": "LOUD",
+    "teamLogo": "https://static.lolesports.com/teams/Logo-LOUD-Esports_Original.png"
+  },
+  {
+    "id": "111734539087870444",
+    "name": "uZent",
+    "role": "support",
+    "image": "https://static.lolesports.com/players/1785138005226_Loud_Uzent-1copy.png",
     "team": "LOUD",
     "teamLogo": "https://static.lolesports.com/teams/Logo-LOUD-Esports_Original.png"
   },
@@ -200,18 +200,18 @@
     "teamLogo": "https://static.lolesports.com/teams/1631820575924_red-2021-worlds.png"
   },
   {
-    "id": "108395451349202875",
-    "name": "Morttheus",
-    "role": "bottom",
-    "image": "https://static.lolesports.com/players/1785142373432_RED_Morttheus-1copy.png",
-    "team": "RED Kalunga",
-    "teamLogo": "https://static.lolesports.com/teams/1631820575924_red-2021-worlds.png"
-  },
-  {
     "id": "107559338252333149",
     "name": "Fuuu",
     "role": "mid",
     "image": "https://static.lolesports.com/players/1785142378404_RED_Fuuu-1copy.png",
+    "team": "RED Kalunga",
+    "teamLogo": "https://static.lolesports.com/teams/1631820575924_red-2021-worlds.png"
+  },
+  {
+    "id": "108395451349202875",
+    "name": "Morttheus",
+    "role": "bottom",
+    "image": "https://static.lolesports.com/players/1785142373432_RED_Morttheus-1copy.png",
     "team": "RED Kalunga",
     "teamLogo": "https://static.lolesports.com/teams/1631820575924_red-2021-worlds.png"
   },
@@ -320,6 +320,22 @@
     "teamLogo": "https://static.lolesports.com/teams/1766161431111_LogoColorida.png"
   },
   {
+    "id": "109716554374057462",
+    "name": "Shiku",
+    "role": "support",
+    "image": "https://static.lolesports.com/players/1785138919269_LEV_Shiku-1copy.png",
+    "team": "LEVIATÁN",
+    "teamLogo": "https://static.lolesports.com/teams/1643795049372_LEV-CLAROWhite.png"
+  },
+  {
+    "id": "107648370969609784",
+    "name": "Strensh",
+    "role": "bottom",
+    "image": "https://static.lolesports.com/players/1785138924996_LEV_Strens-1copy.png",
+    "team": "LEVIATÁN",
+    "teamLogo": "https://static.lolesports.com/teams/1643795049372_LEV-CLAROWhite.png"
+  },
+  {
     "id": "114194564351011213",
     "name": "Devost",
     "role": "top",
@@ -340,22 +356,6 @@
     "name": "Enga",
     "role": "mid",
     "image": "https://static.lolesports.com/players/1785138930440_LEV_Enga-1copy.png",
-    "team": "LEVIATÁN",
-    "teamLogo": "https://static.lolesports.com/teams/1643795049372_LEV-CLAROWhite.png"
-  },
-  {
-    "id": "109716554374057462",
-    "name": "Shiku",
-    "role": "support",
-    "image": "https://static.lolesports.com/players/1785138919269_LEV_Shiku-1copy.png",
-    "team": "LEVIATÁN",
-    "teamLogo": "https://static.lolesports.com/teams/1643795049372_LEV-CLAROWhite.png"
-  },
-  {
-    "id": "107648370969609784",
-    "name": "Strensh",
-    "role": "bottom",
-    "image": "https://static.lolesports.com/players/1785138924996_LEV_Strens-1copy.png",
     "team": "LEVIATÁN",
     "teamLogo": "https://static.lolesports.com/teams/1643795049372_LEV-CLAROWhite.png"
   }
